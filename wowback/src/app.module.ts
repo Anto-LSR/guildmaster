@@ -11,6 +11,9 @@ import { LinkBnetModule } from './link-bnet/link-bnet.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { DataSource } from 'typeorm';
 import { User } from './typeOrm/entities/user/user.entity';
+import { RegisterController } from './register/register.controller';
+import { RegisterService } from './register/register.service';
+import { RegisterModule } from './register/register.module';
 
 
 @Module({
@@ -28,10 +31,11 @@ import { User } from './typeOrm/entities/user/user.entity';
       database: process.env.dbDatabase,
       entities: [User],
       synchronize: true,
-    }), 
+    }),
+    RegisterModule, 
   ],
-  controllers: [AppController, GetTokenController],
-  providers: [AppService, GetTokenService],
+  controllers: [AppController, GetTokenController, RegisterController],
+  providers: [AppService, GetTokenService, RegisterService],
 })
 export class AppModule {
   constructor(private dataSource: DataSource) {
