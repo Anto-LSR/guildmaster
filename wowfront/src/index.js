@@ -5,25 +5,20 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import BattlenetLogin from "./components/BattlenetLogin";
 import LoginForm from "./components/LoginForm";
+import RegisterForm from "./components/RegisterForm";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-
-
-
-
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
-  
     <Routes>
       <Route path="/" element={<App />}>
         <Route path="bnetlogin" element={<BattlenetLogin />} />
         <Route path="user-info" element={<Navbar />} />
-        <Route path="login" element={<LoginForm />} />
-
-
       </Route>
+      <Route path="login" element={<LoginForm />} />
+      <Route path="register" element={<RegisterForm />} />
     </Routes>
   </BrowserRouter>
 );
