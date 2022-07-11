@@ -1,0 +1,5228 @@
+{
+  "_links": {
+    "self": {
+      "href": "https://eu.api.blizzard.com/profile/user/wow?namespace=profile-eu"
+    },
+    "user": {
+      "href": "https://eu.api.blizzard.com/profile/user"
+    },
+    "profile": {
+      "href": "https://eu.api.blizzard.com/profile/user/wow?namespace=profile-eu"
+    }
+  },
+  "id": 124174781,
+  "wow_accounts": [
+    {
+      "id": 40896417,
+      "characters": [
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/archimonde/everftw?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/539-lu?namespace=profile-eu"
+          },
+          "name": "Everftw",
+          "id": 106682534,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/539?namespace=dynamic-eu"
+            },
+            "name": {
+              "en_US": "Archimonde",
+              "es_MX": "Archimonde",
+              "pt_BR": "Archimonde",
+              "de_DE": "Archimonde",
+              "en_GB": "Archimonde",
+              "es_ES": "Archimonde",
+              "fr_FR": "Archimonde",
+              "it_IT": "Archimonde",
+              "ru_RU": "Archimonde",
+              "ko_KR": "Archimonde",
+              "zh_TW": "阿克蒙德",
+              "zh_CN": "阿克蒙德"
+            },
+            "id": 539,
+            "slug": "archimonde"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/8?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Mage",
+              "es_MX": "Mago",
+              "pt_BR": "Mago",
+              "de_DE": "Magier",
+              "en_GB": "Mage",
+              "es_ES": "Mago",
+              "fr_FR": "Mage",
+              "it_IT": "Mago",
+              "ru_RU": "Маг",
+              "ko_KR": "마법사",
+              "zh_TW": "法師",
+              "zh_CN": "法师"
+            },
+            "id": 8
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/5?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Undead",
+              "es_MX": "No-muerto",
+              "pt_BR": "Morto-vivo",
+              "de_DE": "Untoter",
+              "en_GB": "Undead",
+              "es_ES": "No-muerto",
+              "fr_FR": "Mort-vivant",
+              "it_IT": "Non Morto",
+              "ru_RU": "Нежить",
+              "ko_KR": "언데드",
+              "zh_TW": "不死族",
+              "zh_CN": "亡灵"
+            },
+            "id": 5
+          },
+          "gender": {
+            "type": "MALE",
+            "name": {
+              "en_US": "Male",
+              "es_MX": "Masculino",
+              "pt_BR": "Masculino",
+              "de_DE": "Männlich",
+              "en_GB": "Male",
+              "es_ES": "Masculino",
+              "fr_FR": "Homme",
+              "it_IT": "Maschio",
+              "ru_RU": "Мужской",
+              "ko_KR": "남성",
+              "zh_TW": "男性",
+              "zh_CN": "男性"
+            }
+          },
+          "faction": {
+            "type": "HORDE",
+            "name": {
+              "en_US": "Horde",
+              "es_MX": "Horda",
+              "pt_BR": "Horda",
+              "de_DE": "Horde",
+              "en_GB": "Horde",
+              "es_ES": "Horda",
+              "fr_FR": "Horde",
+              "it_IT": "Orda",
+              "ru_RU": "Орда",
+              "ko_KR": "호드",
+              "zh_TW": "部落",
+              "zh_CN": "部落"
+            }
+          },
+          "level": 35
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/archimonde/everbud?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/539-lu?namespace=profile-eu"
+          },
+          "name": "Everbud",
+          "id": 106991610,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/539?namespace=dynamic-eu"
+            },
+            "name": {
+              "en_US": "Archimonde",
+              "es_MX": "Archimonde",
+              "pt_BR": "Archimonde",
+              "de_DE": "Archimonde",
+              "en_GB": "Archimonde",
+              "es_ES": "Archimonde",
+              "fr_FR": "Archimonde",
+              "it_IT": "Archimonde",
+              "ru_RU": "Archimonde",
+              "ko_KR": "Archimonde",
+              "zh_TW": "阿克蒙德",
+              "zh_CN": "阿克蒙德"
+            },
+            "id": 539,
+            "slug": "archimonde"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/1?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Warrior",
+              "es_MX": "Guerrero",
+              "pt_BR": "Guerreiro",
+              "de_DE": "Krieger",
+              "en_GB": "Warrior",
+              "es_ES": "Guerrero",
+              "fr_FR": "Guerrier",
+              "it_IT": "Guerriero",
+              "ru_RU": "Воин",
+              "ko_KR": "전사",
+              "zh_TW": "戰士",
+              "zh_CN": "战士"
+            },
+            "id": 1
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/2?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Orc",
+              "es_MX": "Orco",
+              "pt_BR": "Orc",
+              "de_DE": "Orc",
+              "en_GB": "Orc",
+              "es_ES": "Orco",
+              "fr_FR": "Orc",
+              "it_IT": "Orco",
+              "ru_RU": "Орк",
+              "ko_KR": "오크",
+              "zh_TW": "獸人",
+              "zh_CN": "兽人"
+            },
+            "id": 2
+          },
+          "gender": {
+            "type": "MALE",
+            "name": {
+              "en_US": "Male",
+              "es_MX": "Masculino",
+              "pt_BR": "Masculino",
+              "de_DE": "Männlich",
+              "en_GB": "Male",
+              "es_ES": "Masculino",
+              "fr_FR": "Homme",
+              "it_IT": "Maschio",
+              "ru_RU": "Мужской",
+              "ko_KR": "남성",
+              "zh_TW": "男性",
+              "zh_CN": "男性"
+            }
+          },
+          "faction": {
+            "type": "HORDE",
+            "name": {
+              "en_US": "Horde",
+              "es_MX": "Horda",
+              "pt_BR": "Horda",
+              "de_DE": "Horde",
+              "en_GB": "Horde",
+              "es_ES": "Horda",
+              "fr_FR": "Horde",
+              "it_IT": "Orda",
+              "ru_RU": "Орда",
+              "ko_KR": "호드",
+              "zh_TW": "部落",
+              "zh_CN": "部落"
+            }
+          },
+          "level": 40
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/archimonde/everbbq?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/539-lu?namespace=profile-eu"
+          },
+          "name": "Everbbq",
+          "id": 107009319,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/539?namespace=dynamic-eu"
+            },
+            "name": {
+              "en_US": "Archimonde",
+              "es_MX": "Archimonde",
+              "pt_BR": "Archimonde",
+              "de_DE": "Archimonde",
+              "en_GB": "Archimonde",
+              "es_ES": "Archimonde",
+              "fr_FR": "Archimonde",
+              "it_IT": "Archimonde",
+              "ru_RU": "Archimonde",
+              "ko_KR": "Archimonde",
+              "zh_TW": "阿克蒙德",
+              "zh_CN": "阿克蒙德"
+            },
+            "id": 539,
+            "slug": "archimonde"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/10?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Monk",
+              "es_MX": "Monje",
+              "pt_BR": "Monge",
+              "de_DE": "Mönch",
+              "en_GB": "Monk",
+              "es_ES": "Monje",
+              "fr_FR": "Moine",
+              "it_IT": "Monaco",
+              "ru_RU": "Монах",
+              "ko_KR": "수도사",
+              "zh_TW": "武僧",
+              "zh_CN": "武僧"
+            },
+            "id": 10
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/1?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Human",
+              "es_MX": "Humano",
+              "pt_BR": "Humano",
+              "de_DE": "Mensch",
+              "en_GB": "Human",
+              "es_ES": "Humano",
+              "fr_FR": "Humain",
+              "it_IT": "Umano",
+              "ru_RU": "Человек",
+              "ko_KR": "인간",
+              "zh_TW": "人類",
+              "zh_CN": "人类"
+            },
+            "id": 1
+          },
+          "gender": {
+            "type": "MALE",
+            "name": {
+              "en_US": "Male",
+              "es_MX": "Masculino",
+              "pt_BR": "Masculino",
+              "de_DE": "Männlich",
+              "en_GB": "Male",
+              "es_ES": "Masculino",
+              "fr_FR": "Homme",
+              "it_IT": "Maschio",
+              "ru_RU": "Мужской",
+              "ko_KR": "남성",
+              "zh_TW": "男性",
+              "zh_CN": "男性"
+            }
+          },
+          "faction": {
+            "type": "ALLIANCE",
+            "name": {
+              "en_US": "Alliance",
+              "es_MX": "Alianza",
+              "pt_BR": "Aliança",
+              "de_DE": "Allianz",
+              "en_GB": "Alliance",
+              "es_ES": "Alianza",
+              "fr_FR": "Alliance",
+              "it_IT": "Alleanza",
+              "ru_RU": "Альянс",
+              "ko_KR": "얼라이언스",
+              "zh_TW": "聯盟",
+              "zh_CN": "联盟"
+            }
+          },
+          "level": 37
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/archimonde/fenderguy?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/539-lu?namespace=profile-eu"
+          },
+          "name": "Fenderguy",
+          "id": 107024457,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/539?namespace=dynamic-eu"
+            },
+            "name": {
+              "en_US": "Archimonde",
+              "es_MX": "Archimonde",
+              "pt_BR": "Archimonde",
+              "de_DE": "Archimonde",
+              "en_GB": "Archimonde",
+              "es_ES": "Archimonde",
+              "fr_FR": "Archimonde",
+              "it_IT": "Archimonde",
+              "ru_RU": "Archimonde",
+              "ko_KR": "Archimonde",
+              "zh_TW": "阿克蒙德",
+              "zh_CN": "阿克蒙德"
+            },
+            "id": 539,
+            "slug": "archimonde"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/9?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Warlock",
+              "es_MX": "Brujo",
+              "pt_BR": "Bruxo",
+              "de_DE": "Hexenmeister",
+              "en_GB": "Warlock",
+              "es_ES": "Brujo",
+              "fr_FR": "Démoniste",
+              "it_IT": "Stregone",
+              "ru_RU": "Чернокнижник",
+              "ko_KR": "흑마법사",
+              "zh_TW": "術士",
+              "zh_CN": "术士"
+            },
+            "id": 9
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/2?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Orc",
+              "es_MX": "Orco",
+              "pt_BR": "Orc",
+              "de_DE": "Orc",
+              "en_GB": "Orc",
+              "es_ES": "Orco",
+              "fr_FR": "Orc",
+              "it_IT": "Orco",
+              "ru_RU": "Орк",
+              "ko_KR": "오크",
+              "zh_TW": "獸人",
+              "zh_CN": "兽人"
+            },
+            "id": 2
+          },
+          "gender": {
+            "type": "MALE",
+            "name": {
+              "en_US": "Male",
+              "es_MX": "Masculino",
+              "pt_BR": "Masculino",
+              "de_DE": "Männlich",
+              "en_GB": "Male",
+              "es_ES": "Masculino",
+              "fr_FR": "Homme",
+              "it_IT": "Maschio",
+              "ru_RU": "Мужской",
+              "ko_KR": "남성",
+              "zh_TW": "男性",
+              "zh_CN": "男性"
+            }
+          },
+          "faction": {
+            "type": "HORDE",
+            "name": {
+              "en_US": "Horde",
+              "es_MX": "Horda",
+              "pt_BR": "Horda",
+              "de_DE": "Horde",
+              "en_GB": "Horde",
+              "es_ES": "Horda",
+              "fr_FR": "Horde",
+              "it_IT": "Orda",
+              "ru_RU": "Орда",
+              "ko_KR": "호드",
+              "zh_TW": "部落",
+              "zh_CN": "部落"
+            }
+          },
+          "level": 23
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/archimonde/trollharder?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/539-lu?namespace=profile-eu"
+          },
+          "name": "Trollharder",
+          "id": 107251693,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/539?namespace=dynamic-eu"
+            },
+            "name": {
+              "en_US": "Archimonde",
+              "es_MX": "Archimonde",
+              "pt_BR": "Archimonde",
+              "de_DE": "Archimonde",
+              "en_GB": "Archimonde",
+              "es_ES": "Archimonde",
+              "fr_FR": "Archimonde",
+              "it_IT": "Archimonde",
+              "ru_RU": "Archimonde",
+              "ko_KR": "Archimonde",
+              "zh_TW": "阿克蒙德",
+              "zh_CN": "阿克蒙德"
+            },
+            "id": 539,
+            "slug": "archimonde"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/3?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Hunter",
+              "es_MX": "Cazador",
+              "pt_BR": "Caçador",
+              "de_DE": "Jäger",
+              "en_GB": "Hunter",
+              "es_ES": "Cazador",
+              "fr_FR": "Chasseur",
+              "it_IT": "Cacciatore",
+              "ru_RU": "Охотник",
+              "ko_KR": "사냥꾼",
+              "zh_TW": "獵人",
+              "zh_CN": "猎人"
+            },
+            "id": 3
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/8?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Troll",
+              "es_MX": "Trol",
+              "pt_BR": "Troll",
+              "de_DE": "Troll",
+              "en_GB": "Troll",
+              "es_ES": "Trol",
+              "fr_FR": "Troll",
+              "it_IT": "Troll",
+              "ru_RU": "Тролль",
+              "ko_KR": "트롤",
+              "zh_TW": "食人妖",
+              "zh_CN": "巨魔"
+            },
+            "id": 8
+          },
+          "gender": {
+            "type": "MALE",
+            "name": {
+              "en_US": "Male",
+              "es_MX": "Masculino",
+              "pt_BR": "Masculino",
+              "de_DE": "Männlich",
+              "en_GB": "Male",
+              "es_ES": "Masculino",
+              "fr_FR": "Homme",
+              "it_IT": "Maschio",
+              "ru_RU": "Мужской",
+              "ko_KR": "남성",
+              "zh_TW": "男性",
+              "zh_CN": "男性"
+            }
+          },
+          "faction": {
+            "type": "HORDE",
+            "name": {
+              "en_US": "Horde",
+              "es_MX": "Horda",
+              "pt_BR": "Horda",
+              "de_DE": "Horde",
+              "en_GB": "Horde",
+              "es_ES": "Horda",
+              "fr_FR": "Horde",
+              "it_IT": "Orda",
+              "ru_RU": "Орда",
+              "ko_KR": "호드",
+              "zh_TW": "部落",
+              "zh_CN": "部落"
+            }
+          },
+          "level": 35
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/archimonde/elk%C3%AFs?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/539-lu?namespace=profile-eu"
+          },
+          "name": "Elkïs",
+          "id": 107253661,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/539?namespace=dynamic-eu"
+            },
+            "name": {
+              "en_US": "Archimonde",
+              "es_MX": "Archimonde",
+              "pt_BR": "Archimonde",
+              "de_DE": "Archimonde",
+              "en_GB": "Archimonde",
+              "es_ES": "Archimonde",
+              "fr_FR": "Archimonde",
+              "it_IT": "Archimonde",
+              "ru_RU": "Archimonde",
+              "ko_KR": "Archimonde",
+              "zh_TW": "阿克蒙德",
+              "zh_CN": "阿克蒙德"
+            },
+            "id": 539,
+            "slug": "archimonde"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/2?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Paladin",
+              "es_MX": "Paladín",
+              "pt_BR": "Paladino",
+              "de_DE": "Paladin",
+              "en_GB": "Paladin",
+              "es_ES": "Paladín",
+              "fr_FR": "Paladin",
+              "it_IT": "Paladino",
+              "ru_RU": "Паладин",
+              "ko_KR": "성기사",
+              "zh_TW": "聖騎士",
+              "zh_CN": "圣骑士"
+            },
+            "id": 2
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/10?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Blood Elf",
+              "es_MX": "Elfo de sangre",
+              "pt_BR": "Elfo Sangrento",
+              "de_DE": "Blutelf",
+              "en_GB": "Blood Elf",
+              "es_ES": "Elfo de sangre",
+              "fr_FR": "Elfe de sang",
+              "it_IT": "Elfo del Sangue",
+              "ru_RU": "Эльф крови",
+              "ko_KR": "블러드 엘프",
+              "zh_TW": "血精靈",
+              "zh_CN": "血精灵"
+            },
+            "id": 10
+          },
+          "gender": {
+            "type": "FEMALE",
+            "name": {
+              "en_US": "Female",
+              "es_MX": "Femenino",
+              "pt_BR": "Feminino",
+              "de_DE": "Weiblich",
+              "en_GB": "Female",
+              "es_ES": "Femenino",
+              "fr_FR": "Femme",
+              "it_IT": "Femmina",
+              "ru_RU": "Женский",
+              "ko_KR": "여성",
+              "zh_TW": "女性",
+              "zh_CN": "女性"
+            }
+          },
+          "faction": {
+            "type": "HORDE",
+            "name": {
+              "en_US": "Horde",
+              "es_MX": "Horda",
+              "pt_BR": "Horda",
+              "de_DE": "Horde",
+              "en_GB": "Horde",
+              "es_ES": "Horda",
+              "fr_FR": "Horde",
+              "it_IT": "Orda",
+              "ru_RU": "Орда",
+              "ko_KR": "호드",
+              "zh_TW": "部落",
+              "zh_CN": "部落"
+            }
+          },
+          "level": 40
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/archimonde/everlehippie?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/539-lu?namespace=profile-eu"
+          },
+          "name": "Everlehippie",
+          "id": 107272377,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/539?namespace=dynamic-eu"
+            },
+            "name": {
+              "en_US": "Archimonde",
+              "es_MX": "Archimonde",
+              "pt_BR": "Archimonde",
+              "de_DE": "Archimonde",
+              "en_GB": "Archimonde",
+              "es_ES": "Archimonde",
+              "fr_FR": "Archimonde",
+              "it_IT": "Archimonde",
+              "ru_RU": "Archimonde",
+              "ko_KR": "Archimonde",
+              "zh_TW": "阿克蒙德",
+              "zh_CN": "阿克蒙德"
+            },
+            "id": 539,
+            "slug": "archimonde"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/6?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Death Knight",
+              "es_MX": "Caballero de la Muerte",
+              "pt_BR": "Cavaleiro da Morte",
+              "de_DE": "Todesritter",
+              "en_GB": "Death Knight",
+              "es_ES": "Caballero de la Muerte",
+              "fr_FR": "Chevalier de la mort",
+              "it_IT": "Cavaliere della Morte",
+              "ru_RU": "Рыцарь смерти",
+              "ko_KR": "죽음의 기사",
+              "zh_TW": "死亡騎士",
+              "zh_CN": "死亡骑士"
+            },
+            "id": 6
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/2?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Orc",
+              "es_MX": "Orco",
+              "pt_BR": "Orc",
+              "de_DE": "Orc",
+              "en_GB": "Orc",
+              "es_ES": "Orco",
+              "fr_FR": "Orc",
+              "it_IT": "Orco",
+              "ru_RU": "Орк",
+              "ko_KR": "오크",
+              "zh_TW": "獸人",
+              "zh_CN": "兽人"
+            },
+            "id": 2
+          },
+          "gender": {
+            "type": "MALE",
+            "name": {
+              "en_US": "Male",
+              "es_MX": "Masculino",
+              "pt_BR": "Masculino",
+              "de_DE": "Männlich",
+              "en_GB": "Male",
+              "es_ES": "Masculino",
+              "fr_FR": "Homme",
+              "it_IT": "Maschio",
+              "ru_RU": "Мужской",
+              "ko_KR": "남성",
+              "zh_TW": "男性",
+              "zh_CN": "男性"
+            }
+          },
+          "faction": {
+            "type": "HORDE",
+            "name": {
+              "en_US": "Horde",
+              "es_MX": "Horda",
+              "pt_BR": "Horda",
+              "de_DE": "Horde",
+              "en_GB": "Horde",
+              "es_ES": "Horda",
+              "fr_FR": "Horde",
+              "it_IT": "Orda",
+              "ru_RU": "Орда",
+              "ko_KR": "호드",
+              "zh_TW": "部落",
+              "zh_CN": "部落"
+            }
+          },
+          "level": 35
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/archimonde/%C3%AAverbbq?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/539-lu?namespace=profile-eu"
+          },
+          "name": "Êverbbq",
+          "id": 107300201,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/539?namespace=dynamic-eu"
+            },
+            "name": {
+              "en_US": "Archimonde",
+              "es_MX": "Archimonde",
+              "pt_BR": "Archimonde",
+              "de_DE": "Archimonde",
+              "en_GB": "Archimonde",
+              "es_ES": "Archimonde",
+              "fr_FR": "Archimonde",
+              "it_IT": "Archimonde",
+              "ru_RU": "Archimonde",
+              "ko_KR": "Archimonde",
+              "zh_TW": "阿克蒙德",
+              "zh_CN": "阿克蒙德"
+            },
+            "id": 539,
+            "slug": "archimonde"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/4?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Rogue",
+              "es_MX": "Pícaro",
+              "pt_BR": "Ladino",
+              "de_DE": "Schurke",
+              "en_GB": "Rogue",
+              "es_ES": "Pícaro",
+              "fr_FR": "Voleur",
+              "it_IT": "Ladro",
+              "ru_RU": "Разбойник",
+              "ko_KR": "도적",
+              "zh_TW": "盜賊",
+              "zh_CN": "潜行者"
+            },
+            "id": 4
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/5?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Undead",
+              "es_MX": "No-muerto",
+              "pt_BR": "Morto-vivo",
+              "de_DE": "Untoter",
+              "en_GB": "Undead",
+              "es_ES": "No-muerto",
+              "fr_FR": "Mort-vivant",
+              "it_IT": "Non Morto",
+              "ru_RU": "Нежить",
+              "ko_KR": "언데드",
+              "zh_TW": "不死族",
+              "zh_CN": "亡灵"
+            },
+            "id": 5
+          },
+          "gender": {
+            "type": "MALE",
+            "name": {
+              "en_US": "Male",
+              "es_MX": "Masculino",
+              "pt_BR": "Masculino",
+              "de_DE": "Männlich",
+              "en_GB": "Male",
+              "es_ES": "Masculino",
+              "fr_FR": "Homme",
+              "it_IT": "Maschio",
+              "ru_RU": "Мужской",
+              "ko_KR": "남성",
+              "zh_TW": "男性",
+              "zh_CN": "男性"
+            }
+          },
+          "faction": {
+            "type": "HORDE",
+            "name": {
+              "en_US": "Horde",
+              "es_MX": "Horda",
+              "pt_BR": "Horda",
+              "de_DE": "Horde",
+              "en_GB": "Horde",
+              "es_ES": "Horda",
+              "fr_FR": "Horde",
+              "it_IT": "Orda",
+              "ru_RU": "Орда",
+              "ko_KR": "호드",
+              "zh_TW": "部落",
+              "zh_CN": "部落"
+            }
+          },
+          "level": 35
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/archimonde/everr%C3%B4fl?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/539-lu?namespace=profile-eu"
+          },
+          "name": "Everrôfl",
+          "id": 107329144,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/539?namespace=dynamic-eu"
+            },
+            "name": {
+              "en_US": "Archimonde",
+              "es_MX": "Archimonde",
+              "pt_BR": "Archimonde",
+              "de_DE": "Archimonde",
+              "en_GB": "Archimonde",
+              "es_ES": "Archimonde",
+              "fr_FR": "Archimonde",
+              "it_IT": "Archimonde",
+              "ru_RU": "Archimonde",
+              "ko_KR": "Archimonde",
+              "zh_TW": "阿克蒙德",
+              "zh_CN": "阿克蒙德"
+            },
+            "id": 539,
+            "slug": "archimonde"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/11?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Druid",
+              "es_MX": "Druida",
+              "pt_BR": "Druida",
+              "de_DE": "Druide",
+              "en_GB": "Druid",
+              "es_ES": "Druida",
+              "fr_FR": "Druide",
+              "it_IT": "Druido",
+              "ru_RU": "Друид",
+              "ko_KR": "드루이드",
+              "zh_TW": "德魯伊",
+              "zh_CN": "德鲁伊"
+            },
+            "id": 11
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/6?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Tauren",
+              "es_MX": "Tauren",
+              "pt_BR": "Tauren",
+              "de_DE": "Tauren",
+              "en_GB": "Tauren",
+              "es_ES": "Tauren",
+              "fr_FR": "Tauren",
+              "it_IT": "Tauren",
+              "ru_RU": "Таурен",
+              "ko_KR": "타우렌",
+              "zh_TW": "牛頭人",
+              "zh_CN": "牛头人"
+            },
+            "id": 6
+          },
+          "gender": {
+            "type": "MALE",
+            "name": {
+              "en_US": "Male",
+              "es_MX": "Masculino",
+              "pt_BR": "Masculino",
+              "de_DE": "Männlich",
+              "en_GB": "Male",
+              "es_ES": "Masculino",
+              "fr_FR": "Homme",
+              "it_IT": "Maschio",
+              "ru_RU": "Мужской",
+              "ko_KR": "남성",
+              "zh_TW": "男性",
+              "zh_CN": "男性"
+            }
+          },
+          "faction": {
+            "type": "HORDE",
+            "name": {
+              "en_US": "Horde",
+              "es_MX": "Horda",
+              "pt_BR": "Horda",
+              "de_DE": "Horde",
+              "en_GB": "Horde",
+              "es_ES": "Horda",
+              "fr_FR": "Horde",
+              "it_IT": "Orda",
+              "ru_RU": "Орда",
+              "ko_KR": "호드",
+              "zh_TW": "部落",
+              "zh_CN": "部落"
+            }
+          },
+          "level": 35
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/archimonde/slbbq?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/539-lu?namespace=profile-eu"
+          },
+          "name": "Slbbq",
+          "id": 128465782,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/539?namespace=dynamic-eu"
+            },
+            "name": {
+              "en_US": "Archimonde",
+              "es_MX": "Archimonde",
+              "pt_BR": "Archimonde",
+              "de_DE": "Archimonde",
+              "en_GB": "Archimonde",
+              "es_ES": "Archimonde",
+              "fr_FR": "Archimonde",
+              "it_IT": "Archimonde",
+              "ru_RU": "Archimonde",
+              "ko_KR": "Archimonde",
+              "zh_TW": "阿克蒙德",
+              "zh_CN": "阿克蒙德"
+            },
+            "id": 539,
+            "slug": "archimonde"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/5?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Priest",
+              "es_MX": "Sacerdote",
+              "pt_BR": "Sacerdote",
+              "de_DE": "Priester",
+              "en_GB": "Priest",
+              "es_ES": "Sacerdote",
+              "fr_FR": "Prêtre",
+              "it_IT": "Sacerdote",
+              "ru_RU": "Жрец",
+              "ko_KR": "사제",
+              "zh_TW": "牧師",
+              "zh_CN": "牧师"
+            },
+            "id": 5
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/1?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Human",
+              "es_MX": "Humano",
+              "pt_BR": "Humano",
+              "de_DE": "Mensch",
+              "en_GB": "Human",
+              "es_ES": "Humano",
+              "fr_FR": "Humain",
+              "it_IT": "Umano",
+              "ru_RU": "Человек",
+              "ko_KR": "인간",
+              "zh_TW": "人類",
+              "zh_CN": "人类"
+            },
+            "id": 1
+          },
+          "gender": {
+            "type": "FEMALE",
+            "name": {
+              "en_US": "Female",
+              "es_MX": "Femenino",
+              "pt_BR": "Feminino",
+              "de_DE": "Weiblich",
+              "en_GB": "Female",
+              "es_ES": "Femenino",
+              "fr_FR": "Femme",
+              "it_IT": "Femmina",
+              "ru_RU": "Женский",
+              "ko_KR": "여성",
+              "zh_TW": "女性",
+              "zh_CN": "女性"
+            }
+          },
+          "faction": {
+            "type": "ALLIANCE",
+            "name": {
+              "en_US": "Alliance",
+              "es_MX": "Alianza",
+              "pt_BR": "Aliança",
+              "de_DE": "Allianz",
+              "en_GB": "Alliance",
+              "es_ES": "Alianza",
+              "fr_FR": "Alliance",
+              "it_IT": "Alleanza",
+              "ru_RU": "Альянс",
+              "ko_KR": "얼라이언스",
+              "zh_TW": "聯盟",
+              "zh_CN": "联盟"
+            }
+          },
+          "level": 4
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/ysondre/fyldepaich?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/1335-lu?namespace=profile-eu"
+          },
+          "name": "Fyldepaich",
+          "id": 57710492,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/1335?namespace=dynamic-eu"
+            },
+            "name": {
+              "en_US": "Ysondre",
+              "es_MX": "Ysondre",
+              "pt_BR": "Ysondre",
+              "de_DE": "Ysondre",
+              "en_GB": "Ysondre",
+              "es_ES": "Ysondre",
+              "fr_FR": "Ysondre",
+              "it_IT": "Ysondre",
+              "ru_RU": "Ysondre",
+              "ko_KR": "Ysondre",
+              "zh_TW": "伊索德雷",
+              "zh_CN": "伊森德雷"
+            },
+            "id": 1335,
+            "slug": "ysondre"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/10?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Monk",
+              "es_MX": "Monje",
+              "pt_BR": "Monge",
+              "de_DE": "Mönch",
+              "en_GB": "Monk",
+              "es_ES": "Monje",
+              "fr_FR": "Moine",
+              "it_IT": "Monaco",
+              "ru_RU": "Монах",
+              "ko_KR": "수도사",
+              "zh_TW": "武僧",
+              "zh_CN": "武僧"
+            },
+            "id": 10
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/25?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Pandaren",
+              "es_MX": "Pandaren",
+              "pt_BR": "Pandaren",
+              "de_DE": "Pandaren",
+              "en_GB": "Pandaren",
+              "es_ES": "Pandaren",
+              "fr_FR": "Pandaren",
+              "it_IT": "Pandaren",
+              "ru_RU": "Пандарен",
+              "ko_KR": "판다렌",
+              "zh_TW": "熊貓人",
+              "zh_CN": "熊猫人"
+            },
+            "id": 25
+          },
+          "gender": {
+            "type": "MALE",
+            "name": {
+              "en_US": "Male",
+              "es_MX": "Masculino",
+              "pt_BR": "Masculino",
+              "de_DE": "Männlich",
+              "en_GB": "Male",
+              "es_ES": "Masculino",
+              "fr_FR": "Homme",
+              "it_IT": "Maschio",
+              "ru_RU": "Мужской",
+              "ko_KR": "남성",
+              "zh_TW": "男性",
+              "zh_CN": "男性"
+            }
+          },
+          "faction": {
+            "type": "ALLIANCE",
+            "name": {
+              "en_US": "Alliance",
+              "es_MX": "Alianza",
+              "pt_BR": "Aliança",
+              "de_DE": "Allianz",
+              "en_GB": "Alliance",
+              "es_ES": "Alianza",
+              "fr_FR": "Alliance",
+              "it_IT": "Alleanza",
+              "ru_RU": "Альянс",
+              "ko_KR": "얼라이언스",
+              "zh_TW": "聯盟",
+              "zh_CN": "联盟"
+            }
+          },
+          "level": 17
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/ysondre/bwatapaich?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/1335-lu?namespace=profile-eu"
+          },
+          "name": "Bwatapaich",
+          "id": 57719878,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/1335?namespace=dynamic-eu"
+            },
+            "name": {
+              "en_US": "Ysondre",
+              "es_MX": "Ysondre",
+              "pt_BR": "Ysondre",
+              "de_DE": "Ysondre",
+              "en_GB": "Ysondre",
+              "es_ES": "Ysondre",
+              "fr_FR": "Ysondre",
+              "it_IT": "Ysondre",
+              "ru_RU": "Ysondre",
+              "ko_KR": "Ysondre",
+              "zh_TW": "伊索德雷",
+              "zh_CN": "伊森德雷"
+            },
+            "id": 1335,
+            "slug": "ysondre"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/6?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Death Knight",
+              "es_MX": "Caballero de la Muerte",
+              "pt_BR": "Cavaleiro da Morte",
+              "de_DE": "Todesritter",
+              "en_GB": "Death Knight",
+              "es_ES": "Caballero de la Muerte",
+              "fr_FR": "Chevalier de la mort",
+              "it_IT": "Cavaliere della Morte",
+              "ru_RU": "Рыцарь смерти",
+              "ko_KR": "죽음의 기사",
+              "zh_TW": "死亡騎士",
+              "zh_CN": "死亡骑士"
+            },
+            "id": 6
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/22?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Worgen",
+              "es_MX": "Huargen",
+              "pt_BR": "Worgen",
+              "de_DE": "Worgen",
+              "en_GB": "Worgen",
+              "es_ES": "Huargen",
+              "fr_FR": "Worgen",
+              "it_IT": "Worgen",
+              "ru_RU": "Ворген",
+              "ko_KR": "늑대인간",
+              "zh_TW": "狼人",
+              "zh_CN": "狼人"
+            },
+            "id": 22
+          },
+          "gender": {
+            "type": "FEMALE",
+            "name": {
+              "en_US": "Female",
+              "es_MX": "Femenino",
+              "pt_BR": "Feminino",
+              "de_DE": "Weiblich",
+              "en_GB": "Female",
+              "es_ES": "Femenino",
+              "fr_FR": "Femme",
+              "it_IT": "Femmina",
+              "ru_RU": "Женский",
+              "ko_KR": "여성",
+              "zh_TW": "女性",
+              "zh_CN": "女性"
+            }
+          },
+          "faction": {
+            "type": "ALLIANCE",
+            "name": {
+              "en_US": "Alliance",
+              "es_MX": "Alianza",
+              "pt_BR": "Aliança",
+              "de_DE": "Allianz",
+              "en_GB": "Alliance",
+              "es_ES": "Alianza",
+              "fr_FR": "Alliance",
+              "it_IT": "Alleanza",
+              "ru_RU": "Альянс",
+              "ko_KR": "얼라이언스",
+              "zh_TW": "聯盟",
+              "zh_CN": "联盟"
+            }
+          },
+          "level": 23
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/ysondre/h%C3%BFdro?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/1335-lu?namespace=profile-eu"
+          },
+          "name": "Hÿdro",
+          "id": 57737477,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/1335?namespace=dynamic-eu"
+            },
+            "name": {
+              "en_US": "Ysondre",
+              "es_MX": "Ysondre",
+              "pt_BR": "Ysondre",
+              "de_DE": "Ysondre",
+              "en_GB": "Ysondre",
+              "es_ES": "Ysondre",
+              "fr_FR": "Ysondre",
+              "it_IT": "Ysondre",
+              "ru_RU": "Ysondre",
+              "ko_KR": "Ysondre",
+              "zh_TW": "伊索德雷",
+              "zh_CN": "伊森德雷"
+            },
+            "id": 1335,
+            "slug": "ysondre"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/3?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Hunter",
+              "es_MX": "Cazador",
+              "pt_BR": "Caçador",
+              "de_DE": "Jäger",
+              "en_GB": "Hunter",
+              "es_ES": "Cazador",
+              "fr_FR": "Chasseur",
+              "it_IT": "Cacciatore",
+              "ru_RU": "Охотник",
+              "ko_KR": "사냥꾼",
+              "zh_TW": "獵人",
+              "zh_CN": "猎人"
+            },
+            "id": 3
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/1?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Human",
+              "es_MX": "Humano",
+              "pt_BR": "Humano",
+              "de_DE": "Mensch",
+              "en_GB": "Human",
+              "es_ES": "Humano",
+              "fr_FR": "Humain",
+              "it_IT": "Umano",
+              "ru_RU": "Человек",
+              "ko_KR": "인간",
+              "zh_TW": "人類",
+              "zh_CN": "人类"
+            },
+            "id": 1
+          },
+          "gender": {
+            "type": "FEMALE",
+            "name": {
+              "en_US": "Female",
+              "es_MX": "Femenino",
+              "pt_BR": "Feminino",
+              "de_DE": "Weiblich",
+              "en_GB": "Female",
+              "es_ES": "Femenino",
+              "fr_FR": "Femme",
+              "it_IT": "Femmina",
+              "ru_RU": "Женский",
+              "ko_KR": "여성",
+              "zh_TW": "女性",
+              "zh_CN": "女性"
+            }
+          },
+          "faction": {
+            "type": "ALLIANCE",
+            "name": {
+              "en_US": "Alliance",
+              "es_MX": "Alianza",
+              "pt_BR": "Aliança",
+              "de_DE": "Allianz",
+              "en_GB": "Alliance",
+              "es_ES": "Alianza",
+              "fr_FR": "Alliance",
+              "it_IT": "Alleanza",
+              "ru_RU": "Альянс",
+              "ko_KR": "얼라이언스",
+              "zh_TW": "聯盟",
+              "zh_CN": "联盟"
+            }
+          },
+          "level": 14
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/ysondre/mitainereune?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/1335-lu?namespace=profile-eu"
+          },
+          "name": "Mitainereune",
+          "id": 57758400,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/1335?namespace=dynamic-eu"
+            },
+            "name": {
+              "en_US": "Ysondre",
+              "es_MX": "Ysondre",
+              "pt_BR": "Ysondre",
+              "de_DE": "Ysondre",
+              "en_GB": "Ysondre",
+              "es_ES": "Ysondre",
+              "fr_FR": "Ysondre",
+              "it_IT": "Ysondre",
+              "ru_RU": "Ysondre",
+              "ko_KR": "Ysondre",
+              "zh_TW": "伊索德雷",
+              "zh_CN": "伊森德雷"
+            },
+            "id": 1335,
+            "slug": "ysondre"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/9?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Warlock",
+              "es_MX": "Brujo",
+              "pt_BR": "Bruxo",
+              "de_DE": "Hexenmeister",
+              "en_GB": "Warlock",
+              "es_ES": "Brujo",
+              "fr_FR": "Démoniste",
+              "it_IT": "Stregone",
+              "ru_RU": "Чернокнижник",
+              "ko_KR": "흑마법사",
+              "zh_TW": "術士",
+              "zh_CN": "术士"
+            },
+            "id": 9
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/22?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Worgen",
+              "es_MX": "Huargen",
+              "pt_BR": "Worgen",
+              "de_DE": "Worgen",
+              "en_GB": "Worgen",
+              "es_ES": "Huargen",
+              "fr_FR": "Worgen",
+              "it_IT": "Worgen",
+              "ru_RU": "Ворген",
+              "ko_KR": "늑대인간",
+              "zh_TW": "狼人",
+              "zh_CN": "狼人"
+            },
+            "id": 22
+          },
+          "gender": {
+            "type": "FEMALE",
+            "name": {
+              "en_US": "Female",
+              "es_MX": "Femenino",
+              "pt_BR": "Feminino",
+              "de_DE": "Weiblich",
+              "en_GB": "Female",
+              "es_ES": "Femenino",
+              "fr_FR": "Femme",
+              "it_IT": "Femmina",
+              "ru_RU": "Женский",
+              "ko_KR": "여성",
+              "zh_TW": "女性",
+              "zh_CN": "女性"
+            }
+          },
+          "faction": {
+            "type": "ALLIANCE",
+            "name": {
+              "en_US": "Alliance",
+              "es_MX": "Alianza",
+              "pt_BR": "Aliança",
+              "de_DE": "Allianz",
+              "en_GB": "Alliance",
+              "es_ES": "Alianza",
+              "fr_FR": "Alliance",
+              "it_IT": "Alleanza",
+              "ru_RU": "Альянс",
+              "ko_KR": "얼라이언스",
+              "zh_TW": "聯盟",
+              "zh_CN": "联盟"
+            }
+          },
+          "level": 7
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/ysondre/onhar?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/1335-lu?namespace=profile-eu"
+          },
+          "name": "Onhar",
+          "id": 57761810,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/1335?namespace=dynamic-eu"
+            },
+            "name": {
+              "en_US": "Ysondre",
+              "es_MX": "Ysondre",
+              "pt_BR": "Ysondre",
+              "de_DE": "Ysondre",
+              "en_GB": "Ysondre",
+              "es_ES": "Ysondre",
+              "fr_FR": "Ysondre",
+              "it_IT": "Ysondre",
+              "ru_RU": "Ysondre",
+              "ko_KR": "Ysondre",
+              "zh_TW": "伊索德雷",
+              "zh_CN": "伊森德雷"
+            },
+            "id": 1335,
+            "slug": "ysondre"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/1?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Warrior",
+              "es_MX": "Guerrero",
+              "pt_BR": "Guerreiro",
+              "de_DE": "Krieger",
+              "en_GB": "Warrior",
+              "es_ES": "Guerrero",
+              "fr_FR": "Guerrier",
+              "it_IT": "Guerriero",
+              "ru_RU": "Воин",
+              "ko_KR": "전사",
+              "zh_TW": "戰士",
+              "zh_CN": "战士"
+            },
+            "id": 1
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/3?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Dwarf",
+              "es_MX": "Enano",
+              "pt_BR": "Anão",
+              "de_DE": "Zwerg",
+              "en_GB": "Dwarf",
+              "es_ES": "Enano",
+              "fr_FR": "Nain",
+              "it_IT": "Nano",
+              "ru_RU": "Дворф",
+              "ko_KR": "드워프",
+              "zh_TW": "矮人",
+              "zh_CN": "矮人"
+            },
+            "id": 3
+          },
+          "gender": {
+            "type": "MALE",
+            "name": {
+              "en_US": "Male",
+              "es_MX": "Masculino",
+              "pt_BR": "Masculino",
+              "de_DE": "Männlich",
+              "en_GB": "Male",
+              "es_ES": "Masculino",
+              "fr_FR": "Homme",
+              "it_IT": "Maschio",
+              "ru_RU": "Мужской",
+              "ko_KR": "남성",
+              "zh_TW": "男性",
+              "zh_CN": "男性"
+            }
+          },
+          "faction": {
+            "type": "ALLIANCE",
+            "name": {
+              "en_US": "Alliance",
+              "es_MX": "Alianza",
+              "pt_BR": "Aliança",
+              "de_DE": "Allianz",
+              "en_GB": "Alliance",
+              "es_ES": "Alianza",
+              "fr_FR": "Alliance",
+              "it_IT": "Alleanza",
+              "ru_RU": "Альянс",
+              "ko_KR": "얼라이언스",
+              "zh_TW": "聯盟",
+              "zh_CN": "联盟"
+            }
+          },
+          "level": 4
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/ysondre/gsuisunpulp?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/1335-lu?namespace=profile-eu"
+          },
+          "name": "Gsuisunpulp",
+          "id": 57762968,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/1335?namespace=dynamic-eu"
+            },
+            "name": {
+              "en_US": "Ysondre",
+              "es_MX": "Ysondre",
+              "pt_BR": "Ysondre",
+              "de_DE": "Ysondre",
+              "en_GB": "Ysondre",
+              "es_ES": "Ysondre",
+              "fr_FR": "Ysondre",
+              "it_IT": "Ysondre",
+              "ru_RU": "Ysondre",
+              "ko_KR": "Ysondre",
+              "zh_TW": "伊索德雷",
+              "zh_CN": "伊森德雷"
+            },
+            "id": 1335,
+            "slug": "ysondre"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/2?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Paladin",
+              "es_MX": "Paladín",
+              "pt_BR": "Paladino",
+              "de_DE": "Paladin",
+              "en_GB": "Paladin",
+              "es_ES": "Paladín",
+              "fr_FR": "Paladin",
+              "it_IT": "Paladino",
+              "ru_RU": "Паладин",
+              "ko_KR": "성기사",
+              "zh_TW": "聖騎士",
+              "zh_CN": "圣骑士"
+            },
+            "id": 2
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/11?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Draenei",
+              "es_MX": "Draenei",
+              "pt_BR": "Draenei",
+              "de_DE": "Draenei",
+              "en_GB": "Draenei",
+              "es_ES": "Draenei",
+              "fr_FR": "Draeneï",
+              "it_IT": "Draenei",
+              "ru_RU": "Дреней",
+              "ko_KR": "드레나이",
+              "zh_TW": "德萊尼",
+              "zh_CN": "德莱尼"
+            },
+            "id": 11
+          },
+          "gender": {
+            "type": "FEMALE",
+            "name": {
+              "en_US": "Female",
+              "es_MX": "Femenino",
+              "pt_BR": "Feminino",
+              "de_DE": "Weiblich",
+              "en_GB": "Female",
+              "es_ES": "Femenino",
+              "fr_FR": "Femme",
+              "it_IT": "Femmina",
+              "ru_RU": "Женский",
+              "ko_KR": "여성",
+              "zh_TW": "女性",
+              "zh_CN": "女性"
+            }
+          },
+          "faction": {
+            "type": "ALLIANCE",
+            "name": {
+              "en_US": "Alliance",
+              "es_MX": "Alianza",
+              "pt_BR": "Aliança",
+              "de_DE": "Allianz",
+              "en_GB": "Alliance",
+              "es_ES": "Alianza",
+              "fr_FR": "Alliance",
+              "it_IT": "Alleanza",
+              "ru_RU": "Альянс",
+              "ko_KR": "얼라이언스",
+              "zh_TW": "聯盟",
+              "zh_CN": "联盟"
+            }
+          },
+          "level": 1
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/ysondre/everlehippie?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/1335-lu?namespace=profile-eu"
+          },
+          "name": "Everlehippie",
+          "id": 57763006,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/1335?namespace=dynamic-eu"
+            },
+            "name": {
+              "en_US": "Ysondre",
+              "es_MX": "Ysondre",
+              "pt_BR": "Ysondre",
+              "de_DE": "Ysondre",
+              "en_GB": "Ysondre",
+              "es_ES": "Ysondre",
+              "fr_FR": "Ysondre",
+              "it_IT": "Ysondre",
+              "ru_RU": "Ysondre",
+              "ko_KR": "Ysondre",
+              "zh_TW": "伊索德雷",
+              "zh_CN": "伊森德雷"
+            },
+            "id": 1335,
+            "slug": "ysondre"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/8?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Mage",
+              "es_MX": "Mago",
+              "pt_BR": "Mago",
+              "de_DE": "Magier",
+              "en_GB": "Mage",
+              "es_ES": "Mago",
+              "fr_FR": "Mage",
+              "it_IT": "Mago",
+              "ru_RU": "Маг",
+              "ko_KR": "마법사",
+              "zh_TW": "法師",
+              "zh_CN": "法师"
+            },
+            "id": 8
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/4?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Night Elf",
+              "es_MX": "Elfo de la noche",
+              "pt_BR": "Elfo Noturno",
+              "de_DE": "Nachtelf",
+              "en_GB": "Night Elf",
+              "es_ES": "Elfo de la noche",
+              "fr_FR": "Elfe de la nuit",
+              "it_IT": "Elfo della Notte",
+              "ru_RU": "Ночной эльф",
+              "ko_KR": "나이트 엘프",
+              "zh_TW": "夜精靈",
+              "zh_CN": "暗夜精灵"
+            },
+            "id": 4
+          },
+          "gender": {
+            "type": "FEMALE",
+            "name": {
+              "en_US": "Female",
+              "es_MX": "Femenino",
+              "pt_BR": "Feminino",
+              "de_DE": "Weiblich",
+              "en_GB": "Female",
+              "es_ES": "Femenino",
+              "fr_FR": "Femme",
+              "it_IT": "Femmina",
+              "ru_RU": "Женский",
+              "ko_KR": "여성",
+              "zh_TW": "女性",
+              "zh_CN": "女性"
+            }
+          },
+          "faction": {
+            "type": "ALLIANCE",
+            "name": {
+              "en_US": "Alliance",
+              "es_MX": "Alianza",
+              "pt_BR": "Aliança",
+              "de_DE": "Allianz",
+              "en_GB": "Alliance",
+              "es_ES": "Alianza",
+              "fr_FR": "Alliance",
+              "it_IT": "Alleanza",
+              "ru_RU": "Альянс",
+              "ko_KR": "얼라이언스",
+              "zh_TW": "聯盟",
+              "zh_CN": "联盟"
+            }
+          },
+          "level": 7
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/confr%C3%A9rie-du-thorium/tholran?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/1127-lu?namespace=profile-eu"
+          },
+          "name": "Tholran",
+          "id": 59705610,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/1127?namespace=dynamic-eu"
+            },
+            "name": {
+              "en_US": "Confrérie du Thorium",
+              "es_MX": "Confrérie du Thorium",
+              "pt_BR": "Confrérie du Thorium",
+              "de_DE": "Confrérie du Thorium",
+              "en_GB": "Confrérie du Thorium",
+              "es_ES": "Confrérie du Thorium",
+              "fr_FR": "Confrérie du Thorium",
+              "it_IT": "Confrérie du Thorium",
+              "ru_RU": "Confrérie du Thorium",
+              "ko_KR": "Confrérie du Thorium",
+              "zh_TW": "Confrerie du Thorium",
+              "zh_CN": "Confrérie du Thorium"
+            },
+            "id": 1127,
+            "slug": "confrérie-du-thorium"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/1?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Warrior",
+              "es_MX": "Guerrero",
+              "pt_BR": "Guerreiro",
+              "de_DE": "Krieger",
+              "en_GB": "Warrior",
+              "es_ES": "Guerrero",
+              "fr_FR": "Guerrier",
+              "it_IT": "Guerriero",
+              "ru_RU": "Воин",
+              "ko_KR": "전사",
+              "zh_TW": "戰士",
+              "zh_CN": "战士"
+            },
+            "id": 1
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/3?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Dwarf",
+              "es_MX": "Enano",
+              "pt_BR": "Anão",
+              "de_DE": "Zwerg",
+              "en_GB": "Dwarf",
+              "es_ES": "Enano",
+              "fr_FR": "Nain",
+              "it_IT": "Nano",
+              "ru_RU": "Дворф",
+              "ko_KR": "드워프",
+              "zh_TW": "矮人",
+              "zh_CN": "矮人"
+            },
+            "id": 3
+          },
+          "gender": {
+            "type": "MALE",
+            "name": {
+              "en_US": "Male",
+              "es_MX": "Masculino",
+              "pt_BR": "Masculino",
+              "de_DE": "Männlich",
+              "en_GB": "Male",
+              "es_ES": "Masculino",
+              "fr_FR": "Homme",
+              "it_IT": "Maschio",
+              "ru_RU": "Мужской",
+              "ko_KR": "남성",
+              "zh_TW": "男性",
+              "zh_CN": "男性"
+            }
+          },
+          "faction": {
+            "type": "ALLIANCE",
+            "name": {
+              "en_US": "Alliance",
+              "es_MX": "Alianza",
+              "pt_BR": "Aliança",
+              "de_DE": "Allianz",
+              "en_GB": "Alliance",
+              "es_ES": "Alianza",
+              "fr_FR": "Alliance",
+              "it_IT": "Alleanza",
+              "ru_RU": "Альянс",
+              "ko_KR": "얼라이언스",
+              "zh_TW": "聯盟",
+              "zh_CN": "联盟"
+            }
+          },
+          "level": 2
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/uldaman/raykun?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/1122-lu?namespace=profile-eu"
+          },
+          "name": "Raykun",
+          "id": 54384467,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/1122?namespace=dynamic-eu"
+            },
+            "name": {
+              "en_US": "Uldaman",
+              "es_MX": "Uldaman",
+              "pt_BR": "Uldaman",
+              "de_DE": "Uldaman",
+              "en_GB": "Uldaman",
+              "es_ES": "Uldaman",
+              "fr_FR": "Uldaman",
+              "it_IT": "Uldaman",
+              "ru_RU": "Uldaman",
+              "ko_KR": "Uldaman",
+              "zh_TW": "奧達曼",
+              "zh_CN": "奥达曼"
+            },
+            "id": 1122,
+            "slug": "uldaman"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/6?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Death Knight",
+              "es_MX": "Caballero de la Muerte",
+              "pt_BR": "Cavaleiro da Morte",
+              "de_DE": "Todesritter",
+              "en_GB": "Death Knight",
+              "es_ES": "Caballero de la Muerte",
+              "fr_FR": "Chevalier de la mort",
+              "it_IT": "Cavaliere della Morte",
+              "ru_RU": "Рыцарь смерти",
+              "ko_KR": "죽음의 기사",
+              "zh_TW": "死亡騎士",
+              "zh_CN": "死亡骑士"
+            },
+            "id": 6
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/22?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Worgen",
+              "es_MX": "Huargen",
+              "pt_BR": "Worgen",
+              "de_DE": "Worgen",
+              "en_GB": "Worgen",
+              "es_ES": "Huargen",
+              "fr_FR": "Worgen",
+              "it_IT": "Worgen",
+              "ru_RU": "Ворген",
+              "ko_KR": "늑대인간",
+              "zh_TW": "狼人",
+              "zh_CN": "狼人"
+            },
+            "id": 22
+          },
+          "gender": {
+            "type": "MALE",
+            "name": {
+              "en_US": "Male",
+              "es_MX": "Masculino",
+              "pt_BR": "Masculino",
+              "de_DE": "Männlich",
+              "en_GB": "Male",
+              "es_ES": "Masculino",
+              "fr_FR": "Homme",
+              "it_IT": "Maschio",
+              "ru_RU": "Мужской",
+              "ko_KR": "남성",
+              "zh_TW": "男性",
+              "zh_CN": "男性"
+            }
+          },
+          "faction": {
+            "type": "ALLIANCE",
+            "name": {
+              "en_US": "Alliance",
+              "es_MX": "Alianza",
+              "pt_BR": "Aliança",
+              "de_DE": "Allianz",
+              "en_GB": "Alliance",
+              "es_ES": "Alianza",
+              "fr_FR": "Alliance",
+              "it_IT": "Alleanza",
+              "ru_RU": "Альянс",
+              "ko_KR": "얼라이언스",
+              "zh_TW": "聯盟",
+              "zh_CN": "联盟"
+            }
+          },
+          "level": 24
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/uldaman/fenderguy?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/1122-lu?namespace=profile-eu"
+          },
+          "name": "Fenderguy",
+          "id": 59704243,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/1122?namespace=dynamic-eu"
+            },
+            "name": {
+              "en_US": "Uldaman",
+              "es_MX": "Uldaman",
+              "pt_BR": "Uldaman",
+              "de_DE": "Uldaman",
+              "en_GB": "Uldaman",
+              "es_ES": "Uldaman",
+              "fr_FR": "Uldaman",
+              "it_IT": "Uldaman",
+              "ru_RU": "Uldaman",
+              "ko_KR": "Uldaman",
+              "zh_TW": "奧達曼",
+              "zh_CN": "奥达曼"
+            },
+            "id": 1122,
+            "slug": "uldaman"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/10?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Monk",
+              "es_MX": "Monje",
+              "pt_BR": "Monge",
+              "de_DE": "Mönch",
+              "en_GB": "Monk",
+              "es_ES": "Monje",
+              "fr_FR": "Moine",
+              "it_IT": "Monaco",
+              "ru_RU": "Монах",
+              "ko_KR": "수도사",
+              "zh_TW": "武僧",
+              "zh_CN": "武僧"
+            },
+            "id": 10
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/24?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Pandaren",
+              "es_MX": "Pandaren",
+              "pt_BR": "Pandaren",
+              "de_DE": "Pandaren",
+              "en_GB": "Pandaren",
+              "es_ES": "Pandaren",
+              "fr_FR": "Pandaren",
+              "it_IT": "Pandaren",
+              "ru_RU": "Пандарен",
+              "ko_KR": "판다렌",
+              "zh_TW": "熊貓人",
+              "zh_CN": "熊猫人"
+            },
+            "id": 24
+          },
+          "gender": {
+            "type": "MALE",
+            "name": {
+              "en_US": "Male",
+              "es_MX": "Masculino",
+              "pt_BR": "Masculino",
+              "de_DE": "Männlich",
+              "en_GB": "Male",
+              "es_ES": "Masculino",
+              "fr_FR": "Homme",
+              "it_IT": "Maschio",
+              "ru_RU": "Мужской",
+              "ko_KR": "남성",
+              "zh_TW": "男性",
+              "zh_CN": "男性"
+            }
+          },
+          "faction": {
+            "type": "NEUTRAL",
+            "name": {
+              "en_US": "Neutral",
+              "es_MX": "Neutral",
+              "pt_BR": "Neutra",
+              "de_DE": "Neutral",
+              "en_GB": "Neutral",
+              "es_ES": "Neutral",
+              "fr_FR": "Neutre",
+              "it_IT": "Neutrale",
+              "ru_RU": "Нейтралы",
+              "ko_KR": "중립 지역",
+              "zh_TW": "中立",
+              "zh_CN": "中立"
+            }
+          },
+          "level": 1
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/arathi/everbbq?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/1334-lu?namespace=profile-eu"
+          },
+          "name": "Everbbq",
+          "id": 85020208,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/1334?namespace=dynamic-eu"
+            },
+            "name": {
+              "en_US": "Arathi",
+              "es_MX": "Arathi",
+              "pt_BR": "Arathi",
+              "de_DE": "Arathi",
+              "en_GB": "Arathi",
+              "es_ES": "Arathi",
+              "fr_FR": "Arathi",
+              "it_IT": "Arathi",
+              "ru_RU": "Arathi",
+              "ko_KR": "Arathi",
+              "zh_TW": "阿拉希",
+              "zh_CN": "阿拉希"
+            },
+            "id": 1334,
+            "slug": "arathi"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/3?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Hunter",
+              "es_MX": "Cazador",
+              "pt_BR": "Caçador",
+              "de_DE": "Jäger",
+              "en_GB": "Hunter",
+              "es_ES": "Cazador",
+              "fr_FR": "Chasseur",
+              "it_IT": "Cacciatore",
+              "ru_RU": "Охотник",
+              "ko_KR": "사냥꾼",
+              "zh_TW": "獵人",
+              "zh_CN": "猎人"
+            },
+            "id": 3
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/9?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Goblin",
+              "es_MX": "Goblin",
+              "pt_BR": "Goblin",
+              "de_DE": "Goblin",
+              "en_GB": "Goblin",
+              "es_ES": "Goblin",
+              "fr_FR": "Gobelin",
+              "it_IT": "Goblin",
+              "ru_RU": "Гоблин",
+              "ko_KR": "고블린",
+              "zh_TW": "哥布林",
+              "zh_CN": "地精"
+            },
+            "id": 9
+          },
+          "gender": {
+            "type": "FEMALE",
+            "name": {
+              "en_US": "Female",
+              "es_MX": "Femenino",
+              "pt_BR": "Feminino",
+              "de_DE": "Weiblich",
+              "en_GB": "Female",
+              "es_ES": "Femenino",
+              "fr_FR": "Femme",
+              "it_IT": "Femmina",
+              "ru_RU": "Женский",
+              "ko_KR": "여성",
+              "zh_TW": "女性",
+              "zh_CN": "女性"
+            }
+          },
+          "faction": {
+            "type": "HORDE",
+            "name": {
+              "en_US": "Horde",
+              "es_MX": "Horda",
+              "pt_BR": "Horda",
+              "de_DE": "Horde",
+              "en_GB": "Horde",
+              "es_ES": "Horda",
+              "fr_FR": "Horde",
+              "it_IT": "Orda",
+              "ru_RU": "Орда",
+              "ko_KR": "호드",
+              "zh_TW": "部落",
+              "zh_CN": "部落"
+            }
+          },
+          "level": 1
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/arathi/eternara?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/1334-lu?namespace=profile-eu"
+          },
+          "name": "Eternara",
+          "id": 85024761,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/1334?namespace=dynamic-eu"
+            },
+            "name": {
+              "en_US": "Arathi",
+              "es_MX": "Arathi",
+              "pt_BR": "Arathi",
+              "de_DE": "Arathi",
+              "en_GB": "Arathi",
+              "es_ES": "Arathi",
+              "fr_FR": "Arathi",
+              "it_IT": "Arathi",
+              "ru_RU": "Arathi",
+              "ko_KR": "Arathi",
+              "zh_TW": "阿拉希",
+              "zh_CN": "阿拉希"
+            },
+            "id": 1334,
+            "slug": "arathi"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/9?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Warlock",
+              "es_MX": "Brujo",
+              "pt_BR": "Bruxo",
+              "de_DE": "Hexenmeister",
+              "en_GB": "Warlock",
+              "es_ES": "Brujo",
+              "fr_FR": "Démoniste",
+              "it_IT": "Stregone",
+              "ru_RU": "Чернокнижник",
+              "ko_KR": "흑마법사",
+              "zh_TW": "術士",
+              "zh_CN": "术士"
+            },
+            "id": 9
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/9?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Goblin",
+              "es_MX": "Goblin",
+              "pt_BR": "Goblin",
+              "de_DE": "Goblin",
+              "en_GB": "Goblin",
+              "es_ES": "Goblin",
+              "fr_FR": "Gobelin",
+              "it_IT": "Goblin",
+              "ru_RU": "Гоблин",
+              "ko_KR": "고블린",
+              "zh_TW": "哥布林",
+              "zh_CN": "地精"
+            },
+            "id": 9
+          },
+          "gender": {
+            "type": "FEMALE",
+            "name": {
+              "en_US": "Female",
+              "es_MX": "Femenino",
+              "pt_BR": "Feminino",
+              "de_DE": "Weiblich",
+              "en_GB": "Female",
+              "es_ES": "Femenino",
+              "fr_FR": "Femme",
+              "it_IT": "Femmina",
+              "ru_RU": "Женский",
+              "ko_KR": "여성",
+              "zh_TW": "女性",
+              "zh_CN": "女性"
+            }
+          },
+          "faction": {
+            "type": "HORDE",
+            "name": {
+              "en_US": "Horde",
+              "es_MX": "Horda",
+              "pt_BR": "Horda",
+              "de_DE": "Horde",
+              "en_GB": "Horde",
+              "es_ES": "Horda",
+              "fr_FR": "Horde",
+              "it_IT": "Orda",
+              "ru_RU": "Орда",
+              "ko_KR": "호드",
+              "zh_TW": "部落",
+              "zh_CN": "部落"
+            }
+          },
+          "level": 1
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/arathi/eternarra?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/1334-lu?namespace=profile-eu"
+          },
+          "name": "Eternarra",
+          "id": 85026934,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/1334?namespace=dynamic-eu"
+            },
+            "name": {
+              "en_US": "Arathi",
+              "es_MX": "Arathi",
+              "pt_BR": "Arathi",
+              "de_DE": "Arathi",
+              "en_GB": "Arathi",
+              "es_ES": "Arathi",
+              "fr_FR": "Arathi",
+              "it_IT": "Arathi",
+              "ru_RU": "Arathi",
+              "ko_KR": "Arathi",
+              "zh_TW": "阿拉希",
+              "zh_CN": "阿拉希"
+            },
+            "id": 1334,
+            "slug": "arathi"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/8?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Mage",
+              "es_MX": "Mago",
+              "pt_BR": "Mago",
+              "de_DE": "Magier",
+              "en_GB": "Mage",
+              "es_ES": "Mago",
+              "fr_FR": "Mage",
+              "it_IT": "Mago",
+              "ru_RU": "Маг",
+              "ko_KR": "마법사",
+              "zh_TW": "法師",
+              "zh_CN": "法师"
+            },
+            "id": 8
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/9?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Goblin",
+              "es_MX": "Goblin",
+              "pt_BR": "Goblin",
+              "de_DE": "Goblin",
+              "en_GB": "Goblin",
+              "es_ES": "Goblin",
+              "fr_FR": "Gobelin",
+              "it_IT": "Goblin",
+              "ru_RU": "Гоблин",
+              "ko_KR": "고블린",
+              "zh_TW": "哥布林",
+              "zh_CN": "地精"
+            },
+            "id": 9
+          },
+          "gender": {
+            "type": "FEMALE",
+            "name": {
+              "en_US": "Female",
+              "es_MX": "Femenino",
+              "pt_BR": "Feminino",
+              "de_DE": "Weiblich",
+              "en_GB": "Female",
+              "es_ES": "Femenino",
+              "fr_FR": "Femme",
+              "it_IT": "Femmina",
+              "ru_RU": "Женский",
+              "ko_KR": "여성",
+              "zh_TW": "女性",
+              "zh_CN": "女性"
+            }
+          },
+          "faction": {
+            "type": "HORDE",
+            "name": {
+              "en_US": "Horde",
+              "es_MX": "Horda",
+              "pt_BR": "Horda",
+              "de_DE": "Horde",
+              "en_GB": "Horde",
+              "es_ES": "Horda",
+              "fr_FR": "Horde",
+              "it_IT": "Orda",
+              "ru_RU": "Орда",
+              "ko_KR": "호드",
+              "zh_TW": "部落",
+              "zh_CN": "部落"
+            }
+          },
+          "level": 1
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/arathi/soualo?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/1334-lu?namespace=profile-eu"
+          },
+          "name": "Soualo",
+          "id": 85164094,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/1334?namespace=dynamic-eu"
+            },
+            "name": {
+              "en_US": "Arathi",
+              "es_MX": "Arathi",
+              "pt_BR": "Arathi",
+              "de_DE": "Arathi",
+              "en_GB": "Arathi",
+              "es_ES": "Arathi",
+              "fr_FR": "Arathi",
+              "it_IT": "Arathi",
+              "ru_RU": "Arathi",
+              "ko_KR": "Arathi",
+              "zh_TW": "阿拉希",
+              "zh_CN": "阿拉希"
+            },
+            "id": 1334,
+            "slug": "arathi"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/7?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Shaman",
+              "es_MX": "Chamán",
+              "pt_BR": "Xamã",
+              "de_DE": "Schamane",
+              "en_GB": "Shaman",
+              "es_ES": "Chamán",
+              "fr_FR": "Chaman",
+              "it_IT": "Sciamano",
+              "ru_RU": "Шаман",
+              "ko_KR": "주술사",
+              "zh_TW": "薩滿",
+              "zh_CN": "萨满祭司"
+            },
+            "id": 7
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/2?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Orc",
+              "es_MX": "Orco",
+              "pt_BR": "Orc",
+              "de_DE": "Orc",
+              "en_GB": "Orc",
+              "es_ES": "Orco",
+              "fr_FR": "Orc",
+              "it_IT": "Orco",
+              "ru_RU": "Орк",
+              "ko_KR": "오크",
+              "zh_TW": "獸人",
+              "zh_CN": "兽人"
+            },
+            "id": 2
+          },
+          "gender": {
+            "type": "MALE",
+            "name": {
+              "en_US": "Male",
+              "es_MX": "Masculino",
+              "pt_BR": "Masculino",
+              "de_DE": "Männlich",
+              "en_GB": "Male",
+              "es_ES": "Masculino",
+              "fr_FR": "Homme",
+              "it_IT": "Maschio",
+              "ru_RU": "Мужской",
+              "ko_KR": "남성",
+              "zh_TW": "男性",
+              "zh_CN": "男性"
+            }
+          },
+          "faction": {
+            "type": "HORDE",
+            "name": {
+              "en_US": "Horde",
+              "es_MX": "Horda",
+              "pt_BR": "Horda",
+              "de_DE": "Horde",
+              "en_GB": "Horde",
+              "es_ES": "Horda",
+              "fr_FR": "Horde",
+              "it_IT": "Orda",
+              "ru_RU": "Орда",
+              "ko_KR": "호드",
+              "zh_TW": "部落",
+              "zh_CN": "部落"
+            }
+          },
+          "level": 2
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/naxxramas/everbbq?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/1624-lu?namespace=profile-eu"
+          },
+          "name": "Everbbq",
+          "id": 105751458,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/1624?namespace=dynamic-eu"
+            },
+            "name": {
+              "en_US": "Naxxramas",
+              "es_MX": "Naxxramas",
+              "pt_BR": "Naxxramas",
+              "de_DE": "Naxxramas",
+              "en_GB": "Naxxramas",
+              "es_ES": "Naxxramas",
+              "fr_FR": "Naxxramas",
+              "it_IT": "Naxxramas",
+              "ru_RU": "Naxxramas",
+              "ko_KR": "Naxxramas",
+              "zh_TW": "納克薩瑪斯",
+              "zh_CN": "纳克萨玛斯"
+            },
+            "id": 1624,
+            "slug": "naxxramas"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/1?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Warrior",
+              "es_MX": "Guerrero",
+              "pt_BR": "Guerreiro",
+              "de_DE": "Krieger",
+              "en_GB": "Warrior",
+              "es_ES": "Guerrero",
+              "fr_FR": "Guerrier",
+              "it_IT": "Guerriero",
+              "ru_RU": "Воин",
+              "ko_KR": "전사",
+              "zh_TW": "戰士",
+              "zh_CN": "战士"
+            },
+            "id": 1
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/1?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Human",
+              "es_MX": "Humano",
+              "pt_BR": "Humano",
+              "de_DE": "Mensch",
+              "en_GB": "Human",
+              "es_ES": "Humano",
+              "fr_FR": "Humain",
+              "it_IT": "Umano",
+              "ru_RU": "Человек",
+              "ko_KR": "인간",
+              "zh_TW": "人類",
+              "zh_CN": "人类"
+            },
+            "id": 1
+          },
+          "gender": {
+            "type": "FEMALE",
+            "name": {
+              "en_US": "Female",
+              "es_MX": "Femenino",
+              "pt_BR": "Feminino",
+              "de_DE": "Weiblich",
+              "en_GB": "Female",
+              "es_ES": "Femenino",
+              "fr_FR": "Femme",
+              "it_IT": "Femmina",
+              "ru_RU": "Женский",
+              "ko_KR": "여성",
+              "zh_TW": "女性",
+              "zh_CN": "女性"
+            }
+          },
+          "faction": {
+            "type": "ALLIANCE",
+            "name": {
+              "en_US": "Alliance",
+              "es_MX": "Alianza",
+              "pt_BR": "Aliança",
+              "de_DE": "Allianz",
+              "en_GB": "Alliance",
+              "es_ES": "Alianza",
+              "fr_FR": "Alliance",
+              "it_IT": "Alleanza",
+              "ru_RU": "Альянс",
+              "ko_KR": "얼라이언스",
+              "zh_TW": "聯盟",
+              "zh_CN": "联盟"
+            }
+          },
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": 82621273,
+      "characters": [
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/archimonde/bibikyu?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/539-lu?namespace=profile-eu"
+          },
+          "name": "Bibikyu",
+          "id": 165161229,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/539?namespace=dynamic-eu"
+            },
+            "name": {
+              "en_US": "Archimonde",
+              "es_MX": "Archimonde",
+              "pt_BR": "Archimonde",
+              "de_DE": "Archimonde",
+              "en_GB": "Archimonde",
+              "es_ES": "Archimonde",
+              "fr_FR": "Archimonde",
+              "it_IT": "Archimonde",
+              "ru_RU": "Archimonde",
+              "ko_KR": "Archimonde",
+              "zh_TW": "阿克蒙德",
+              "zh_CN": "阿克蒙德"
+            },
+            "id": 539,
+            "slug": "archimonde"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/10?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Monk",
+              "es_MX": "Monje",
+              "pt_BR": "Monge",
+              "de_DE": "Mönch",
+              "en_GB": "Monk",
+              "es_ES": "Monje",
+              "fr_FR": "Moine",
+              "it_IT": "Monaco",
+              "ru_RU": "Монах",
+              "ko_KR": "수도사",
+              "zh_TW": "武僧",
+              "zh_CN": "武僧"
+            },
+            "id": 10
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/1?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Human",
+              "es_MX": "Humano",
+              "pt_BR": "Humano",
+              "de_DE": "Mensch",
+              "en_GB": "Human",
+              "es_ES": "Humano",
+              "fr_FR": "Humain",
+              "it_IT": "Umano",
+              "ru_RU": "Человек",
+              "ko_KR": "인간",
+              "zh_TW": "人類",
+              "zh_CN": "人类"
+            },
+            "id": 1
+          },
+          "gender": {
+            "type": "MALE",
+            "name": {
+              "en_US": "Male",
+              "es_MX": "Masculino",
+              "pt_BR": "Masculino",
+              "de_DE": "Männlich",
+              "en_GB": "Male",
+              "es_ES": "Masculino",
+              "fr_FR": "Homme",
+              "it_IT": "Maschio",
+              "ru_RU": "Мужской",
+              "ko_KR": "남성",
+              "zh_TW": "男性",
+              "zh_CN": "男性"
+            }
+          },
+          "faction": {
+            "type": "ALLIANCE",
+            "name": {
+              "en_US": "Alliance",
+              "es_MX": "Alianza",
+              "pt_BR": "Aliança",
+              "de_DE": "Allianz",
+              "en_GB": "Alliance",
+              "es_ES": "Alianza",
+              "fr_FR": "Alliance",
+              "it_IT": "Alleanza",
+              "ru_RU": "Альянс",
+              "ko_KR": "얼라이언스",
+              "zh_TW": "聯盟",
+              "zh_CN": "联盟"
+            }
+          },
+          "level": 45
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/archimonde/pahaut?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/539-lu?namespace=profile-eu"
+          },
+          "name": "Pahaut",
+          "id": 165268882,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/539?namespace=dynamic-eu"
+            },
+            "name": {
+              "en_US": "Archimonde",
+              "es_MX": "Archimonde",
+              "pt_BR": "Archimonde",
+              "de_DE": "Archimonde",
+              "en_GB": "Archimonde",
+              "es_ES": "Archimonde",
+              "fr_FR": "Archimonde",
+              "it_IT": "Archimonde",
+              "ru_RU": "Archimonde",
+              "ko_KR": "Archimonde",
+              "zh_TW": "阿克蒙德",
+              "zh_CN": "阿克蒙德"
+            },
+            "id": 539,
+            "slug": "archimonde"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/7?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Shaman",
+              "es_MX": "Chamán",
+              "pt_BR": "Xamã",
+              "de_DE": "Schamane",
+              "en_GB": "Shaman",
+              "es_ES": "Chamán",
+              "fr_FR": "Chaman",
+              "it_IT": "Sciamano",
+              "ru_RU": "Шаман",
+              "ko_KR": "주술사",
+              "zh_TW": "薩滿",
+              "zh_CN": "萨满祭司"
+            },
+            "id": 7
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/3?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Dwarf",
+              "es_MX": "Enano",
+              "pt_BR": "Anão",
+              "de_DE": "Zwerg",
+              "en_GB": "Dwarf",
+              "es_ES": "Enano",
+              "fr_FR": "Nain",
+              "it_IT": "Nano",
+              "ru_RU": "Дворф",
+              "ko_KR": "드워프",
+              "zh_TW": "矮人",
+              "zh_CN": "矮人"
+            },
+            "id": 3
+          },
+          "gender": {
+            "type": "MALE",
+            "name": {
+              "en_US": "Male",
+              "es_MX": "Masculino",
+              "pt_BR": "Masculino",
+              "de_DE": "Männlich",
+              "en_GB": "Male",
+              "es_ES": "Masculino",
+              "fr_FR": "Homme",
+              "it_IT": "Maschio",
+              "ru_RU": "Мужской",
+              "ko_KR": "남성",
+              "zh_TW": "男性",
+              "zh_CN": "男性"
+            }
+          },
+          "faction": {
+            "type": "ALLIANCE",
+            "name": {
+              "en_US": "Alliance",
+              "es_MX": "Alianza",
+              "pt_BR": "Aliança",
+              "de_DE": "Allianz",
+              "en_GB": "Alliance",
+              "es_ES": "Alianza",
+              "fr_FR": "Alliance",
+              "it_IT": "Alleanza",
+              "ru_RU": "Альянс",
+              "ko_KR": "얼라이언스",
+              "zh_TW": "聯盟",
+              "zh_CN": "联盟"
+            }
+          },
+          "level": 16
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/archimonde/bbcute?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/539-lu?namespace=profile-eu"
+          },
+          "name": "Bbcute",
+          "id": 167769697,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/539?namespace=dynamic-eu"
+            },
+            "name": {
+              "en_US": "Archimonde",
+              "es_MX": "Archimonde",
+              "pt_BR": "Archimonde",
+              "de_DE": "Archimonde",
+              "en_GB": "Archimonde",
+              "es_ES": "Archimonde",
+              "fr_FR": "Archimonde",
+              "it_IT": "Archimonde",
+              "ru_RU": "Archimonde",
+              "ko_KR": "Archimonde",
+              "zh_TW": "阿克蒙德",
+              "zh_CN": "阿克蒙德"
+            },
+            "id": 539,
+            "slug": "archimonde"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/3?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Hunter",
+              "es_MX": "Cazador",
+              "pt_BR": "Caçador",
+              "de_DE": "Jäger",
+              "en_GB": "Hunter",
+              "es_ES": "Cazador",
+              "fr_FR": "Chasseur",
+              "it_IT": "Cacciatore",
+              "ru_RU": "Охотник",
+              "ko_KR": "사냥꾼",
+              "zh_TW": "獵人",
+              "zh_CN": "猎人"
+            },
+            "id": 3
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/2?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Orc",
+              "es_MX": "Orco",
+              "pt_BR": "Orc",
+              "de_DE": "Orc",
+              "en_GB": "Orc",
+              "es_ES": "Orco",
+              "fr_FR": "Orc",
+              "it_IT": "Orco",
+              "ru_RU": "Орк",
+              "ko_KR": "오크",
+              "zh_TW": "獸人",
+              "zh_CN": "兽人"
+            },
+            "id": 2
+          },
+          "gender": {
+            "type": "MALE",
+            "name": {
+              "en_US": "Male",
+              "es_MX": "Masculino",
+              "pt_BR": "Masculino",
+              "de_DE": "Männlich",
+              "en_GB": "Male",
+              "es_ES": "Masculino",
+              "fr_FR": "Homme",
+              "it_IT": "Maschio",
+              "ru_RU": "Мужской",
+              "ko_KR": "남성",
+              "zh_TW": "男性",
+              "zh_CN": "男性"
+            }
+          },
+          "faction": {
+            "type": "HORDE",
+            "name": {
+              "en_US": "Horde",
+              "es_MX": "Horda",
+              "pt_BR": "Horda",
+              "de_DE": "Horde",
+              "en_GB": "Horde",
+              "es_ES": "Horda",
+              "fr_FR": "Horde",
+              "it_IT": "Orda",
+              "ru_RU": "Орда",
+              "ko_KR": "호드",
+              "zh_TW": "部落",
+              "zh_CN": "部落"
+            }
+          },
+          "level": 60
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/archimonde/antonain?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/539-lu?namespace=profile-eu"
+          },
+          "name": "Antonain",
+          "id": 195312161,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/539?namespace=dynamic-eu"
+            },
+            "name": {
+              "en_US": "Archimonde",
+              "es_MX": "Archimonde",
+              "pt_BR": "Archimonde",
+              "de_DE": "Archimonde",
+              "en_GB": "Archimonde",
+              "es_ES": "Archimonde",
+              "fr_FR": "Archimonde",
+              "it_IT": "Archimonde",
+              "ru_RU": "Archimonde",
+              "ko_KR": "Archimonde",
+              "zh_TW": "阿克蒙德",
+              "zh_CN": "阿克蒙德"
+            },
+            "id": 539,
+            "slug": "archimonde"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/2?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Paladin",
+              "es_MX": "Paladín",
+              "pt_BR": "Paladino",
+              "de_DE": "Paladin",
+              "en_GB": "Paladin",
+              "es_ES": "Paladín",
+              "fr_FR": "Paladin",
+              "it_IT": "Paladino",
+              "ru_RU": "Паладин",
+              "ko_KR": "성기사",
+              "zh_TW": "聖騎士",
+              "zh_CN": "圣骑士"
+            },
+            "id": 2
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/3?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Dwarf",
+              "es_MX": "Enano",
+              "pt_BR": "Anão",
+              "de_DE": "Zwerg",
+              "en_GB": "Dwarf",
+              "es_ES": "Enano",
+              "fr_FR": "Nain",
+              "it_IT": "Nano",
+              "ru_RU": "Дворф",
+              "ko_KR": "드워프",
+              "zh_TW": "矮人",
+              "zh_CN": "矮人"
+            },
+            "id": 3
+          },
+          "gender": {
+            "type": "MALE",
+            "name": {
+              "en_US": "Male",
+              "es_MX": "Masculino",
+              "pt_BR": "Masculino",
+              "de_DE": "Männlich",
+              "en_GB": "Male",
+              "es_ES": "Masculino",
+              "fr_FR": "Homme",
+              "it_IT": "Maschio",
+              "ru_RU": "Мужской",
+              "ko_KR": "남성",
+              "zh_TW": "男性",
+              "zh_CN": "男性"
+            }
+          },
+          "faction": {
+            "type": "ALLIANCE",
+            "name": {
+              "en_US": "Alliance",
+              "es_MX": "Alianza",
+              "pt_BR": "Aliança",
+              "de_DE": "Allianz",
+              "en_GB": "Alliance",
+              "es_ES": "Alianza",
+              "fr_FR": "Alliance",
+              "it_IT": "Alleanza",
+              "ru_RU": "Альянс",
+              "ko_KR": "얼라이언스",
+              "zh_TW": "聯盟",
+              "zh_CN": "联盟"
+            }
+          },
+          "level": 33
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/archimonde/daedalus?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/539-lu?namespace=profile-eu"
+          },
+          "name": "Daedalus",
+          "id": 195372797,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/539?namespace=dynamic-eu"
+            },
+            "name": {
+              "en_US": "Archimonde",
+              "es_MX": "Archimonde",
+              "pt_BR": "Archimonde",
+              "de_DE": "Archimonde",
+              "en_GB": "Archimonde",
+              "es_ES": "Archimonde",
+              "fr_FR": "Archimonde",
+              "it_IT": "Archimonde",
+              "ru_RU": "Archimonde",
+              "ko_KR": "Archimonde",
+              "zh_TW": "阿克蒙德",
+              "zh_CN": "阿克蒙德"
+            },
+            "id": 539,
+            "slug": "archimonde"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/11?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Druid",
+              "es_MX": "Druida",
+              "pt_BR": "Druida",
+              "de_DE": "Druide",
+              "en_GB": "Druid",
+              "es_ES": "Druida",
+              "fr_FR": "Druide",
+              "it_IT": "Druido",
+              "ru_RU": "Друид",
+              "ko_KR": "드루이드",
+              "zh_TW": "德魯伊",
+              "zh_CN": "德鲁伊"
+            },
+            "id": 11
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/4?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Night Elf",
+              "es_MX": "Elfo de la noche",
+              "pt_BR": "Elfo Noturno",
+              "de_DE": "Nachtelf",
+              "en_GB": "Night Elf",
+              "es_ES": "Elfo de la noche",
+              "fr_FR": "Elfe de la nuit",
+              "it_IT": "Elfo della Notte",
+              "ru_RU": "Ночной эльф",
+              "ko_KR": "나이트 엘프",
+              "zh_TW": "夜精靈",
+              "zh_CN": "暗夜精灵"
+            },
+            "id": 4
+          },
+          "gender": {
+            "type": "MALE",
+            "name": {
+              "en_US": "Male",
+              "es_MX": "Masculino",
+              "pt_BR": "Masculino",
+              "de_DE": "Männlich",
+              "en_GB": "Male",
+              "es_ES": "Masculino",
+              "fr_FR": "Homme",
+              "it_IT": "Maschio",
+              "ru_RU": "Мужской",
+              "ko_KR": "남성",
+              "zh_TW": "男性",
+              "zh_CN": "男性"
+            }
+          },
+          "faction": {
+            "type": "ALLIANCE",
+            "name": {
+              "en_US": "Alliance",
+              "es_MX": "Alianza",
+              "pt_BR": "Aliança",
+              "de_DE": "Allianz",
+              "en_GB": "Alliance",
+              "es_ES": "Alianza",
+              "fr_FR": "Alliance",
+              "it_IT": "Alleanza",
+              "ru_RU": "Альянс",
+              "ko_KR": "얼라이언스",
+              "zh_TW": "聯盟",
+              "zh_CN": "联盟"
+            }
+          },
+          "level": 36
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/archimonde/grosabots?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/539-lu?namespace=profile-eu"
+          },
+          "name": "Grosabots",
+          "id": 195392101,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/539?namespace=dynamic-eu"
+            },
+            "name": {
+              "en_US": "Archimonde",
+              "es_MX": "Archimonde",
+              "pt_BR": "Archimonde",
+              "de_DE": "Archimonde",
+              "en_GB": "Archimonde",
+              "es_ES": "Archimonde",
+              "fr_FR": "Archimonde",
+              "it_IT": "Archimonde",
+              "ru_RU": "Archimonde",
+              "ko_KR": "Archimonde",
+              "zh_TW": "阿克蒙德",
+              "zh_CN": "阿克蒙德"
+            },
+            "id": 539,
+            "slug": "archimonde"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/7?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Shaman",
+              "es_MX": "Chamán",
+              "pt_BR": "Xamã",
+              "de_DE": "Schamane",
+              "en_GB": "Shaman",
+              "es_ES": "Chamán",
+              "fr_FR": "Chaman",
+              "it_IT": "Sciamano",
+              "ru_RU": "Шаман",
+              "ko_KR": "주술사",
+              "zh_TW": "薩滿",
+              "zh_CN": "萨满祭司"
+            },
+            "id": 7
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/11?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Draenei",
+              "es_MX": "Draenei",
+              "pt_BR": "Draenei",
+              "de_DE": "Draenei",
+              "en_GB": "Draenei",
+              "es_ES": "Draenei",
+              "fr_FR": "Draeneï",
+              "it_IT": "Draenei",
+              "ru_RU": "Дреней",
+              "ko_KR": "드레나이",
+              "zh_TW": "德萊尼",
+              "zh_CN": "德莱尼"
+            },
+            "id": 11
+          },
+          "gender": {
+            "type": "FEMALE",
+            "name": {
+              "en_US": "Female",
+              "es_MX": "Femenino",
+              "pt_BR": "Feminino",
+              "de_DE": "Weiblich",
+              "en_GB": "Female",
+              "es_ES": "Femenino",
+              "fr_FR": "Femme",
+              "it_IT": "Femmina",
+              "ru_RU": "Женский",
+              "ko_KR": "여성",
+              "zh_TW": "女性",
+              "zh_CN": "女性"
+            }
+          },
+          "faction": {
+            "type": "ALLIANCE",
+            "name": {
+              "en_US": "Alliance",
+              "es_MX": "Alianza",
+              "pt_BR": "Aliança",
+              "de_DE": "Allianz",
+              "en_GB": "Alliance",
+              "es_ES": "Alianza",
+              "fr_FR": "Alliance",
+              "it_IT": "Alleanza",
+              "ru_RU": "Альянс",
+              "ko_KR": "얼라이언스",
+              "zh_TW": "聯盟",
+              "zh_CN": "联盟"
+            }
+          },
+          "level": 2
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/archimonde/didieraoult?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/539-lu?namespace=profile-eu"
+          },
+          "name": "Didieraoult",
+          "id": 195419884,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/539?namespace=dynamic-eu"
+            },
+            "name": {
+              "en_US": "Archimonde",
+              "es_MX": "Archimonde",
+              "pt_BR": "Archimonde",
+              "de_DE": "Archimonde",
+              "en_GB": "Archimonde",
+              "es_ES": "Archimonde",
+              "fr_FR": "Archimonde",
+              "it_IT": "Archimonde",
+              "ru_RU": "Archimonde",
+              "ko_KR": "Archimonde",
+              "zh_TW": "阿克蒙德",
+              "zh_CN": "阿克蒙德"
+            },
+            "id": 539,
+            "slug": "archimonde"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/1?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Warrior",
+              "es_MX": "Guerrero",
+              "pt_BR": "Guerreiro",
+              "de_DE": "Krieger",
+              "en_GB": "Warrior",
+              "es_ES": "Guerrero",
+              "fr_FR": "Guerrier",
+              "it_IT": "Guerriero",
+              "ru_RU": "Воин",
+              "ko_KR": "전사",
+              "zh_TW": "戰士",
+              "zh_CN": "战士"
+            },
+            "id": 1
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/1?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Human",
+              "es_MX": "Humano",
+              "pt_BR": "Humano",
+              "de_DE": "Mensch",
+              "en_GB": "Human",
+              "es_ES": "Humano",
+              "fr_FR": "Humain",
+              "it_IT": "Umano",
+              "ru_RU": "Человек",
+              "ko_KR": "인간",
+              "zh_TW": "人類",
+              "zh_CN": "人类"
+            },
+            "id": 1
+          },
+          "gender": {
+            "type": "MALE",
+            "name": {
+              "en_US": "Male",
+              "es_MX": "Masculino",
+              "pt_BR": "Masculino",
+              "de_DE": "Männlich",
+              "en_GB": "Male",
+              "es_ES": "Masculino",
+              "fr_FR": "Homme",
+              "it_IT": "Maschio",
+              "ru_RU": "Мужской",
+              "ko_KR": "남성",
+              "zh_TW": "男性",
+              "zh_CN": "男性"
+            }
+          },
+          "faction": {
+            "type": "ALLIANCE",
+            "name": {
+              "en_US": "Alliance",
+              "es_MX": "Alianza",
+              "pt_BR": "Aliança",
+              "de_DE": "Allianz",
+              "en_GB": "Alliance",
+              "es_ES": "Alianza",
+              "fr_FR": "Alliance",
+              "it_IT": "Alleanza",
+              "ru_RU": "Альянс",
+              "ko_KR": "얼라이언스",
+              "zh_TW": "聯盟",
+              "zh_CN": "联盟"
+            }
+          },
+          "level": 50
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/archimonde/b%C3%B4f?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/539-lu?namespace=profile-eu"
+          },
+          "name": "Bôf",
+          "id": 195573133,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/539?namespace=dynamic-eu"
+            },
+            "name": {
+              "en_US": "Archimonde",
+              "es_MX": "Archimonde",
+              "pt_BR": "Archimonde",
+              "de_DE": "Archimonde",
+              "en_GB": "Archimonde",
+              "es_ES": "Archimonde",
+              "fr_FR": "Archimonde",
+              "it_IT": "Archimonde",
+              "ru_RU": "Archimonde",
+              "ko_KR": "Archimonde",
+              "zh_TW": "阿克蒙德",
+              "zh_CN": "阿克蒙德"
+            },
+            "id": 539,
+            "slug": "archimonde"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/12?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Demon Hunter",
+              "es_MX": "Cazador de demonios",
+              "pt_BR": "Caçador de Demônios",
+              "de_DE": "Dämonenjäger",
+              "en_GB": "Demon Hunter",
+              "es_ES": "Cazador de demonios",
+              "fr_FR": "Chasseur de démons",
+              "it_IT": "Cacciatore di Demoni",
+              "ru_RU": "Охотник на демонов",
+              "ko_KR": "악마사냥꾼",
+              "zh_TW": "惡魔獵人",
+              "zh_CN": "恶魔猎手"
+            },
+            "id": 12
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/4?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Night Elf",
+              "es_MX": "Elfo de la noche",
+              "pt_BR": "Elfo Noturno",
+              "de_DE": "Nachtelf",
+              "en_GB": "Night Elf",
+              "es_ES": "Elfo de la noche",
+              "fr_FR": "Elfe de la nuit",
+              "it_IT": "Elfo della Notte",
+              "ru_RU": "Ночной эльф",
+              "ko_KR": "나이트 엘프",
+              "zh_TW": "夜精靈",
+              "zh_CN": "暗夜精灵"
+            },
+            "id": 4
+          },
+          "gender": {
+            "type": "FEMALE",
+            "name": {
+              "en_US": "Female",
+              "es_MX": "Femenino",
+              "pt_BR": "Feminino",
+              "de_DE": "Weiblich",
+              "en_GB": "Female",
+              "es_ES": "Femenino",
+              "fr_FR": "Femme",
+              "it_IT": "Femmina",
+              "ru_RU": "Женский",
+              "ko_KR": "여성",
+              "zh_TW": "女性",
+              "zh_CN": "女性"
+            }
+          },
+          "faction": {
+            "type": "ALLIANCE",
+            "name": {
+              "en_US": "Alliance",
+              "es_MX": "Alianza",
+              "pt_BR": "Aliança",
+              "de_DE": "Allianz",
+              "en_GB": "Alliance",
+              "es_ES": "Alianza",
+              "fr_FR": "Alliance",
+              "it_IT": "Alleanza",
+              "ru_RU": "Альянс",
+              "ko_KR": "얼라이언스",
+              "zh_TW": "聯盟",
+              "zh_CN": "联盟"
+            }
+          },
+          "level": 8
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/elune/ever?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/540-lu?namespace=profile-eu"
+          },
+          "name": "Ever",
+          "id": 146007152,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/540?namespace=dynamic-eu"
+            },
+            "name": {
+              "en_US": "Elune",
+              "es_MX": "Elune",
+              "pt_BR": "Elune",
+              "de_DE": "Elune",
+              "en_GB": "Elune",
+              "es_ES": "Elune",
+              "fr_FR": "Elune",
+              "it_IT": "Elune",
+              "ru_RU": "Elune",
+              "ko_KR": "Elune",
+              "zh_TW": "伊露恩",
+              "zh_CN": "艾露恩"
+            },
+            "id": 540,
+            "slug": "elune"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/12?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Demon Hunter",
+              "es_MX": "Cazador de demonios",
+              "pt_BR": "Caçador de Demônios",
+              "de_DE": "Dämonenjäger",
+              "en_GB": "Demon Hunter",
+              "es_ES": "Cazador de demonios",
+              "fr_FR": "Chasseur de démons",
+              "it_IT": "Cacciatore di Demoni",
+              "ru_RU": "Охотник на демонов",
+              "ko_KR": "악마사냥꾼",
+              "zh_TW": "惡魔獵人",
+              "zh_CN": "恶魔猎手"
+            },
+            "id": 12
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/4?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Night Elf",
+              "es_MX": "Elfo de la noche",
+              "pt_BR": "Elfo Noturno",
+              "de_DE": "Nachtelf",
+              "en_GB": "Night Elf",
+              "es_ES": "Elfo de la noche",
+              "fr_FR": "Elfe de la nuit",
+              "it_IT": "Elfo della Notte",
+              "ru_RU": "Ночной эльф",
+              "ko_KR": "나이트 엘프",
+              "zh_TW": "夜精靈",
+              "zh_CN": "暗夜精灵"
+            },
+            "id": 4
+          },
+          "gender": {
+            "type": "MALE",
+            "name": {
+              "en_US": "Male",
+              "es_MX": "Masculino",
+              "pt_BR": "Masculino",
+              "de_DE": "Männlich",
+              "en_GB": "Male",
+              "es_ES": "Masculino",
+              "fr_FR": "Homme",
+              "it_IT": "Maschio",
+              "ru_RU": "Мужской",
+              "ko_KR": "남성",
+              "zh_TW": "男性",
+              "zh_CN": "男性"
+            }
+          },
+          "faction": {
+            "type": "ALLIANCE",
+            "name": {
+              "en_US": "Alliance",
+              "es_MX": "Alianza",
+              "pt_BR": "Aliança",
+              "de_DE": "Allianz",
+              "en_GB": "Alliance",
+              "es_ES": "Alianza",
+              "fr_FR": "Alliance",
+              "it_IT": "Alleanza",
+              "ru_RU": "Альянс",
+              "ko_KR": "얼라이언스",
+              "zh_TW": "聯盟",
+              "zh_CN": "联盟"
+            }
+          },
+          "level": 45
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/hyjal/everbibikyu?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/542-lu?namespace=profile-eu"
+          },
+          "name": "Everbibikyu",
+          "id": 151865449,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/542?namespace=dynamic-eu"
+            },
+            "name": {
+              "en_US": "Hyjal",
+              "es_MX": "Hyjal",
+              "pt_BR": "Hyjal",
+              "de_DE": "Hyjal",
+              "en_GB": "Hyjal",
+              "es_ES": "Hyjal",
+              "fr_FR": "Hyjal",
+              "it_IT": "Hyjal",
+              "ru_RU": "Hyjal",
+              "ko_KR": "Hyjal",
+              "zh_TW": "海加爾山",
+              "zh_CN": "海加尔"
+            },
+            "id": 542,
+            "slug": "hyjal"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/1?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Warrior",
+              "es_MX": "Guerrero",
+              "pt_BR": "Guerreiro",
+              "de_DE": "Krieger",
+              "en_GB": "Warrior",
+              "es_ES": "Guerrero",
+              "fr_FR": "Guerrier",
+              "it_IT": "Guerriero",
+              "ru_RU": "Воин",
+              "ko_KR": "전사",
+              "zh_TW": "戰士",
+              "zh_CN": "战士"
+            },
+            "id": 1
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/1?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Human",
+              "es_MX": "Humano",
+              "pt_BR": "Humano",
+              "de_DE": "Mensch",
+              "en_GB": "Human",
+              "es_ES": "Humano",
+              "fr_FR": "Humain",
+              "it_IT": "Umano",
+              "ru_RU": "Человек",
+              "ko_KR": "인간",
+              "zh_TW": "人類",
+              "zh_CN": "人类"
+            },
+            "id": 1
+          },
+          "gender": {
+            "type": "MALE",
+            "name": {
+              "en_US": "Male",
+              "es_MX": "Masculino",
+              "pt_BR": "Masculino",
+              "de_DE": "Männlich",
+              "en_GB": "Male",
+              "es_ES": "Masculino",
+              "fr_FR": "Homme",
+              "it_IT": "Maschio",
+              "ru_RU": "Мужской",
+              "ko_KR": "남성",
+              "zh_TW": "男性",
+              "zh_CN": "男性"
+            }
+          },
+          "faction": {
+            "type": "ALLIANCE",
+            "name": {
+              "en_US": "Alliance",
+              "es_MX": "Alianza",
+              "pt_BR": "Aliança",
+              "de_DE": "Allianz",
+              "en_GB": "Alliance",
+              "es_ES": "Alianza",
+              "fr_FR": "Alliance",
+              "it_IT": "Alleanza",
+              "ru_RU": "Альянс",
+              "ko_KR": "얼라이언스",
+              "zh_TW": "聯盟",
+              "zh_CN": "联盟"
+            }
+          },
+          "level": 45
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/hyjal/bibikyu?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/542-lu?namespace=profile-eu"
+          },
+          "name": "Bibikyu",
+          "id": 156394583,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/542?namespace=dynamic-eu"
+            },
+            "name": {
+              "en_US": "Hyjal",
+              "es_MX": "Hyjal",
+              "pt_BR": "Hyjal",
+              "de_DE": "Hyjal",
+              "en_GB": "Hyjal",
+              "es_ES": "Hyjal",
+              "fr_FR": "Hyjal",
+              "it_IT": "Hyjal",
+              "ru_RU": "Hyjal",
+              "ko_KR": "Hyjal",
+              "zh_TW": "海加爾山",
+              "zh_CN": "海加尔"
+            },
+            "id": 542,
+            "slug": "hyjal"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/8?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Mage",
+              "es_MX": "Mago",
+              "pt_BR": "Mago",
+              "de_DE": "Magier",
+              "en_GB": "Mage",
+              "es_ES": "Mago",
+              "fr_FR": "Mage",
+              "it_IT": "Mago",
+              "ru_RU": "Маг",
+              "ko_KR": "마법사",
+              "zh_TW": "法師",
+              "zh_CN": "法师"
+            },
+            "id": 8
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/1?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Human",
+              "es_MX": "Humano",
+              "pt_BR": "Humano",
+              "de_DE": "Mensch",
+              "en_GB": "Human",
+              "es_ES": "Humano",
+              "fr_FR": "Humain",
+              "it_IT": "Umano",
+              "ru_RU": "Человек",
+              "ko_KR": "인간",
+              "zh_TW": "人類",
+              "zh_CN": "人类"
+            },
+            "id": 1
+          },
+          "gender": {
+            "type": "MALE",
+            "name": {
+              "en_US": "Male",
+              "es_MX": "Masculino",
+              "pt_BR": "Masculino",
+              "de_DE": "Männlich",
+              "en_GB": "Male",
+              "es_ES": "Masculino",
+              "fr_FR": "Homme",
+              "it_IT": "Maschio",
+              "ru_RU": "Мужской",
+              "ko_KR": "남성",
+              "zh_TW": "男性",
+              "zh_CN": "男性"
+            }
+          },
+          "faction": {
+            "type": "ALLIANCE",
+            "name": {
+              "en_US": "Alliance",
+              "es_MX": "Alianza",
+              "pt_BR": "Aliança",
+              "de_DE": "Allianz",
+              "en_GB": "Alliance",
+              "es_ES": "Alianza",
+              "fr_FR": "Alliance",
+              "it_IT": "Alleanza",
+              "ru_RU": "Альянс",
+              "ko_KR": "얼라이언스",
+              "zh_TW": "聯盟",
+              "zh_CN": "联盟"
+            }
+          },
+          "level": 50
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/hyjal/%C3%AAverbbq?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/542-lu?namespace=profile-eu"
+          },
+          "name": "Êverbbq",
+          "id": 182174497,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/542?namespace=dynamic-eu"
+            },
+            "name": {
+              "en_US": "Hyjal",
+              "es_MX": "Hyjal",
+              "pt_BR": "Hyjal",
+              "de_DE": "Hyjal",
+              "en_GB": "Hyjal",
+              "es_ES": "Hyjal",
+              "fr_FR": "Hyjal",
+              "it_IT": "Hyjal",
+              "ru_RU": "Hyjal",
+              "ko_KR": "Hyjal",
+              "zh_TW": "海加爾山",
+              "zh_CN": "海加尔"
+            },
+            "id": 542,
+            "slug": "hyjal"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/8?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Mage",
+              "es_MX": "Mago",
+              "pt_BR": "Mago",
+              "de_DE": "Magier",
+              "en_GB": "Mage",
+              "es_ES": "Mago",
+              "fr_FR": "Mage",
+              "it_IT": "Mago",
+              "ru_RU": "Маг",
+              "ko_KR": "마법사",
+              "zh_TW": "法師",
+              "zh_CN": "法师"
+            },
+            "id": 8
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/5?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Undead",
+              "es_MX": "No-muerto",
+              "pt_BR": "Morto-vivo",
+              "de_DE": "Untoter",
+              "en_GB": "Undead",
+              "es_ES": "No-muerto",
+              "fr_FR": "Mort-vivant",
+              "it_IT": "Non Morto",
+              "ru_RU": "Нежить",
+              "ko_KR": "언데드",
+              "zh_TW": "不死族",
+              "zh_CN": "亡灵"
+            },
+            "id": 5
+          },
+          "gender": {
+            "type": "MALE",
+            "name": {
+              "en_US": "Male",
+              "es_MX": "Masculino",
+              "pt_BR": "Masculino",
+              "de_DE": "Männlich",
+              "en_GB": "Male",
+              "es_ES": "Masculino",
+              "fr_FR": "Homme",
+              "it_IT": "Maschio",
+              "ru_RU": "Мужской",
+              "ko_KR": "남성",
+              "zh_TW": "男性",
+              "zh_CN": "男性"
+            }
+          },
+          "faction": {
+            "type": "HORDE",
+            "name": {
+              "en_US": "Horde",
+              "es_MX": "Horda",
+              "pt_BR": "Horda",
+              "de_DE": "Horde",
+              "en_GB": "Horde",
+              "es_ES": "Horda",
+              "fr_FR": "Horde",
+              "it_IT": "Orda",
+              "ru_RU": "Орда",
+              "ko_KR": "호드",
+              "zh_TW": "部落",
+              "zh_CN": "部落"
+            }
+          },
+          "level": 52
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/hyjal/edenshoulder?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/542-lu?namespace=profile-eu"
+          },
+          "name": "Edenshoulder",
+          "id": 195692571,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/542?namespace=dynamic-eu"
+            },
+            "name": {
+              "en_US": "Hyjal",
+              "es_MX": "Hyjal",
+              "pt_BR": "Hyjal",
+              "de_DE": "Hyjal",
+              "en_GB": "Hyjal",
+              "es_ES": "Hyjal",
+              "fr_FR": "Hyjal",
+              "it_IT": "Hyjal",
+              "ru_RU": "Hyjal",
+              "ko_KR": "Hyjal",
+              "zh_TW": "海加爾山",
+              "zh_CN": "海加尔"
+            },
+            "id": 542,
+            "slug": "hyjal"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/1?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Warrior",
+              "es_MX": "Guerrero",
+              "pt_BR": "Guerreiro",
+              "de_DE": "Krieger",
+              "en_GB": "Warrior",
+              "es_ES": "Guerrero",
+              "fr_FR": "Guerrier",
+              "it_IT": "Guerriero",
+              "ru_RU": "Воин",
+              "ko_KR": "전사",
+              "zh_TW": "戰士",
+              "zh_CN": "战士"
+            },
+            "id": 1
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/2?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Orc",
+              "es_MX": "Orco",
+              "pt_BR": "Orc",
+              "de_DE": "Orc",
+              "en_GB": "Orc",
+              "es_ES": "Orco",
+              "fr_FR": "Orc",
+              "it_IT": "Orco",
+              "ru_RU": "Орк",
+              "ko_KR": "오크",
+              "zh_TW": "獸人",
+              "zh_CN": "兽人"
+            },
+            "id": 2
+          },
+          "gender": {
+            "type": "MALE",
+            "name": {
+              "en_US": "Male",
+              "es_MX": "Masculino",
+              "pt_BR": "Masculino",
+              "de_DE": "Männlich",
+              "en_GB": "Male",
+              "es_ES": "Masculino",
+              "fr_FR": "Homme",
+              "it_IT": "Maschio",
+              "ru_RU": "Мужской",
+              "ko_KR": "남성",
+              "zh_TW": "男性",
+              "zh_CN": "男性"
+            }
+          },
+          "faction": {
+            "type": "HORDE",
+            "name": {
+              "en_US": "Horde",
+              "es_MX": "Horda",
+              "pt_BR": "Horda",
+              "de_DE": "Horde",
+              "en_GB": "Horde",
+              "es_ES": "Horda",
+              "fr_FR": "Horde",
+              "it_IT": "Orda",
+              "ru_RU": "Орда",
+              "ko_KR": "호드",
+              "zh_TW": "部落",
+              "zh_CN": "部落"
+            }
+          },
+          "level": 51
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/hyjal/%C3%ABverbbq?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/542-lu?namespace=profile-eu"
+          },
+          "name": "Ëverbbq",
+          "id": 195889975,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/542?namespace=dynamic-eu"
+            },
+            "name": {
+              "en_US": "Hyjal",
+              "es_MX": "Hyjal",
+              "pt_BR": "Hyjal",
+              "de_DE": "Hyjal",
+              "en_GB": "Hyjal",
+              "es_ES": "Hyjal",
+              "fr_FR": "Hyjal",
+              "it_IT": "Hyjal",
+              "ru_RU": "Hyjal",
+              "ko_KR": "Hyjal",
+              "zh_TW": "海加爾山",
+              "zh_CN": "海加尔"
+            },
+            "id": 542,
+            "slug": "hyjal"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/10?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Monk",
+              "es_MX": "Monje",
+              "pt_BR": "Monge",
+              "de_DE": "Mönch",
+              "en_GB": "Monk",
+              "es_ES": "Monje",
+              "fr_FR": "Moine",
+              "it_IT": "Monaco",
+              "ru_RU": "Монах",
+              "ko_KR": "수도사",
+              "zh_TW": "武僧",
+              "zh_CN": "武僧"
+            },
+            "id": 10
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/2?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Orc",
+              "es_MX": "Orco",
+              "pt_BR": "Orc",
+              "de_DE": "Orc",
+              "en_GB": "Orc",
+              "es_ES": "Orco",
+              "fr_FR": "Orc",
+              "it_IT": "Orco",
+              "ru_RU": "Орк",
+              "ko_KR": "오크",
+              "zh_TW": "獸人",
+              "zh_CN": "兽人"
+            },
+            "id": 2
+          },
+          "gender": {
+            "type": "MALE",
+            "name": {
+              "en_US": "Male",
+              "es_MX": "Masculino",
+              "pt_BR": "Masculino",
+              "de_DE": "Männlich",
+              "en_GB": "Male",
+              "es_ES": "Masculino",
+              "fr_FR": "Homme",
+              "it_IT": "Maschio",
+              "ru_RU": "Мужской",
+              "ko_KR": "남성",
+              "zh_TW": "男性",
+              "zh_CN": "男性"
+            }
+          },
+          "faction": {
+            "type": "HORDE",
+            "name": {
+              "en_US": "Horde",
+              "es_MX": "Horda",
+              "pt_BR": "Horda",
+              "de_DE": "Horde",
+              "en_GB": "Horde",
+              "es_ES": "Horda",
+              "fr_FR": "Horde",
+              "it_IT": "Orda",
+              "ru_RU": "Орда",
+              "ko_KR": "호드",
+              "zh_TW": "部落",
+              "zh_CN": "部落"
+            }
+          },
+          "level": 60
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/hyjal/belanu?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/542-lu?namespace=profile-eu"
+          },
+          "name": "Belanu",
+          "id": 195990610,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/542?namespace=dynamic-eu"
+            },
+            "name": {
+              "en_US": "Hyjal",
+              "es_MX": "Hyjal",
+              "pt_BR": "Hyjal",
+              "de_DE": "Hyjal",
+              "en_GB": "Hyjal",
+              "es_ES": "Hyjal",
+              "fr_FR": "Hyjal",
+              "it_IT": "Hyjal",
+              "ru_RU": "Hyjal",
+              "ko_KR": "Hyjal",
+              "zh_TW": "海加爾山",
+              "zh_CN": "海加尔"
+            },
+            "id": 542,
+            "slug": "hyjal"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/7?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Shaman",
+              "es_MX": "Chamán",
+              "pt_BR": "Xamã",
+              "de_DE": "Schamane",
+              "en_GB": "Shaman",
+              "es_ES": "Chamán",
+              "fr_FR": "Chaman",
+              "it_IT": "Sciamano",
+              "ru_RU": "Шаман",
+              "ko_KR": "주술사",
+              "zh_TW": "薩滿",
+              "zh_CN": "萨满祭司"
+            },
+            "id": 7
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/2?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Orc",
+              "es_MX": "Orco",
+              "pt_BR": "Orc",
+              "de_DE": "Orc",
+              "en_GB": "Orc",
+              "es_ES": "Orco",
+              "fr_FR": "Orc",
+              "it_IT": "Orco",
+              "ru_RU": "Орк",
+              "ko_KR": "오크",
+              "zh_TW": "獸人",
+              "zh_CN": "兽人"
+            },
+            "id": 2
+          },
+          "gender": {
+            "type": "FEMALE",
+            "name": {
+              "en_US": "Female",
+              "es_MX": "Femenino",
+              "pt_BR": "Feminino",
+              "de_DE": "Weiblich",
+              "en_GB": "Female",
+              "es_ES": "Femenino",
+              "fr_FR": "Femme",
+              "it_IT": "Femmina",
+              "ru_RU": "Женский",
+              "ko_KR": "여성",
+              "zh_TW": "女性",
+              "zh_CN": "女性"
+            }
+          },
+          "faction": {
+            "type": "HORDE",
+            "name": {
+              "en_US": "Horde",
+              "es_MX": "Horda",
+              "pt_BR": "Horda",
+              "de_DE": "Horde",
+              "en_GB": "Horde",
+              "es_ES": "Horda",
+              "fr_FR": "Horde",
+              "it_IT": "Orda",
+              "ru_RU": "Орда",
+              "ko_KR": "호드",
+              "zh_TW": "部落",
+              "zh_CN": "部落"
+            }
+          },
+          "level": 60
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/hyjal/%C3%ABver?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/542-lu?namespace=profile-eu"
+          },
+          "name": "Ëver",
+          "id": 197426216,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/542?namespace=dynamic-eu"
+            },
+            "name": {
+              "en_US": "Hyjal",
+              "es_MX": "Hyjal",
+              "pt_BR": "Hyjal",
+              "de_DE": "Hyjal",
+              "en_GB": "Hyjal",
+              "es_ES": "Hyjal",
+              "fr_FR": "Hyjal",
+              "it_IT": "Hyjal",
+              "ru_RU": "Hyjal",
+              "ko_KR": "Hyjal",
+              "zh_TW": "海加爾山",
+              "zh_CN": "海加尔"
+            },
+            "id": 542,
+            "slug": "hyjal"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/4?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Rogue",
+              "es_MX": "Pícaro",
+              "pt_BR": "Ladino",
+              "de_DE": "Schurke",
+              "en_GB": "Rogue",
+              "es_ES": "Pícaro",
+              "fr_FR": "Voleur",
+              "it_IT": "Ladro",
+              "ru_RU": "Разбойник",
+              "ko_KR": "도적",
+              "zh_TW": "盜賊",
+              "zh_CN": "潜行者"
+            },
+            "id": 4
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/2?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Orc",
+              "es_MX": "Orco",
+              "pt_BR": "Orc",
+              "de_DE": "Orc",
+              "en_GB": "Orc",
+              "es_ES": "Orco",
+              "fr_FR": "Orc",
+              "it_IT": "Orco",
+              "ru_RU": "Орк",
+              "ko_KR": "오크",
+              "zh_TW": "獸人",
+              "zh_CN": "兽人"
+            },
+            "id": 2
+          },
+          "gender": {
+            "type": "FEMALE",
+            "name": {
+              "en_US": "Female",
+              "es_MX": "Femenino",
+              "pt_BR": "Feminino",
+              "de_DE": "Weiblich",
+              "en_GB": "Female",
+              "es_ES": "Femenino",
+              "fr_FR": "Femme",
+              "it_IT": "Femmina",
+              "ru_RU": "Женский",
+              "ko_KR": "여성",
+              "zh_TW": "女性",
+              "zh_CN": "女性"
+            }
+          },
+          "faction": {
+            "type": "HORDE",
+            "name": {
+              "en_US": "Horde",
+              "es_MX": "Horda",
+              "pt_BR": "Horda",
+              "de_DE": "Horde",
+              "en_GB": "Horde",
+              "es_ES": "Horda",
+              "fr_FR": "Horde",
+              "it_IT": "Orda",
+              "ru_RU": "Орда",
+              "ko_KR": "호드",
+              "zh_TW": "部落",
+              "zh_CN": "部落"
+            }
+          },
+          "level": 60
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/hyjal/tucknorris?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/542-lu?namespace=profile-eu"
+          },
+          "name": "Tucknorris",
+          "id": 199195879,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/542?namespace=dynamic-eu"
+            },
+            "name": {
+              "en_US": "Hyjal",
+              "es_MX": "Hyjal",
+              "pt_BR": "Hyjal",
+              "de_DE": "Hyjal",
+              "en_GB": "Hyjal",
+              "es_ES": "Hyjal",
+              "fr_FR": "Hyjal",
+              "it_IT": "Hyjal",
+              "ru_RU": "Hyjal",
+              "ko_KR": "Hyjal",
+              "zh_TW": "海加爾山",
+              "zh_CN": "海加尔"
+            },
+            "id": 542,
+            "slug": "hyjal"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/10?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Monk",
+              "es_MX": "Monje",
+              "pt_BR": "Monge",
+              "de_DE": "Mönch",
+              "en_GB": "Monk",
+              "es_ES": "Monje",
+              "fr_FR": "Moine",
+              "it_IT": "Monaco",
+              "ru_RU": "Монах",
+              "ko_KR": "수도사",
+              "zh_TW": "武僧",
+              "zh_CN": "武僧"
+            },
+            "id": 10
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/2?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Orc",
+              "es_MX": "Orco",
+              "pt_BR": "Orc",
+              "de_DE": "Orc",
+              "en_GB": "Orc",
+              "es_ES": "Orco",
+              "fr_FR": "Orc",
+              "it_IT": "Orco",
+              "ru_RU": "Орк",
+              "ko_KR": "오크",
+              "zh_TW": "獸人",
+              "zh_CN": "兽人"
+            },
+            "id": 2
+          },
+          "gender": {
+            "type": "FEMALE",
+            "name": {
+              "en_US": "Female",
+              "es_MX": "Femenino",
+              "pt_BR": "Feminino",
+              "de_DE": "Weiblich",
+              "en_GB": "Female",
+              "es_ES": "Femenino",
+              "fr_FR": "Femme",
+              "it_IT": "Femmina",
+              "ru_RU": "Женский",
+              "ko_KR": "여성",
+              "zh_TW": "女性",
+              "zh_CN": "女性"
+            }
+          },
+          "faction": {
+            "type": "HORDE",
+            "name": {
+              "en_US": "Horde",
+              "es_MX": "Horda",
+              "pt_BR": "Horda",
+              "de_DE": "Horde",
+              "en_GB": "Horde",
+              "es_ES": "Horda",
+              "fr_FR": "Horde",
+              "it_IT": "Orda",
+              "ru_RU": "Орда",
+              "ko_KR": "호드",
+              "zh_TW": "部落",
+              "zh_CN": "部落"
+            }
+          },
+          "level": 48
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/hyjal/bbcute?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/542-lu?namespace=profile-eu"
+          },
+          "name": "Bbcute",
+          "id": 201508885,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/542?namespace=dynamic-eu"
+            },
+            "name": {
+              "en_US": "Hyjal",
+              "es_MX": "Hyjal",
+              "pt_BR": "Hyjal",
+              "de_DE": "Hyjal",
+              "en_GB": "Hyjal",
+              "es_ES": "Hyjal",
+              "fr_FR": "Hyjal",
+              "it_IT": "Hyjal",
+              "ru_RU": "Hyjal",
+              "ko_KR": "Hyjal",
+              "zh_TW": "海加爾山",
+              "zh_CN": "海加尔"
+            },
+            "id": 542,
+            "slug": "hyjal"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/9?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Warlock",
+              "es_MX": "Brujo",
+              "pt_BR": "Bruxo",
+              "de_DE": "Hexenmeister",
+              "en_GB": "Warlock",
+              "es_ES": "Brujo",
+              "fr_FR": "Démoniste",
+              "it_IT": "Stregone",
+              "ru_RU": "Чернокнижник",
+              "ko_KR": "흑마법사",
+              "zh_TW": "術士",
+              "zh_CN": "术士"
+            },
+            "id": 9
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/2?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Orc",
+              "es_MX": "Orco",
+              "pt_BR": "Orc",
+              "de_DE": "Orc",
+              "en_GB": "Orc",
+              "es_ES": "Orco",
+              "fr_FR": "Orc",
+              "it_IT": "Orco",
+              "ru_RU": "Орк",
+              "ko_KR": "오크",
+              "zh_TW": "獸人",
+              "zh_CN": "兽人"
+            },
+            "id": 2
+          },
+          "gender": {
+            "type": "MALE",
+            "name": {
+              "en_US": "Male",
+              "es_MX": "Masculino",
+              "pt_BR": "Masculino",
+              "de_DE": "Männlich",
+              "en_GB": "Male",
+              "es_ES": "Masculino",
+              "fr_FR": "Homme",
+              "it_IT": "Maschio",
+              "ru_RU": "Мужской",
+              "ko_KR": "남성",
+              "zh_TW": "男性",
+              "zh_CN": "男性"
+            }
+          },
+          "faction": {
+            "type": "HORDE",
+            "name": {
+              "en_US": "Horde",
+              "es_MX": "Horda",
+              "pt_BR": "Horda",
+              "de_DE": "Horde",
+              "en_GB": "Horde",
+              "es_ES": "Horda",
+              "fr_FR": "Horde",
+              "it_IT": "Orda",
+              "ru_RU": "Орда",
+              "ko_KR": "호드",
+              "zh_TW": "部落",
+              "zh_CN": "部落"
+            }
+          },
+          "level": 60
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/hyjal/everbbq?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/542-lu?namespace=profile-eu"
+          },
+          "name": "Everbbq",
+          "id": 201841821,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/542?namespace=dynamic-eu"
+            },
+            "name": {
+              "en_US": "Hyjal",
+              "es_MX": "Hyjal",
+              "pt_BR": "Hyjal",
+              "de_DE": "Hyjal",
+              "en_GB": "Hyjal",
+              "es_ES": "Hyjal",
+              "fr_FR": "Hyjal",
+              "it_IT": "Hyjal",
+              "ru_RU": "Hyjal",
+              "ko_KR": "Hyjal",
+              "zh_TW": "海加爾山",
+              "zh_CN": "海加尔"
+            },
+            "id": 542,
+            "slug": "hyjal"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/5?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Priest",
+              "es_MX": "Sacerdote",
+              "pt_BR": "Sacerdote",
+              "de_DE": "Priester",
+              "en_GB": "Priest",
+              "es_ES": "Sacerdote",
+              "fr_FR": "Prêtre",
+              "it_IT": "Sacerdote",
+              "ru_RU": "Жрец",
+              "ko_KR": "사제",
+              "zh_TW": "牧師",
+              "zh_CN": "牧师"
+            },
+            "id": 5
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/5?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Undead",
+              "es_MX": "No-muerto",
+              "pt_BR": "Morto-vivo",
+              "de_DE": "Untoter",
+              "en_GB": "Undead",
+              "es_ES": "No-muerto",
+              "fr_FR": "Mort-vivant",
+              "it_IT": "Non Morto",
+              "ru_RU": "Нежить",
+              "ko_KR": "언데드",
+              "zh_TW": "不死族",
+              "zh_CN": "亡灵"
+            },
+            "id": 5
+          },
+          "gender": {
+            "type": "MALE",
+            "name": {
+              "en_US": "Male",
+              "es_MX": "Masculino",
+              "pt_BR": "Masculino",
+              "de_DE": "Männlich",
+              "en_GB": "Male",
+              "es_ES": "Masculino",
+              "fr_FR": "Homme",
+              "it_IT": "Maschio",
+              "ru_RU": "Мужской",
+              "ko_KR": "남성",
+              "zh_TW": "男性",
+              "zh_CN": "男性"
+            }
+          },
+          "faction": {
+            "type": "HORDE",
+            "name": {
+              "en_US": "Horde",
+              "es_MX": "Horda",
+              "pt_BR": "Horda",
+              "de_DE": "Horde",
+              "en_GB": "Horde",
+              "es_ES": "Horda",
+              "fr_FR": "Horde",
+              "it_IT": "Orda",
+              "ru_RU": "Орда",
+              "ko_KR": "호드",
+              "zh_TW": "部落",
+              "zh_CN": "部落"
+            }
+          },
+          "level": 60
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/stormscale/everbbq?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/560-lu?namespace=profile-eu"
+          },
+          "name": "Everbbq",
+          "id": 92878215,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/560?namespace=dynamic-eu"
+            },
+            "name": {
+              "en_US": "Stormscale",
+              "es_MX": "Stormscale",
+              "pt_BR": "Stormscale",
+              "de_DE": "Stormscale",
+              "en_GB": "Stormscale",
+              "es_ES": "Stormscale",
+              "fr_FR": "Stormscale",
+              "it_IT": "Stormscale",
+              "ru_RU": "Stormscale",
+              "ko_KR": "Stormscale",
+              "zh_TW": "雷鱗",
+              "zh_CN": "风暴之鳞"
+            },
+            "id": 560,
+            "slug": "stormscale"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/11?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Druid",
+              "es_MX": "Druida",
+              "pt_BR": "Druida",
+              "de_DE": "Druide",
+              "en_GB": "Druid",
+              "es_ES": "Druida",
+              "fr_FR": "Druide",
+              "it_IT": "Druido",
+              "ru_RU": "Друид",
+              "ko_KR": "드루이드",
+              "zh_TW": "德魯伊",
+              "zh_CN": "德鲁伊"
+            },
+            "id": 11
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/4?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Night Elf",
+              "es_MX": "Elfo de la noche",
+              "pt_BR": "Elfo Noturno",
+              "de_DE": "Nachtelf",
+              "en_GB": "Night Elf",
+              "es_ES": "Elfo de la noche",
+              "fr_FR": "Elfe de la nuit",
+              "it_IT": "Elfo della Notte",
+              "ru_RU": "Ночной эльф",
+              "ko_KR": "나이트 엘프",
+              "zh_TW": "夜精靈",
+              "zh_CN": "暗夜精灵"
+            },
+            "id": 4
+          },
+          "gender": {
+            "type": "FEMALE",
+            "name": {
+              "en_US": "Female",
+              "es_MX": "Femenino",
+              "pt_BR": "Feminino",
+              "de_DE": "Weiblich",
+              "en_GB": "Female",
+              "es_ES": "Femenino",
+              "fr_FR": "Femme",
+              "it_IT": "Femmina",
+              "ru_RU": "Женский",
+              "ko_KR": "여성",
+              "zh_TW": "女性",
+              "zh_CN": "女性"
+            }
+          },
+          "faction": {
+            "type": "ALLIANCE",
+            "name": {
+              "en_US": "Alliance",
+              "es_MX": "Alianza",
+              "pt_BR": "Aliança",
+              "de_DE": "Allianz",
+              "en_GB": "Alliance",
+              "es_ES": "Alianza",
+              "fr_FR": "Alliance",
+              "it_IT": "Alleanza",
+              "ru_RU": "Альянс",
+              "ko_KR": "얼라이언스",
+              "zh_TW": "聯盟",
+              "zh_CN": "联盟"
+            }
+          },
+          "level": 40
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/stormscale/barbiche?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/560-lu?namespace=profile-eu"
+          },
+          "name": "Barbiche",
+          "id": 92895238,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/560?namespace=dynamic-eu"
+            },
+            "name": {
+              "en_US": "Stormscale",
+              "es_MX": "Stormscale",
+              "pt_BR": "Stormscale",
+              "de_DE": "Stormscale",
+              "en_GB": "Stormscale",
+              "es_ES": "Stormscale",
+              "fr_FR": "Stormscale",
+              "it_IT": "Stormscale",
+              "ru_RU": "Stormscale",
+              "ko_KR": "Stormscale",
+              "zh_TW": "雷鱗",
+              "zh_CN": "风暴之鳞"
+            },
+            "id": 560,
+            "slug": "stormscale"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/2?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Paladin",
+              "es_MX": "Paladín",
+              "pt_BR": "Paladino",
+              "de_DE": "Paladin",
+              "en_GB": "Paladin",
+              "es_ES": "Paladín",
+              "fr_FR": "Paladin",
+              "it_IT": "Paladino",
+              "ru_RU": "Паладин",
+              "ko_KR": "성기사",
+              "zh_TW": "聖騎士",
+              "zh_CN": "圣骑士"
+            },
+            "id": 2
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/3?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Dwarf",
+              "es_MX": "Enano",
+              "pt_BR": "Anão",
+              "de_DE": "Zwerg",
+              "en_GB": "Dwarf",
+              "es_ES": "Enano",
+              "fr_FR": "Nain",
+              "it_IT": "Nano",
+              "ru_RU": "Дворф",
+              "ko_KR": "드워프",
+              "zh_TW": "矮人",
+              "zh_CN": "矮人"
+            },
+            "id": 3
+          },
+          "gender": {
+            "type": "MALE",
+            "name": {
+              "en_US": "Male",
+              "es_MX": "Masculino",
+              "pt_BR": "Masculino",
+              "de_DE": "Männlich",
+              "en_GB": "Male",
+              "es_ES": "Masculino",
+              "fr_FR": "Homme",
+              "it_IT": "Maschio",
+              "ru_RU": "Мужской",
+              "ko_KR": "남성",
+              "zh_TW": "男性",
+              "zh_CN": "男性"
+            }
+          },
+          "faction": {
+            "type": "ALLIANCE",
+            "name": {
+              "en_US": "Alliance",
+              "es_MX": "Alianza",
+              "pt_BR": "Aliança",
+              "de_DE": "Allianz",
+              "en_GB": "Alliance",
+              "es_ES": "Alianza",
+              "fr_FR": "Alliance",
+              "it_IT": "Alleanza",
+              "ru_RU": "Альянс",
+              "ko_KR": "얼라이언스",
+              "zh_TW": "聯盟",
+              "zh_CN": "联盟"
+            }
+          },
+          "level": 38
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/stormscale/cuill%C3%A8re?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/560-lu?namespace=profile-eu"
+          },
+          "name": "Cuillère",
+          "id": 92907177,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/560?namespace=dynamic-eu"
+            },
+            "name": {
+              "en_US": "Stormscale",
+              "es_MX": "Stormscale",
+              "pt_BR": "Stormscale",
+              "de_DE": "Stormscale",
+              "en_GB": "Stormscale",
+              "es_ES": "Stormscale",
+              "fr_FR": "Stormscale",
+              "it_IT": "Stormscale",
+              "ru_RU": "Stormscale",
+              "ko_KR": "Stormscale",
+              "zh_TW": "雷鱗",
+              "zh_CN": "风暴之鳞"
+            },
+            "id": 560,
+            "slug": "stormscale"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/4?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Rogue",
+              "es_MX": "Pícaro",
+              "pt_BR": "Ladino",
+              "de_DE": "Schurke",
+              "en_GB": "Rogue",
+              "es_ES": "Pícaro",
+              "fr_FR": "Voleur",
+              "it_IT": "Ladro",
+              "ru_RU": "Разбойник",
+              "ko_KR": "도적",
+              "zh_TW": "盜賊",
+              "zh_CN": "潜行者"
+            },
+            "id": 4
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/1?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Human",
+              "es_MX": "Humano",
+              "pt_BR": "Humano",
+              "de_DE": "Mensch",
+              "en_GB": "Human",
+              "es_ES": "Humano",
+              "fr_FR": "Humain",
+              "it_IT": "Umano",
+              "ru_RU": "Человек",
+              "ko_KR": "인간",
+              "zh_TW": "人類",
+              "zh_CN": "人类"
+            },
+            "id": 1
+          },
+          "gender": {
+            "type": "FEMALE",
+            "name": {
+              "en_US": "Female",
+              "es_MX": "Femenino",
+              "pt_BR": "Feminino",
+              "de_DE": "Weiblich",
+              "en_GB": "Female",
+              "es_ES": "Femenino",
+              "fr_FR": "Femme",
+              "it_IT": "Femmina",
+              "ru_RU": "Женский",
+              "ko_KR": "여성",
+              "zh_TW": "女性",
+              "zh_CN": "女性"
+            }
+          },
+          "faction": {
+            "type": "ALLIANCE",
+            "name": {
+              "en_US": "Alliance",
+              "es_MX": "Alianza",
+              "pt_BR": "Aliança",
+              "de_DE": "Allianz",
+              "en_GB": "Alliance",
+              "es_ES": "Alianza",
+              "fr_FR": "Alliance",
+              "it_IT": "Alleanza",
+              "ru_RU": "Альянс",
+              "ko_KR": "얼라이언스",
+              "zh_TW": "聯盟",
+              "zh_CN": "联盟"
+            }
+          },
+          "level": 45
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/conseil-des-ombres/bbcute?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/644-lu?namespace=profile-eu"
+          },
+          "name": "Bbcute",
+          "id": 168127179,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/644?namespace=dynamic-eu"
+            },
+            "name": {
+              "en_US": "Conseil des Ombres",
+              "es_MX": "Conseil des Ombres",
+              "pt_BR": "Conseil des Ombres",
+              "de_DE": "Conseil des Ombres",
+              "en_GB": "Conseil des Ombres",
+              "es_ES": "Conseil des Ombres",
+              "fr_FR": "Conseil des Ombres",
+              "it_IT": "Conseil des Ombres",
+              "ru_RU": "Conseil des Ombres",
+              "ko_KR": "Conseil des Ombres",
+              "zh_TW": "Conseil des Ombres",
+              "zh_CN": "Conseil des Ombres"
+            },
+            "id": 644,
+            "slug": "conseil-des-ombres"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/7?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Shaman",
+              "es_MX": "Chamán",
+              "pt_BR": "Xamã",
+              "de_DE": "Schamane",
+              "en_GB": "Shaman",
+              "es_ES": "Chamán",
+              "fr_FR": "Chaman",
+              "it_IT": "Sciamano",
+              "ru_RU": "Шаман",
+              "ko_KR": "주술사",
+              "zh_TW": "薩滿",
+              "zh_CN": "萨满祭司"
+            },
+            "id": 7
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/6?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Tauren",
+              "es_MX": "Tauren",
+              "pt_BR": "Tauren",
+              "de_DE": "Tauren",
+              "en_GB": "Tauren",
+              "es_ES": "Tauren",
+              "fr_FR": "Tauren",
+              "it_IT": "Tauren",
+              "ru_RU": "Таурен",
+              "ko_KR": "타우렌",
+              "zh_TW": "牛頭人",
+              "zh_CN": "牛头人"
+            },
+            "id": 6
+          },
+          "gender": {
+            "type": "FEMALE",
+            "name": {
+              "en_US": "Female",
+              "es_MX": "Femenino",
+              "pt_BR": "Feminino",
+              "de_DE": "Weiblich",
+              "en_GB": "Female",
+              "es_ES": "Femenino",
+              "fr_FR": "Femme",
+              "it_IT": "Femmina",
+              "ru_RU": "Женский",
+              "ko_KR": "여성",
+              "zh_TW": "女性",
+              "zh_CN": "女性"
+            }
+          },
+          "faction": {
+            "type": "HORDE",
+            "name": {
+              "en_US": "Horde",
+              "es_MX": "Horda",
+              "pt_BR": "Horda",
+              "de_DE": "Horde",
+              "en_GB": "Horde",
+              "es_ES": "Horda",
+              "fr_FR": "Horde",
+              "it_IT": "Orda",
+              "ru_RU": "Орда",
+              "ko_KR": "호드",
+              "zh_TW": "部落",
+              "zh_CN": "部落"
+            }
+          },
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": 11011395,
+      "characters": [
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/tyrande/mdr72b152?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/1384-lu?namespace=profile-eu"
+          },
+          "name": "Mdr72B152",
+          "id": 41070930,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/1384?namespace=dynamic-eu"
+            },
+            "name": {
+              "en_US": "Tyrande",
+              "es_MX": "Tyrande",
+              "pt_BR": "Tyrande",
+              "de_DE": "Tyrande",
+              "en_GB": "Tyrande",
+              "es_ES": "Tyrande",
+              "fr_FR": "Tyrande",
+              "it_IT": "Tyrande",
+              "ru_RU": "Tyrande",
+              "ko_KR": "Tyrande",
+              "zh_TW": "泰蘭妲",
+              "zh_CN": "泰兰德"
+            },
+            "id": 1384,
+            "slug": "tyrande"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/2?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Paladin",
+              "es_MX": "Paladín",
+              "pt_BR": "Paladino",
+              "de_DE": "Paladin",
+              "en_GB": "Paladin",
+              "es_ES": "Paladín",
+              "fr_FR": "Paladin",
+              "it_IT": "Paladino",
+              "ru_RU": "Паладин",
+              "ko_KR": "성기사",
+              "zh_TW": "聖騎士",
+              "zh_CN": "圣骑士"
+            },
+            "id": 2
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/10?namespace=static-9.2.5_43810-eu"
+            },
+            "name": {
+              "en_US": "Blood Elf",
+              "es_MX": "Elfo de sangre",
+              "pt_BR": "Elfo Sangrento",
+              "de_DE": "Blutelf",
+              "en_GB": "Blood Elf",
+              "es_ES": "Elfo de sangre",
+              "fr_FR": "Elfe de sang",
+              "it_IT": "Elfo del Sangue",
+              "ru_RU": "Эльф крови",
+              "ko_KR": "블러드 엘프",
+              "zh_TW": "血精靈",
+              "zh_CN": "血精灵"
+            },
+            "id": 10
+          },
+          "gender": {
+            "type": "MALE",
+            "name": {
+              "en_US": "Male",
+              "es_MX": "Masculino",
+              "pt_BR": "Masculino",
+              "de_DE": "Männlich",
+              "en_GB": "Male",
+              "es_ES": "Masculino",
+              "fr_FR": "Homme",
+              "it_IT": "Maschio",
+              "ru_RU": "Мужской",
+              "ko_KR": "남성",
+              "zh_TW": "男性",
+              "zh_CN": "男性"
+            }
+          },
+          "faction": {
+            "type": "HORDE",
+            "name": {
+              "en_US": "Horde",
+              "es_MX": "Horda",
+              "pt_BR": "Horda",
+              "de_DE": "Horde",
+              "en_GB": "Horde",
+              "es_ES": "Horda",
+              "fr_FR": "Horde",
+              "it_IT": "Orda",
+              "ru_RU": "Орда",
+              "ko_KR": "호드",
+              "zh_TW": "部落",
+              "zh_CN": "部落"
+            }
+          },
+          "level": 1
+        }
+      ]
+    }
+  ],
+  "collections": {
+    "href": "https://eu.api.blizzard.com/profile/user/wow/collections?namespace=profile-eu"
+  }
+}
