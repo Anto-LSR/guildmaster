@@ -2,28 +2,34 @@ import loginBackground from "../assets/img/loginBackground.jpg";
 import { BsDoorClosed, BsFillExclamationCircleFill } from "react-icons/bs";
 import { GiCrenelCrown } from "react-icons/gi";
 
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import ApiManager from "../services/ApiManager";
 
-import { useState } from "react";
+
+
+
 
 function LoginForm() {
   const {
     register,
     handleSubmit,
     formState: { errors },
-    watch,
   } = useForm({
     validateCriteriaMode: "all",
   });
 
-  let [status, setStatus] = useState("");
+  const navigate = useNavigate();
 
   const onSubmit = async (data, e) => {
     if (Object.entries(errors).length === 0) {
       const am = ApiManager.getInstance();
-      let response = await am.post("/login", data);
-      setStatus(response.data.status);
+      let response = await am.post("/auth/login", data);
+      if (response.data.access_token) {
+        //TODO: store token SOMEWHERE?
+          navigate("/");
+      }
     }
   };
 

@@ -4,18 +4,17 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { GetTokenService } from './get-token/get-token.service';
 import { GetTokenController } from './get-token/get-token.controller';
-import { LinkBnetController } from './link-bnet/link-bnet.controller';
 import { ConfigModule } from '@nestjs/config';
 import { UserInfoModule } from './user-info/user-info.module';
 import { LinkBnetModule } from './link-bnet/link-bnet.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { DataSource } from 'typeorm';
 import { User } from './typeOrm/entities/user/user.entity';
-import { RegisterController } from './register/register.controller';
-import { RegisterService } from './register/register.service';
 import { RegisterModule } from './register/register.module';
-import { UsersService } from './typeOrm/entities/user/user.service';
-import { LoginModule } from './login/login.module';
+import { AuthModule } from './auth/auth.module';
+import { UsersModule } from './typeOrm/entities/user/user.module';
+
+
 
 @Module({
   imports: [
@@ -34,7 +33,8 @@ import { LoginModule } from './login/login.module';
       entities: [User],
       synchronize: true,
     }),
-    LoginModule,
+    AuthModule,
+    UsersModule,
   ],
   controllers: [AppController, GetTokenController],
   providers: [AppService, GetTokenService],
