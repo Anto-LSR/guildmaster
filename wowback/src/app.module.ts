@@ -14,7 +14,8 @@ import { User } from './typeOrm/entities/user/user.entity';
 import { RegisterController } from './register/register.controller';
 import { RegisterService } from './register/register.service';
 import { RegisterModule } from './register/register.module';
-
+import { UsersService } from './typeOrm/entities/user/user.service';
+import { LoginModule } from './login/login.module';
 
 @Module({
   imports: [
@@ -22,6 +23,7 @@ import { RegisterModule } from './register/register.module';
     ConfigModule.forRoot(),
     UserInfoModule,
     LinkBnetModule,
+    RegisterModule,
     TypeOrmModule.forRoot({
       type: 'mysql',
       host: process.env.dbHost,
@@ -32,13 +34,11 @@ import { RegisterModule } from './register/register.module';
       entities: [User],
       synchronize: true,
     }),
-    RegisterModule, 
+    LoginModule,
   ],
-  controllers: [AppController, GetTokenController, RegisterController],
-  providers: [AppService, GetTokenService, RegisterService],
+  controllers: [AppController, GetTokenController],
+  providers: [AppService, GetTokenService],
 })
 export class AppModule {
-  constructor(private dataSource: DataSource) {
-    
-  }
+  constructor(private dataSource: DataSource) {}
 }

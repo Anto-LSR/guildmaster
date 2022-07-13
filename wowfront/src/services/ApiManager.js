@@ -1,11 +1,9 @@
 import axios from "axios";
 import { Component } from "react";
 
-
 export default class ApiManager extends Component {
   static myInstance = null;
-  baseUrl = process.env.REACT_APP_BASEURL
-   
+  baseUrl = process.env.REACT_APP_BASEURL;
 
   static getInstance() {
     if (ApiManager.myInstance == null) {
@@ -14,19 +12,15 @@ export default class ApiManager extends Component {
     return this.myInstance;
   }
 
-  get(url){
-    
+  get(url) {
     return axios.get(this.baseUrl + url, {
-        withCredentials: true,
-      })
+      withCredentials: true,
+    });
   }
 
-
-
-
-
-
-
-
-  
+  post(url, data) {
+    return axios.post(this.baseUrl + url, data, {
+      withCredentials: true,
+    });
+  }
 }

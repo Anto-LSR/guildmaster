@@ -6,7 +6,9 @@ import { RegisterService } from './register.service';
 export class RegisterController {
   constructor(private readonly registerService: RegisterService) {}
   @Post()
-  registerUser(@Req() request: Request): boolean {
+  registerUser(@Req() request: Request): any {
+  
+
     return this.registerService.registerUser(request);
   }
 }
