@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { BiShieldQuarter } from "react-icons/bi";
 import { VscWorkspaceUnknown } from "react-icons/vsc";
 import { FiLogOut } from "react-icons/fi";
@@ -6,18 +6,35 @@ import ApiManager from "../services/ApiManager";
 import { Outlet } from "react-router-dom";
 
 function Navbar() {
-  const [userCharacterData, setUserCharacterData] = React.useState("");
+  const [info, setInfo] = useState({});
+  const apiManager = ApiManager.getInstance();
+
+  const [loading, setLoading] = useState(true);
+
+  const [characterData, setCharacterData] = useState({});
+
 
   useEffect(() => {
-    if (!userCharacterData) {
-      getUserCharacterData();
-    }
+    const fetchData = async () => {
+      setLoading(true);
+      try {
+        const { data: response } = await apiManager.get("/user-info/selected-character");
+        
+        setCharacterData(response.wow_accounts[1].characters[15]);
+        console.log(characterData)
+        setInfo(response);
+        
+      } catch (error) {
+        console.error(error.message);
+      }
+      setLoading(false);
+    };
+
+    fetchData();
   }, []);
 
-  const getUserCharacterData = async () => {
-    let apiManager = ApiManager.getInstance();
-    //setUserCharacterData(await apiManager.get('user-info/selected-character'))
-  };
+  console.log(characterData
+    )
 
   return (
     <div className="App">
@@ -30,7 +47,7 @@ function Navbar() {
               className="rounded border-2 border-white"
             />
             <div className="text-left pl-2 text-white">
-              <p className="text-[#FFF468]">Ëver - Hyjal</p>
+              <p className="text-[#FFF468]">{characterData.name + ' - ' + characterData.realm?.name}</p>
               <p className="text-[#E7B57A]">Ouroboros</p>
               <p>60</p>
             </div>
@@ -56,7 +73,7 @@ function Navbar() {
             <FiLogOut /> &nbsp; Log out
           </a>
         </div>
-        <Outlet/>
+        <Outlet />
       </div>
     </div>
   );

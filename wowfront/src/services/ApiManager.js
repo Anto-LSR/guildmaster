@@ -13,6 +13,7 @@ export default class ApiManager extends Component {
   }
 
   get(url) {
+    console.log(this.baseUrl + url)
     return axios.get(this.baseUrl + url, {
       withCredentials: true,
     });

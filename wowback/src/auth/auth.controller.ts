@@ -1,5 +1,5 @@
-import { Controller, Post, Req, UseGuards } from '@nestjs/common';
-import { Request } from 'express';
+import { Controller, Post, Req, Res, UseGuards } from '@nestjs/common';
+import { Request, Response } from 'express';
 import { User } from 'src/typeOrm/entities/user/user.entity';
 import { AuthService } from './auth.service';
 import { LocalAuthGuard } from './guards/local-auth.guard';
@@ -10,9 +10,16 @@ export class AuthController {
 
   @UseGuards(LocalAuthGuard)
   @Post('login')
-  login(@Req() req: Request): Promise<{ access_token: string; }> {
-    console.log(this.authService.login(req.user as User));
-    
-    return this.authService.login(req.user as User);
+  async login(@Req() req: Request, @Res() res: Response): Promise<void> {
+    const jwtToken = await this.authService.login(req.user as User);
+    res
+      .status(202)
+      .cookie('jwt', jwtToken.access_token, {
+        sameSite: 'strict',
+        path: '/',
+        expires: new Date(new Date().getTime() + 60 * 1000 * 60 * 24 * 7),
+        httpOnly: true,
+      })
+      .send('cookie being initialized');
   }
 }

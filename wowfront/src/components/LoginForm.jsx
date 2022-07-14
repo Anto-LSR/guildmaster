@@ -22,12 +22,15 @@ function LoginForm() {
 
   const navigate = useNavigate();
 
+
+  
+  
   const onSubmit = async (data, e) => {
     if (Object.entries(errors).length === 0) {
       const am = ApiManager.getInstance();
       let response = await am.post("/auth/login", data);
-      if (response.data.access_token) {
-        //TODO: store token SOMEWHERE?
+      if (response.data) {
+        console.log('coucou!');
           navigate("/");
       }
     }

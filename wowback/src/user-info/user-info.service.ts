@@ -5,6 +5,7 @@ import { writeFileSync } from 'fs';
 @Injectable()
 export class UserInfoService {
   async getUserInfo(token: string): Promise<Record<string, any>> {
+    
     console.log('userinfo', token);
     
     const accountInfo = await axios.get(

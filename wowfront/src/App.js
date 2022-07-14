@@ -4,8 +4,11 @@ import BattlenetLogin from "./components/BattlenetLogin";
 import LoginForm from "./components/LoginForm";
 import RegisterForm from "./components/RegisterForm";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ApiManager from "./services/ApiManager";
 
 function App() {
+
+
   return (
     <BrowserRouter>
       <Routes>
