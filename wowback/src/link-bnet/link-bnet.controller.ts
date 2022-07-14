@@ -1,42 +1,40 @@
-import { Controller, Get, Query, Req, Res, Session } from '@nestjs/common';
-import { Request, Response } from 'express';
+import {
+  Controller,
+  Get,
+  Param,
+  Query,
+  Req,
+  Res,
+  Session,
+  UseGuards,
+} from '@nestjs/common';
+import { query, Request, Response } from 'express';
 import axios from 'axios';
-
-@Controller('user-login')
+import { JwtAuthGuard } from 'src/auth/guards/jwt-auth.guard';
+import { LinkBnetService } from './link-bnet.service';
+import { AuthService } from 'src/auth/auth.service';
+import { UsersService } from 'src/typeOrm/entities/user/user.service';
+import { InjectRepository } from '@nestjs/typeorm';
+import { User } from 'src/typeOrm/entities/user/user.entity';
+import { Repository } from 'typeorm';
+@UseGuards(JwtAuthGuard)
+@Controller('bnet')
 export class LinkBnetController {
+  constructor(private readonly linkBnetService: LinkBnetService) {}
   @Get()
   async getCode(
     @Query('code') code: string,
     @Res() response: Response,
   ): Promise<void> {
-    var qs = require('qs');
-    var data = qs.stringify({
-      redirect_uri: process.env.redirectUri,
-      scope: 'wow.profile',
-      grant_type: 'authorization_code',
-      code: code,
-    });
-    var config = {
-      method: 'post',
-      url: 'https://us.battle.net/oauth/token',
-      headers: {
-        Authorization:
-          'Basic NTJjYTc0MzgxNDEwNGU1Nzk0NjFkZTJjMTEyZjIzMmU6eElwNzlhTzg3QVdTV3FGTnRWM2tPTjd2R2dLRFFpNWI=',
-        'Content-Type': 'application/x-www-form-urlencoded',
-      },
-      data: data,
-    };
+    this.linkBnetService.getCode(code, response);
+  }
 
-    await axios
-      .request(config)
-      .then((res) => {
-        response.cookie('token', res.data.access_token, {
-          httpOnly: true,
-        });
-        response.redirect(process.env.frontUrl);
-      })
-      .catch((error) => {
-        console.log(error.message);
-      });
+  @Get('auth')
+  async getToken(
+    @Query() query,
+    @Req() request: Request,
+    @Res() response: Response,
+  ): Promise<void> {
+    this.linkBnetService.setTokenAndBnetInfos(request, response, query);
   }
 }

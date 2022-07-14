@@ -1,31 +1,31 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { BiShieldQuarter } from "react-icons/bi";
 import { VscWorkspaceUnknown } from "react-icons/vsc";
 import { FiLogOut } from "react-icons/fi";
 import ApiManager from "../services/ApiManager";
-import { Outlet } from "react-router-dom";
+import { Link, Outlet, useSearchParams } from "react-router-dom";
+import { UserContext } from "../services/UserContext";
 
 function Navbar() {
-  const [info, setInfo] = useState({});
   const apiManager = ApiManager.getInstance();
-
+  const [info, setInfo] = useState({});
   const [loading, setLoading] = useState(true);
-
   const [characterData, setCharacterData] = useState({});
 
+  const { user, setUser } = useContext(UserContext);
 
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
       try {
-        const { data: response } = await apiManager.get("/user-info/selected-character");
-        
-        setCharacterData(response.wow_accounts[1].characters[15]);
-        console.log(characterData)
-        setInfo(response);
-        
+        // const { data: response } = await apiManager.get(
+        //   "/user-info/selected-character"
+        // );
+        // setCharacterData(response.wow_accounts[1].characters[15]);
+        // //console.log(characterData);
+        // setInfo(response);
       } catch (error) {
-        console.error(error.message);
+        //console.error(error.message);
       }
       setLoading(false);
     };
@@ -33,11 +33,12 @@ function Navbar() {
     fetchData();
   }, []);
 
-  console.log(characterData
-    )
+  //console.log(characterData);
 
   return (
     <div className="App">
+      <pre>{JSON.stringify(user, null, 2)}</pre>
+      <Link to="/auth/login"> coucou</Link>
       <div className="flex flex-row">
         <div className=" w-64 bg-[#252525] h-screen">
           <div className="user-info flex m-5">
@@ -47,7 +48,9 @@ function Navbar() {
               className="rounded border-2 border-white"
             />
             <div className="text-left pl-2 text-white">
-              <p className="text-[#FFF468]">{characterData.name + ' - ' + characterData.realm?.name}</p>
+              <p className="text-[#FFF468]">
+                {characterData.name + " - " + characterData.realm?.name}
+              </p>
               <p className="text-[#E7B57A]">Ouroboros</p>
               <p>60</p>
             </div>
@@ -69,9 +72,11 @@ function Navbar() {
               Find a guild
             </li>
           </ul>
-          <a className="absolute bottom-5 left-10 text-white flex items-center hover:text-primary cursor-pointer">
-            <FiLogOut /> &nbsp; Log out
-          </a>
+          {user && (
+            <a className="absolute bottom-5 left-10 text-white flex items-center hover:text-primary cursor-pointer">
+              <FiLogOut /> &nbsp; Log out
+            </a>
+          )}
         </div>
         <Outlet />
       </div>

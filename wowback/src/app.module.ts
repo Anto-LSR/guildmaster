@@ -13,6 +13,8 @@ import { User } from './typeOrm/entities/user/user.entity';
 import { RegisterModule } from './register/register.module';
 import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './typeOrm/entities/user/user.module';
+import { CharacterModule } from './typeOrm/entities/character/character.module';
+import { Character } from './typeOrm/entities/character/character.entity';
 
 
 
@@ -30,11 +32,12 @@ import { UsersModule } from './typeOrm/entities/user/user.module';
       username: process.env.dbUsername,
       password: process.env.dbPassword,
       database: process.env.dbDatabase,
-      entities: [User],
+      entities: [User, Character],
       synchronize: true,
     }),
     AuthModule,
     UsersModule,
+    CharacterModule,
   ],
   controllers: [AppController, GetTokenController],
   providers: [AppService, GetTokenService],

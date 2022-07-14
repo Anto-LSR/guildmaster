@@ -13,11 +13,9 @@ export class UserInfoController {
     let token = request.cookies['token']
     return this.userInfoService.getUserInfo(token);
   }
-
+  @UseGuards(JwtAuthGuard)
   @Get('selected-character')
-  async getSelectedCharacter(@Req() request:Request): Promise<Record<string, any>> {
-    console.log('coucou');
-    
+  async getSelectedCharacter(@Req() request:Request): Promise<Record<string, any>> { 
     let token = request.cookies['token']
     return this.userInfoService.getUserCharacter(token);
   }

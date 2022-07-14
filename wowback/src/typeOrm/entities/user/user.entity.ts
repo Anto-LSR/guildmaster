@@ -1,4 +1,5 @@
-import { Entity, Column, PrimaryGeneratedColumn, Unique } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, Unique, OneToMany, OneToOne, JoinColumn } from 'typeorm';
+import { Character } from '../character/character.entity';
 
 @Entity()
 export class User {
@@ -23,7 +24,14 @@ export class User {
   @Column({nullable : true})
   bnetId: string;
 
-  @Column({nullable : true})
+
+  @OneToMany(() => Character, (character) => character.user)
+  characters: Character[];
+
+  @OneToOne(() => Character, {nullable : true})
+  @JoinColumn()
   selectedCharacter: string;
 
+  @Column()
+  bnetLinked : boolean;
 }

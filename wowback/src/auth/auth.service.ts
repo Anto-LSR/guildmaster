@@ -33,7 +33,7 @@ export class AuthService {
       secret: process.env.JWT_SECRET,
     });
 
-    const user = this.usersService.findByEmail(decoded.email);
+    const user = await this.usersService.findByEmail(decoded.email);
 
     if (!user) {
       throw new Error('Unable to get the user from decoded token.');
