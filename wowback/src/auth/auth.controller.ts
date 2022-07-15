@@ -32,7 +32,6 @@ export class AuthController {
   async getUser(@Req() req: Request): Promise<User> {
     let user = await this.authService.verify(req.cookies.jwt);
     user.password = undefined;
-    console.log('Inside auth controller :' , user)
     return user;
   }
 }

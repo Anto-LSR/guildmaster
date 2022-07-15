@@ -5,7 +5,7 @@ import { AppService } from './app.service';
 import { GetTokenService } from './get-token/get-token.service';
 import { GetTokenController } from './get-token/get-token.controller';
 import { ConfigModule } from '@nestjs/config';
-import { UserInfoModule } from './user-info/user-info.module';
+import { BnetInfoModule } from './bnet-info/bnet-info.module';
 import { LinkBnetModule } from './link-bnet/link-bnet.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { DataSource } from 'typeorm';
@@ -22,7 +22,7 @@ import { Character } from './typeOrm/entities/character/character.entity';
   imports: [
     HttpModule,
     ConfigModule.forRoot(),
-    UserInfoModule,
+    BnetInfoModule,
     LinkBnetModule,
     RegisterModule,
     TypeOrmModule.forRoot({

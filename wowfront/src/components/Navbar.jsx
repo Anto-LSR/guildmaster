@@ -5,6 +5,7 @@ import { FiLogOut } from "react-icons/fi";
 import ApiManager from "../services/ApiManager";
 import { Link, Outlet, useSearchParams } from "react-router-dom";
 import { UserContext } from "../services/UserContext";
+import { CharacterContext } from "../services/CharacterContext";
 
 function Navbar() {
   const apiManager = ApiManager.getInstance();
@@ -13,20 +14,12 @@ function Navbar() {
   const [characterData, setCharacterData] = useState({});
 
   const { user, setUser } = useContext(UserContext);
+  const { character, setCharacter } = useContext(CharacterContext);
 
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
-      try {
-        // const { data: response } = await apiManager.get(
-        //   "/user-info/selected-character"
-        // );
-        // setCharacterData(response.wow_accounts[1].characters[15]);
-        // //console.log(characterData);
-        // setInfo(response);
-      } catch (error) {
-        //console.error(error.message);
-      }
+      console.log(character);
       setLoading(false);
     };
 

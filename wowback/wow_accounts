@@ -1,0 +1,2044 @@
+
+{
+  "_links": {
+    "self": {
+      "href": "https://eu.api.blizzard.com/profile/user/wow?namespace=profile-eu"
+    },
+    "user": {
+      "href": "https://eu.api.blizzard.com/profile/user"
+    },
+    "profile": {
+      "href": "https://eu.api.blizzard.com/profile/user/wow?namespace=profile-eu"
+    }
+  },
+  "id": 124174781,
+  "wow_accounts": [
+    {
+      "id": 40896417,
+      "characters": [
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/archimonde/everftw?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/539-lu?namespace=profile-eu"
+          },
+          "name": "Everftw",
+          "id": 106682534,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/539?namespace=dynamic-eu"
+            },
+            "name": "Archimonde",
+            "id": 539,
+            "slug": "archimonde"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/8?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Mage",
+            "id": 8
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/5?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Mort-vivant",
+            "id": 5
+          },
+          "gender": {
+            "type": "MALE",
+            "name": "Homme"
+          },
+          "faction": {
+            "type": "HORDE",
+            "name": "Horde"
+          },
+          "level": 35
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/archimonde/everbud?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/539-lu?namespace=profile-eu"
+          },
+          "name": "Everbud",
+          "id": 106991610,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/539?namespace=dynamic-eu"
+            },
+            "name": "Archimonde",
+            "id": 539,
+            "slug": "archimonde"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/1?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Guerrier",
+            "id": 1
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/2?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Orc",
+            "id": 2
+          },
+          "gender": {
+            "type": "MALE",
+            "name": "Homme"
+          },
+          "faction": {
+            "type": "HORDE",
+            "name": "Horde"
+          },
+          "level": 40
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/archimonde/everbbq?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/539-lu?namespace=profile-eu"
+          },
+          "name": "Everbbq",
+          "id": 107009319,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/539?namespace=dynamic-eu"
+            },
+            "name": "Archimonde",
+            "id": 539,
+            "slug": "archimonde"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/10?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Moine",
+            "id": 10
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/1?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Humain",
+            "id": 1
+          },
+          "gender": {
+            "type": "MALE",
+            "name": "Homme"
+          },
+          "faction": {
+            "type": "ALLIANCE",
+            "name": "Alliance"
+          },
+          "level": 37
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/archimonde/fenderguy?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/539-lu?namespace=profile-eu"
+          },
+          "name": "Fenderguy",
+          "id": 107024457,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/539?namespace=dynamic-eu"
+            },
+            "name": "Archimonde",
+            "id": 539,
+            "slug": "archimonde"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/9?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Démoniste",
+            "id": 9
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/2?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Orc",
+            "id": 2
+          },
+          "gender": {
+            "type": "MALE",
+            "name": "Homme"
+          },
+          "faction": {
+            "type": "HORDE",
+            "name": "Horde"
+          },
+          "level": 23
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/archimonde/trollharder?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/539-lu?namespace=profile-eu"
+          },
+          "name": "Trollharder",
+          "id": 107251693,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/539?namespace=dynamic-eu"
+            },
+            "name": "Archimonde",
+            "id": 539,
+            "slug": "archimonde"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/3?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Chasseur",
+            "id": 3
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/8?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Troll",
+            "id": 8
+          },
+          "gender": {
+            "type": "MALE",
+            "name": "Homme"
+          },
+          "faction": {
+            "type": "HORDE",
+            "name": "Horde"
+          },
+          "level": 35
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/archimonde/elk%C3%AFs?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/539-lu?namespace=profile-eu"
+          },
+          "name": "Elkïs",
+          "id": 107253661,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/539?namespace=dynamic-eu"
+            },
+            "name": "Archimonde",
+            "id": 539,
+            "slug": "archimonde"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/2?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Paladin",
+            "id": 2
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/10?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Elfe de sang",
+            "id": 10
+          },
+          "gender": {
+            "type": "FEMALE",
+            "name": "Femme"
+          },
+          "faction": {
+            "type": "HORDE",
+            "name": "Horde"
+          },
+          "level": 40
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/archimonde/everlehippie?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/539-lu?namespace=profile-eu"
+          },
+          "name": "Everlehippie",
+          "id": 107272377,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/539?namespace=dynamic-eu"
+            },
+            "name": "Archimonde",
+            "id": 539,
+            "slug": "archimonde"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/6?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Chevalier de la mort",
+            "id": 6
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/2?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Orc",
+            "id": 2
+          },
+          "gender": {
+            "type": "MALE",
+            "name": "Homme"
+          },
+          "faction": {
+            "type": "HORDE",
+            "name": "Horde"
+          },
+          "level": 35
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/archimonde/%C3%AAverbbq?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/539-lu?namespace=profile-eu"
+          },
+          "name": "Êverbbq",
+          "id": 107300201,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/539?namespace=dynamic-eu"
+            },
+            "name": "Archimonde",
+            "id": 539,
+            "slug": "archimonde"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/4?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Voleur",
+            "id": 4
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/5?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Mort-vivant",
+            "id": 5
+          },
+          "gender": {
+            "type": "MALE",
+            "name": "Homme"
+          },
+          "faction": {
+            "type": "HORDE",
+            "name": "Horde"
+          },
+          "level": 35
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/archimonde/everr%C3%B4fl?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/539-lu?namespace=profile-eu"
+          },
+          "name": "Everrôfl",
+          "id": 107329144,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/539?namespace=dynamic-eu"
+            },
+            "name": "Archimonde",
+            "id": 539,
+            "slug": "archimonde"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/11?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Druide",
+            "id": 11
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/6?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Tauren",
+            "id": 6
+          },
+          "gender": {
+            "type": "MALE",
+            "name": "Homme"
+          },
+          "faction": {
+            "type": "HORDE",
+            "name": "Horde"
+          },
+          "level": 35
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/archimonde/slbbq?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/539-lu?namespace=profile-eu"
+          },
+          "name": "Slbbq",
+          "id": 128465782,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/539?namespace=dynamic-eu"
+            },
+            "name": "Archimonde",
+            "id": 539,
+            "slug": "archimonde"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/5?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Prêtre",
+            "id": 5
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/1?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Humain",
+            "id": 1
+          },
+          "gender": {
+            "type": "FEMALE",
+            "name": "Femme"
+          },
+          "faction": {
+            "type": "ALLIANCE",
+            "name": "Alliance"
+          },
+          "level": 4
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/ysondre/fyldepaich?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/1335-lu?namespace=profile-eu"
+          },
+          "name": "Fyldepaich",
+          "id": 57710492,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/1335?namespace=dynamic-eu"
+            },
+            "name": "Ysondre",
+            "id": 1335,
+            "slug": "ysondre"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/10?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Moine",
+            "id": 10
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/25?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Pandaren",
+            "id": 25
+          },
+          "gender": {
+            "type": "MALE",
+            "name": "Homme"
+          },
+          "faction": {
+            "type": "ALLIANCE",
+            "name": "Alliance"
+          },
+          "level": 17
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/ysondre/bwatapaich?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/1335-lu?namespace=profile-eu"
+          },
+          "name": "Bwatapaich",
+          "id": 57719878,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/1335?namespace=dynamic-eu"
+            },
+            "name": "Ysondre",
+            "id": 1335,
+            "slug": "ysondre"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/6?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Chevalier de la mort",
+            "id": 6
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/22?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Worgen",
+            "id": 22
+          },
+          "gender": {
+            "type": "FEMALE",
+            "name": "Femme"
+          },
+          "faction": {
+            "type": "ALLIANCE",
+            "name": "Alliance"
+          },
+          "level": 23
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/ysondre/h%C3%BFdro?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/1335-lu?namespace=profile-eu"
+          },
+          "name": "Hÿdro",
+          "id": 57737477,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/1335?namespace=dynamic-eu"
+            },
+            "name": "Ysondre",
+            "id": 1335,
+            "slug": "ysondre"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/3?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Chasseur",
+            "id": 3
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/1?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Humain",
+            "id": 1
+          },
+          "gender": {
+            "type": "FEMALE",
+            "name": "Femme"
+          },
+          "faction": {
+            "type": "ALLIANCE",
+            "name": "Alliance"
+          },
+          "level": 14
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/ysondre/mitainereune?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/1335-lu?namespace=profile-eu"
+          },
+          "name": "Mitainereune",
+          "id": 57758400,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/1335?namespace=dynamic-eu"
+            },
+            "name": "Ysondre",
+            "id": 1335,
+            "slug": "ysondre"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/9?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Démoniste",
+            "id": 9
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/22?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Worgen",
+            "id": 22
+          },
+          "gender": {
+            "type": "FEMALE",
+            "name": "Femme"
+          },
+          "faction": {
+            "type": "ALLIANCE",
+            "name": "Alliance"
+          },
+          "level": 7
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/ysondre/onhar?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/1335-lu?namespace=profile-eu"
+          },
+          "name": "Onhar",
+          "id": 57761810,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/1335?namespace=dynamic-eu"
+            },
+            "name": "Ysondre",
+            "id": 1335,
+            "slug": "ysondre"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/1?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Guerrier",
+            "id": 1
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/3?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Nain",
+            "id": 3
+          },
+          "gender": {
+            "type": "MALE",
+            "name": "Homme"
+          },
+          "faction": {
+            "type": "ALLIANCE",
+            "name": "Alliance"
+          },
+          "level": 4
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/ysondre/gsuisunpulp?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/1335-lu?namespace=profile-eu"
+          },
+          "name": "Gsuisunpulp",
+          "id": 57762968,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/1335?namespace=dynamic-eu"
+            },
+            "name": "Ysondre",
+            "id": 1335,
+            "slug": "ysondre"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/2?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Paladin",
+            "id": 2
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/11?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Draeneï",
+            "id": 11
+          },
+          "gender": {
+            "type": "FEMALE",
+            "name": "Femme"
+          },
+          "faction": {
+            "type": "ALLIANCE",
+            "name": "Alliance"
+          },
+          "level": 1
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/ysondre/everlehippie?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/1335-lu?namespace=profile-eu"
+          },
+          "name": "Everlehippie",
+          "id": 57763006,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/1335?namespace=dynamic-eu"
+            },
+            "name": "Ysondre",
+            "id": 1335,
+            "slug": "ysondre"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/8?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Mage",
+            "id": 8
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/4?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Elfe de la nuit",
+            "id": 4
+          },
+          "gender": {
+            "type": "FEMALE",
+            "name": "Femme"
+          },
+          "faction": {
+            "type": "ALLIANCE",
+            "name": "Alliance"
+          },
+          "level": 7
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/confr%C3%A9rie-du-thorium/tholran?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/1127-lu?namespace=profile-eu"
+          },
+          "name": "Tholran",
+          "id": 59705610,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/1127?namespace=dynamic-eu"
+            },
+            "name": "Confrérie du Thorium",
+            "id": 1127,
+            "slug": "confrérie-du-thorium"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/1?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Guerrier",
+            "id": 1
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/3?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Nain",
+            "id": 3
+          },
+          "gender": {
+            "type": "MALE",
+            "name": "Homme"
+          },
+          "faction": {
+            "type": "ALLIANCE",
+            "name": "Alliance"
+          },
+          "level": 2
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/uldaman/raykun?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/1122-lu?namespace=profile-eu"
+          },
+          "name": "Raykun",
+          "id": 54384467,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/1122?namespace=dynamic-eu"
+            },
+            "name": "Uldaman",
+            "id": 1122,
+            "slug": "uldaman"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/6?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Chevalier de la mort",
+            "id": 6
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/22?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Worgen",
+            "id": 22
+          },
+          "gender": {
+            "type": "MALE",
+            "name": "Homme"
+          },
+          "faction": {
+            "type": "ALLIANCE",
+            "name": "Alliance"
+          },
+          "level": 24
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/uldaman/fenderguy?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/1122-lu?namespace=profile-eu"
+          },
+          "name": "Fenderguy",
+          "id": 59704243,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/1122?namespace=dynamic-eu"
+            },
+            "name": "Uldaman",
+            "id": 1122,
+            "slug": "uldaman"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/10?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Moine",
+            "id": 10
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/24?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Pandaren",
+            "id": 24
+          },
+          "gender": {
+            "type": "MALE",
+            "name": "Homme"
+          },
+          "faction": {
+            "type": "NEUTRAL",
+            "name": "Neutre"
+          },
+          "level": 1
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/arathi/everbbq?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/1334-lu?namespace=profile-eu"
+          },
+          "name": "Everbbq",
+          "id": 85020208,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/1334?namespace=dynamic-eu"
+            },
+            "name": "Arathi",
+            "id": 1334,
+            "slug": "arathi"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/3?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Chasseur",
+            "id": 3
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/9?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Gobelin",
+            "id": 9
+          },
+          "gender": {
+            "type": "FEMALE",
+            "name": "Femme"
+          },
+          "faction": {
+            "type": "HORDE",
+            "name": "Horde"
+          },
+          "level": 1
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/arathi/eternara?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/1334-lu?namespace=profile-eu"
+          },
+          "name": "Eternara",
+          "id": 85024761,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/1334?namespace=dynamic-eu"
+            },
+            "name": "Arathi",
+            "id": 1334,
+            "slug": "arathi"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/9?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Démoniste",
+            "id": 9
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/9?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Gobelin",
+            "id": 9
+          },
+          "gender": {
+            "type": "FEMALE",
+            "name": "Femme"
+          },
+          "faction": {
+            "type": "HORDE",
+            "name": "Horde"
+          },
+          "level": 1
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/arathi/eternarra?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/1334-lu?namespace=profile-eu"
+          },
+          "name": "Eternarra",
+          "id": 85026934,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/1334?namespace=dynamic-eu"
+            },
+            "name": "Arathi",
+            "id": 1334,
+            "slug": "arathi"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/8?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Mage",
+            "id": 8
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/9?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Gobelin",
+            "id": 9
+          },
+          "gender": {
+            "type": "FEMALE",
+            "name": "Femme"
+          },
+          "faction": {
+            "type": "HORDE",
+            "name": "Horde"
+          },
+          "level": 1
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/arathi/soualo?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/1334-lu?namespace=profile-eu"
+          },
+          "name": "Soualo",
+          "id": 85164094,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/1334?namespace=dynamic-eu"
+            },
+            "name": "Arathi",
+            "id": 1334,
+            "slug": "arathi"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/7?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Chaman",
+            "id": 7
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/2?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Orc",
+            "id": 2
+          },
+          "gender": {
+            "type": "MALE",
+            "name": "Homme"
+          },
+          "faction": {
+            "type": "HORDE",
+            "name": "Horde"
+          },
+          "level": 2
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/naxxramas/everbbq?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/1624-lu?namespace=profile-eu"
+          },
+          "name": "Everbbq",
+          "id": 105751458,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/1624?namespace=dynamic-eu"
+            },
+            "name": "Naxxramas",
+            "id": 1624,
+            "slug": "naxxramas"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/1?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Guerrier",
+            "id": 1
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/1?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Humain",
+            "id": 1
+          },
+          "gender": {
+            "type": "FEMALE",
+            "name": "Femme"
+          },
+          "faction": {
+            "type": "ALLIANCE",
+            "name": "Alliance"
+          },
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": 82621273,
+      "characters": [
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/archimonde/bibikyu?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/539-lu?namespace=profile-eu"
+          },
+          "name": "Bibikyu",
+          "id": 165161229,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/539?namespace=dynamic-eu"
+            },
+            "name": "Archimonde",
+            "id": 539,
+            "slug": "archimonde"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/10?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Moine",
+            "id": 10
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/1?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Humain",
+            "id": 1
+          },
+          "gender": {
+            "type": "MALE",
+            "name": "Homme"
+          },
+          "faction": {
+            "type": "ALLIANCE",
+            "name": "Alliance"
+          },
+          "level": 45
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/archimonde/pahaut?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/539-lu?namespace=profile-eu"
+          },
+          "name": "Pahaut",
+          "id": 165268882,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/539?namespace=dynamic-eu"
+            },
+            "name": "Archimonde",
+            "id": 539,
+            "slug": "archimonde"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/7?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Chaman",
+            "id": 7
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/3?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Nain",
+            "id": 3
+          },
+          "gender": {
+            "type": "MALE",
+            "name": "Homme"
+          },
+          "faction": {
+            "type": "ALLIANCE",
+            "name": "Alliance"
+          },
+          "level": 16
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/archimonde/bbcute?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/539-lu?namespace=profile-eu"
+          },
+          "name": "Bbcute",
+          "id": 167769697,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/539?namespace=dynamic-eu"
+            },
+            "name": "Archimonde",
+            "id": 539,
+            "slug": "archimonde"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/3?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Chasseur",
+            "id": 3
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/2?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Orc",
+            "id": 2
+          },
+          "gender": {
+            "type": "MALE",
+            "name": "Homme"
+          },
+          "faction": {
+            "type": "HORDE",
+            "name": "Horde"
+          },
+          "level": 60
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/archimonde/antonain?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/539-lu?namespace=profile-eu"
+          },
+          "name": "Antonain",
+          "id": 195312161,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/539?namespace=dynamic-eu"
+            },
+            "name": "Archimonde",
+            "id": 539,
+            "slug": "archimonde"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/2?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Paladin",
+            "id": 2
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/3?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Nain",
+            "id": 3
+          },
+          "gender": {
+            "type": "MALE",
+            "name": "Homme"
+          },
+          "faction": {
+            "type": "ALLIANCE",
+            "name": "Alliance"
+          },
+          "level": 33
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/archimonde/daedalus?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/539-lu?namespace=profile-eu"
+          },
+          "name": "Daedalus",
+          "id": 195372797,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/539?namespace=dynamic-eu"
+            },
+            "name": "Archimonde",
+            "id": 539,
+            "slug": "archimonde"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/11?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Druide",
+            "id": 11
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/4?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Elfe de la nuit",
+            "id": 4
+          },
+          "gender": {
+            "type": "MALE",
+            "name": "Homme"
+          },
+          "faction": {
+            "type": "ALLIANCE",
+            "name": "Alliance"
+          },
+          "level": 36
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/archimonde/grosabots?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/539-lu?namespace=profile-eu"
+          },
+          "name": "Grosabots",
+          "id": 195392101,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/539?namespace=dynamic-eu"
+            },
+            "name": "Archimonde",
+            "id": 539,
+            "slug": "archimonde"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/7?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Chaman",
+            "id": 7
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/11?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Draeneï",
+            "id": 11
+          },
+          "gender": {
+            "type": "FEMALE",
+            "name": "Femme"
+          },
+          "faction": {
+            "type": "ALLIANCE",
+            "name": "Alliance"
+          },
+          "level": 2
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/archimonde/didieraoult?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/539-lu?namespace=profile-eu"
+          },
+          "name": "Didieraoult",
+          "id": 195419884,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/539?namespace=dynamic-eu"
+            },
+            "name": "Archimonde",
+            "id": 539,
+            "slug": "archimonde"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/1?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Guerrier",
+            "id": 1
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/1?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Humain",
+            "id": 1
+          },
+          "gender": {
+            "type": "MALE",
+            "name": "Homme"
+          },
+          "faction": {
+            "type": "ALLIANCE",
+            "name": "Alliance"
+          },
+          "level": 50
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/archimonde/b%C3%B4f?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/539-lu?namespace=profile-eu"
+          },
+          "name": "Bôf",
+          "id": 195573133,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/539?namespace=dynamic-eu"
+            },
+            "name": "Archimonde",
+            "id": 539,
+            "slug": "archimonde"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/12?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Chasseur de démons",
+            "id": 12
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/4?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Elfe de la nuit",
+            "id": 4
+          },
+          "gender": {
+            "type": "FEMALE",
+            "name": "Femme"
+          },
+          "faction": {
+            "type": "ALLIANCE",
+            "name": "Alliance"
+          },
+          "level": 8
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/elune/ever?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/540-lu?namespace=profile-eu"
+          },
+          "name": "Ever",
+          "id": 146007152,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/540?namespace=dynamic-eu"
+            },
+            "name": "Elune",
+            "id": 540,
+            "slug": "elune"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/12?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Chasseur de démons",
+            "id": 12
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/4?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Elfe de la nuit",
+            "id": 4
+          },
+          "gender": {
+            "type": "MALE",
+            "name": "Homme"
+          },
+          "faction": {
+            "type": "ALLIANCE",
+            "name": "Alliance"
+          },
+          "level": 45
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/hyjal/everbibikyu?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/542-lu?namespace=profile-eu"
+          },
+          "name": "Everbibikyu",
+          "id": 151865449,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/542?namespace=dynamic-eu"
+            },
+            "name": "Hyjal",
+            "id": 542,
+            "slug": "hyjal"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/1?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Guerrier",
+            "id": 1
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/1?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Humain",
+            "id": 1
+          },
+          "gender": {
+            "type": "MALE",
+            "name": "Homme"
+          },
+          "faction": {
+            "type": "ALLIANCE",
+            "name": "Alliance"
+          },
+          "level": 45
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/hyjal/bibikyu?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/542-lu?namespace=profile-eu"
+          },
+          "name": "Bibikyu",
+          "id": 156394583,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/542?namespace=dynamic-eu"
+            },
+            "name": "Hyjal",
+            "id": 542,
+            "slug": "hyjal"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/8?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Mage",
+            "id": 8
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/1?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Humain",
+            "id": 1
+          },
+          "gender": {
+            "type": "MALE",
+            "name": "Homme"
+          },
+          "faction": {
+            "type": "ALLIANCE",
+            "name": "Alliance"
+          },
+          "level": 50
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/hyjal/%C3%AAverbbq?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/542-lu?namespace=profile-eu"
+          },
+          "name": "Êverbbq",
+          "id": 182174497,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/542?namespace=dynamic-eu"
+            },
+            "name": "Hyjal",
+            "id": 542,
+            "slug": "hyjal"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/8?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Mage",
+            "id": 8
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/5?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Mort-vivant",
+            "id": 5
+          },
+          "gender": {
+            "type": "MALE",
+            "name": "Homme"
+          },
+          "faction": {
+            "type": "HORDE",
+            "name": "Horde"
+          },
+          "level": 52
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/hyjal/edenshoulder?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/542-lu?namespace=profile-eu"
+          },
+          "name": "Edenshoulder",
+          "id": 195692571,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/542?namespace=dynamic-eu"
+            },
+            "name": "Hyjal",
+            "id": 542,
+            "slug": "hyjal"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/1?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Guerrier",
+            "id": 1
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/2?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Orc",
+            "id": 2
+          },
+          "gender": {
+            "type": "MALE",
+            "name": "Homme"
+          },
+          "faction": {
+            "type": "HORDE",
+            "name": "Horde"
+          },
+          "level": 51
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/hyjal/%C3%ABverbbq?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/542-lu?namespace=profile-eu"
+          },
+          "name": "Ëverbbq",
+          "id": 195889975,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/542?namespace=dynamic-eu"
+            },
+            "name": "Hyjal",
+            "id": 542,
+            "slug": "hyjal"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/10?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Moine",
+            "id": 10
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/2?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Orc",
+            "id": 2
+          },
+          "gender": {
+            "type": "MALE",
+            "name": "Homme"
+          },
+          "faction": {
+            "type": "HORDE",
+            "name": "Horde"
+          },
+          "level": 60
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/hyjal/belanu?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/542-lu?namespace=profile-eu"
+          },
+          "name": "Belanu",
+          "id": 195990610,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/542?namespace=dynamic-eu"
+            },
+            "name": "Hyjal",
+            "id": 542,
+            "slug": "hyjal"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/7?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Chaman",
+            "id": 7
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/2?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Orc",
+            "id": 2
+          },
+          "gender": {
+            "type": "FEMALE",
+            "name": "Femme"
+          },
+          "faction": {
+            "type": "HORDE",
+            "name": "Horde"
+          },
+          "level": 60
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/hyjal/%C3%ABver?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/542-lu?namespace=profile-eu"
+          },
+          "name": "Ëver",
+          "id": 197426216,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/542?namespace=dynamic-eu"
+            },
+            "name": "Hyjal",
+            "id": 542,
+            "slug": "hyjal"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/4?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Voleur",
+            "id": 4
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/2?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Orc",
+            "id": 2
+          },
+          "gender": {
+            "type": "FEMALE",
+            "name": "Femme"
+          },
+          "faction": {
+            "type": "HORDE",
+            "name": "Horde"
+          },
+          "level": 60
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/hyjal/tucknorris?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/542-lu?namespace=profile-eu"
+          },
+          "name": "Tucknorris",
+          "id": 199195879,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/542?namespace=dynamic-eu"
+            },
+            "name": "Hyjal",
+            "id": 542,
+            "slug": "hyjal"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/10?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Moine",
+            "id": 10
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/2?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Orc",
+            "id": 2
+          },
+          "gender": {
+            "type": "FEMALE",
+            "name": "Femme"
+          },
+          "faction": {
+            "type": "HORDE",
+            "name": "Horde"
+          },
+          "level": 48
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/hyjal/bbcute?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/542-lu?namespace=profile-eu"
+          },
+          "name": "Bbcute",
+          "id": 201508885,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/542?namespace=dynamic-eu"
+            },
+            "name": "Hyjal",
+            "id": 542,
+            "slug": "hyjal"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/9?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Démoniste",
+            "id": 9
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/2?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Orc",
+            "id": 2
+          },
+          "gender": {
+            "type": "MALE",
+            "name": "Homme"
+          },
+          "faction": {
+            "type": "HORDE",
+            "name": "Horde"
+          },
+          "level": 60
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/hyjal/everbbq?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/542-lu?namespace=profile-eu"
+          },
+          "name": "Everbbq",
+          "id": 201841821,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/542?namespace=dynamic-eu"
+            },
+            "name": "Hyjal",
+            "id": 542,
+            "slug": "hyjal"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/5?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Prêtre",
+            "id": 5
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/5?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Mort-vivant",
+            "id": 5
+          },
+          "gender": {
+            "type": "MALE",
+            "name": "Homme"
+          },
+          "faction": {
+            "type": "HORDE",
+            "name": "Horde"
+          },
+          "level": 60
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/stormscale/everbbq?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/560-lu?namespace=profile-eu"
+          },
+          "name": "Everbbq",
+          "id": 92878215,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/560?namespace=dynamic-eu"
+            },
+            "name": "Stormscale",
+            "id": 560,
+            "slug": "stormscale"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/11?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Druide",
+            "id": 11
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/4?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Elfe de la nuit",
+            "id": 4
+          },
+          "gender": {
+            "type": "FEMALE",
+            "name": "Femme"
+          },
+          "faction": {
+            "type": "ALLIANCE",
+            "name": "Alliance"
+          },
+          "level": 40
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/stormscale/barbiche?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/560-lu?namespace=profile-eu"
+          },
+          "name": "Barbiche",
+          "id": 92895238,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/560?namespace=dynamic-eu"
+            },
+            "name": "Stormscale",
+            "id": 560,
+            "slug": "stormscale"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/2?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Paladin",
+            "id": 2
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/3?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Nain",
+            "id": 3
+          },
+          "gender": {
+            "type": "MALE",
+            "name": "Homme"
+          },
+          "faction": {
+            "type": "ALLIANCE",
+            "name": "Alliance"
+          },
+          "level": 38
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/stormscale/cuill%C3%A8re?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/560-lu?namespace=profile-eu"
+          },
+          "name": "Cuillère",
+          "id": 92907177,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/560?namespace=dynamic-eu"
+            },
+            "name": "Stormscale",
+            "id": 560,
+            "slug": "stormscale"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/4?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Voleur",
+            "id": 4
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/1?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Humain",
+            "id": 1
+          },
+          "gender": {
+            "type": "FEMALE",
+            "name": "Femme"
+          },
+          "faction": {
+            "type": "ALLIANCE",
+            "name": "Alliance"
+          },
+          "level": 45
+        },
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/conseil-des-ombres/bbcute?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/644-lu?namespace=profile-eu"
+          },
+          "name": "Bbcute",
+          "id": 168127179,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/644?namespace=dynamic-eu"
+            },
+            "name": "Conseil des Ombres",
+            "id": 644,
+            "slug": "conseil-des-ombres"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/7?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Chaman",
+            "id": 7
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/6?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Tauren",
+            "id": 6
+          },
+          "gender": {
+            "type": "FEMALE",
+            "name": "Femme"
+          },
+          "faction": {
+            "type": "HORDE",
+            "name": "Horde"
+          },
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": 11011395,
+      "characters": [
+        {
+          "character": {
+            "href": "https://eu.api.blizzard.com/profile/wow/character/tyrande/mdr72b152?namespace=profile-eu"
+          },
+          "protected_character": {
+            "href": "https://eu.api.blizzard.com/profile/user/wow/protected-character/1384-lu?namespace=profile-eu"
+          },
+          "name": "Mdr72B152",
+          "id": 41070930,
+          "realm": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/realm/1384?namespace=dynamic-eu"
+            },
+            "name": "Tyrande",
+            "id": 1384,
+            "slug": "tyrande"
+          },
+          "playable_class": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-class/2?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Paladin",
+            "id": 2
+          },
+          "playable_race": {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/playable-race/10?namespace=static-9.2.5_43810-eu"
+            },
+            "name": "Elfe de sang",
+            "id": 10
+          },
+          "gender": {
+            "type": "MALE",
+            "name": "Homme"
+          },
+          "faction": {
+            "type": "HORDE",
+            "name": "Horde"
+          },
+          "level": 1
+        }
+      ]
+    }
+  ],
+  "collections": {
+    "href": "https://eu.api.blizzard.com/profile/user/wow/collections?namespace=profile-eu"
+  }
+}
