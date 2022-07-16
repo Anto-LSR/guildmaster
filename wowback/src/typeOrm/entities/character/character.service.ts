@@ -21,8 +21,6 @@ export class CharacterService {
   }
 
   async getCharacterInfo(characterId: string): Promise<any> {
-    console.log(characterId);
-
     const character = await this.findByCharacterId(characterId);
     return character;
   }
@@ -32,5 +30,9 @@ export class CharacterService {
       where: { user: user },
       order: { level: 'DESC' },
     });
+  }
+
+  async setSelectedCharacter(user: User): Promise<User> {
+    return await this.userRepository.save(user);
   }
 }

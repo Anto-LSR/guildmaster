@@ -1,73 +1,142 @@
 import React, { useEffect, useState, useContext } from "react";
 import { BiShieldQuarter } from "react-icons/bi";
 import { VscWorkspaceUnknown } from "react-icons/vsc";
-import { FiLogOut } from "react-icons/fi";
+import { FiLogOut, FiLogIn } from "react-icons/fi";
+import { GiCrenelCrown } from "react-icons/gi";
+import { HiMenu } from "react-icons/hi";
+
+import { MdClose } from "react-icons/md";
+
 import { Link, Outlet } from "react-router-dom";
 import { UserInfoContext } from "../contexts/UserInfoContext";
 
 function Navbar() {
   const { userInfo, setUserInfo, characterData, setCharacterData } =
     useContext(UserInfoContext);
+
+  const [navBarToggled, setNavBarToggled] = useState(false);
   return (
     <div className="App">
-      {/* <pre>{JSON.stringify(characterData, null, 2)}</pre> */}
-
       <div className="flex flex-row">
-        {characterData && (
-          <div className=" w-64 bg-[#252525] h-screen">
-            <div className="user-info flex m-5">
-              <img
-                src={characterData?.avatar}
-                alt=""
-                className="rounded border-2 border-white"
-              />
-              <div className="text-left pl-2 text-white">
-                <p
-                  className={
-                    "text-" +
-                    characterData?.character_class.name
-                      .toLowerCase()
-                      .replaceAll(" ", "") +
-                    "color"
-                  }
-                >
-                  {characterData?.name}
-                </p>
+        <div
+          className={
+            navBarToggled
+              ? "w-screen bg-[#252525] h-screen  lg:w-64"
+              : "hidden bg-[#252525] h-screen  left-0 lg:block lg:w-80"
+          }
+          toggled={navBarToggled.toString()}
+        >
+          <MdClose
+            className="text-2xl absolute right-2 top-2 text-white lg:hidden"
+            onClick={() => {
+              setNavBarToggled(false);
+            }}
+          />
+          <div className="flex flex-col items-center border-0 border-b border-solid bg-primary">
+            <GiCrenelCrown className="text-white font-bold text-4xl " />
+            <h1 className="font-bold text-4xl text-white mb-2">Guild Master</h1>
+          </div>
+          {characterData && (
+            <div>
+              <div className="user-info flex m-5">
+                <img
+                  src={characterData?.avatar}
+                  alt=""
+                  className="rounded border-2 border-white"
+                />
+                <div className="text-left pl-2 text-white">
+                  <p
+                    className={
+                      "text-" +
+                      characterData?.character_class.name
+                        .toLowerCase()
+                        .replaceAll(" ", "") +
+                      "color"
+                    }
+                  >
+                    {characterData?.name}
+                  </p>
 
-                <p>{characterData?.realm.name}</p>
-                <p className="text-[#E7B57A]">{characterData?.guild?.name}</p>
-                <p>{characterData?.level}</p>
-              </div>
-            </div>
-            <Link
-              to="my-characters"
-              className="bg-primary hover:bg-[#2A7484] text-white font-bold py-2 px-4 border-b-4 border-[#2A7484] hover:border-[##2A7484] rounded transition ease-in-out"
-            >
-              Change character
-            </Link>
-
-            <ul className="mt-10 ml-10 text-white">
-              <li className=" flex">
-                <div className="flex items-center text-xl cursor-pointer  hover:text-primary  transition ease-in-out">
-                  <BiShieldQuarter className="mr-5" />
-                  My Guild &nbsp;
+                  <p>{characterData?.realm.name}</p>
+                  <p className="text-[#E7B57A]">{characterData?.guild?.name}</p>
+                  <p>{characterData?.level}</p>
                 </div>
-                <div className="rounded-full bg-red-500 w-7  ">2</div>
-              </li>
-              <li className="nav-active-link flex items-center text-xl cursor-pointer hover:text-primary transition ease-in-out mt-3">
-                <VscWorkspaceUnknown className="mr-5" />
-                Find a guild
-              </li>
-            </ul>
+              </div>
+
+              <Link
+                to="my-characters"
+                className="bg-primary hover:bg-[#2A7484] text-white font-bold py-2 px-4 border-b-4 border-[#2A7484] hover:border-[##2A7484] rounded transition ease-in-out"
+                onClick={() => {
+                  setNavBarToggled(false);
+                }}
+              >
+                Change character
+              </Link>
+            </div>
+          )}
+          <ul className="mt-10 ml-10 text-white">
+            <li className=" flex">
+              {characterData && (
+                <div className="flex">
+                  <div className="flex items-center text-xl cursor-pointer  hover:text-primary  transition ease-in-out">
+                    <BiShieldQuarter className="mr-5" />
+                    My Guild &nbsp;
+                  </div>
+
+                  <div className="rounded-full bg-red-500 w-7  ">2</div>
+                </div>
+              )}
+
+              {!characterData && (
+                <div>
+                  <div className="flex items-center text-xl cursor-pointer  hover:text-primary  transition ease-in-out">
+                    <Link to="/auth/login" className="flex items-center">
+                      <FiLogIn className="mr-5" />
+                      Login &nbsp;
+                    </Link>
+                  </div>
+                </div>
+              )}
+            </li>
+            <li className="nav-active-link flex items-center text-xl cursor-pointer hover:text-primary transition ease-in-out mt-3">
+              <VscWorkspaceUnknown className="mr-5" />
+              Find a guild
+            </li>
+          </ul>
+          {userInfo && (
             <a className="absolute bottom-5 left-10 text-white flex items-center hover:text-primary cursor-pointer">
               <FiLogOut /> &nbsp; Log out
             </a>
-          </div>
-        )}
-        <Outlet />
+          )}
+        </div>
+
+        <div
+          className={
+            navBarToggled
+              ? "hidden lg:hidden"
+              : "text-2xl absolute left-2 top-2 lg:hidden"
+          }
+        >
+          <HiMenu
+            onClick={() => {
+              setNavBarToggled(true);
+            }}
+            className="text-white cursor-pointer"
+          />
+        </div>
+        <div
+          className={
+            navBarToggled
+              ? "hidden lg:block bg-[#232739] h-full w-full"
+              : "lg:block w-full bg-[#232739] h-full w-full md:h-screen  lg:h-screen"
+          }
+          id="content"
+        >
+          <Outlet />
+        </div>
       </div>
 
-      {!characterData && (
+      {/* {!characterData && (
         <div className="flex items-center justify-center h-screen w-screen bg-[#252525]">
           <button
             disabled
@@ -93,7 +162,7 @@ function Navbar() {
             Loading...
           </button>
         </div>
-      )}
+      )} */}
     </div>
   );
 }

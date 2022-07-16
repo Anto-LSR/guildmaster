@@ -14,11 +14,15 @@ function CharacterCard({ character, passChildData }) {
           className={
             "flex bg-" +
             character.faction.toLowerCase() +
-            " bg-opacity text-white border-2 rounded-md border-white-500  w-44 items-center pl-2 hover:border-primary cursor-pointer focus:border-primary focus:outline focus:outline-primary "
+            " bg-opacity text-white border-2 rounded-md border-white-500  lg:w-44 w-32 md:w-44 items-center pl-2 hover:border-primary cursor-pointer focus:border-primary focus:outline focus:outline-primary "
           }
         >
           <div>
-            <img className="border-white" src={character.avatarUrl} alt="" />
+            <img
+              className=" hidden border-white lg:block"
+              src={character.avatarUrl}
+              alt=""
+            />
           </div>
           <div className="text-start p-2">
             <p
@@ -38,7 +42,6 @@ function CharacterCard({ character, passChildData }) {
           </div>
         </button>
       )}
-
     </div>
   );
 }
