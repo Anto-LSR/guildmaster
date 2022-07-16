@@ -26,8 +26,8 @@ export class BnetInfoService {
 
   async getUserCharacter(token: string): Promise<Record<string, any>> {
     //TODO: Récupérer l'id du personnage selectionné depuis la base de données
-    let character = await axios.get(
-      `https://eu.api.blizzard.com/profile/user/wow?namespace=profile-eu&locale=fr_FR&access_token=${token}`,
+    const character = await axios.get(
+      `https://eu.api.blizzard.com/profile/user/wow?namespace=profile-eu&locale=en_GB&access_token=${token}`,
     );
     return character.data;
   }

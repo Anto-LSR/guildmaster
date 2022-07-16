@@ -6,10 +6,11 @@ import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import ApiManager from "../services/ApiManager";
-import { UserContext } from "../services/UserContext";
+import { UserInfoContext } from "../contexts/UserInfoContext";
 
 function LoginForm() {
-  const { user, setUser } = useContext(UserContext);
+  const { userInfo, setUserInfo} =
+    useContext(UserInfoContext);
 
   const {
     register,
@@ -18,9 +19,6 @@ function LoginForm() {
   } = useForm({
     validateCriteriaMode: "all",
   });
-
-  const navigate = useNavigate();
-
   const onSubmit = async (data, e) => {
     if (Object.entries(errors).length === 0) {
       const am = ApiManager.getInstance();
@@ -30,8 +28,8 @@ function LoginForm() {
 
         let data = await am.post("/auth/get-user");
         const user = data.data;
-        setUser(user)
-        navigate("/");
+        setUserInfo(user);
+        window.location='/'
       }
     }
   };

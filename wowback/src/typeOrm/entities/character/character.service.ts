@@ -1,8 +1,9 @@
 import { Inject, Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Repository } from 'typeorm';
+import { MetadataAlreadyExistsError, Repository } from 'typeorm';
 import { User } from '../user/user.entity';
 import { Character } from './character.entity';
+import axios from 'axios';
 
 @Injectable()
 export class CharacterService {
@@ -16,6 +17,20 @@ export class CharacterService {
   async findByCharacterId(characterId: string): Promise<Character> {
     return await this.characterRepository.findOneBy({
       wowCharacterId: characterId,
+    });
+  }
+
+  async getCharacterInfo(characterId: string): Promise<any> {
+    console.log(characterId);
+
+    const character = await this.findByCharacterId(characterId);
+    return character;
+  }
+
+  async getAllCharacters(user: User): Promise<Character[]> {
+    return await this.characterRepository.find({
+      where: { user: user },
+      order: { level: 'DESC' },
     });
   }
 }

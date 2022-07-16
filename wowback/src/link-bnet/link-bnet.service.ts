@@ -1,14 +1,14 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import axios from 'axios';
-import qs from 'qs';
 import { Request, Response } from 'express';
 import { AuthService } from 'src/auth/auth.service';
 import { Character } from 'src/typeOrm/entities/character/character.entity';
 import { User } from 'src/typeOrm/entities/user/user.entity';
-
+import qs from 'qs';
 import { Repository } from 'typeorm';
 import { CharacterService } from 'src/typeOrm/entities/character/character.service';
+import { log } from 'console';
 
 @Injectable()
 export class LinkBnetService {
@@ -27,14 +27,15 @@ export class LinkBnetService {
    * @param response
    */
   async getAccessToken(code: string, response: Response, request: Request) {
-    var qs = require('qs');
-    var data = qs.stringify({
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
+    const qs = require('qs');
+    const data = qs.stringify({
       redirect_uri: process.env.redirectUri,
       scope: 'wow.profile',
       grant_type: 'authorization_code',
       code: code,
     });
-    var config = {
+    const config = {
       method: 'post',
       url: 'https://us.battle.net/oauth/token',
       headers: {
@@ -56,28 +57,32 @@ export class LinkBnetService {
       `http://eu.battle.net/oauth/userinfo?region=eu&access_token=${token}`,
     );
 
-    let user = await this.authService.verify(request.cookies.jwt);
+    const user = await this.authService.verify(request.cookies.jwt);
+    console.log('Old api token : ', user.apiToken);
+    console.log('New api token : ', token);
+
     user.apiToken = token;
     user.bnetId = bnetInfo.data.id;
     user.battleTag = bnetInfo.data.battletag;
     user.tokenCreatedAt = new Date(Date.now()).valueOf() + '';
-    user.bnetLinked = true
+    user.bnetLinked = true;
     this.usersRepository.save(user);
     //On récupère les personnages de l'utilisateur
-    let wowAccounts = await axios.get(
-      `https://eu.api.blizzard.com/profile/user/wow?namespace=profile-eu&locale=fr_FR&access_token=${token}`,
+    const wowAccounts = await axios.get(
+      `https://eu.api.blizzard.com/profile/user/wow?namespace=profile-eu&locale=en_GB&access_token=${token}`,
     );
     const registeredCharacters = await this.charactersRepository.find();
+    let wowCharacterId;
     wowAccounts.data.wow_accounts.forEach(async (account) => {
       account.characters.forEach(async (character) => {
         try {
-          let characterEntity = new Character();
+          const characterEntity = new Character();
           characterEntity.realm = character.realm.slug;
           characterEntity.class = character.playable_class.name;
           characterEntity.race = character.playable_race.name;
-          let raceId = character.playable_race.id;
+          const raceId = character.playable_race.id;
           characterEntity.gender = character.gender.type;
-          let genderId = character.gender.type === 'MALE' ? 0 : 1;
+          const genderId = character.gender.type === 'MALE' ? 0 : 1;
           characterEntity.faction = character.faction.name;
           characterEntity.level = character.level;
           characterEntity.wowCharacterId = character.id;
@@ -92,19 +97,25 @@ export class LinkBnetService {
           let insert = true;
           registeredCharacters.forEach((registeredCharacter) => {
             if (
-              registeredCharacter.wowCharacterId ===
+              registeredCharacter.wowCharacterId ==
               characterEntity.wowCharacterId
             ) {
               insert = false;
+              console.log('Character already registered');
             }
           });
           if (insert) {
+            wowCharacterId = characterEntity.wowCharacterId;
             this.charactersRepository.save(characterEntity);
-          } 
+            if (user.selectedCharacter == null) {
+              user.selectedCharacter = wowCharacterId;
+              await this.usersRepository.save(user);
+            }
+          }
         } catch (e) {}
       });
     });
-    
+
     response.redirect(process.env.frontUrl);
   }
 
@@ -127,7 +138,7 @@ export class LinkBnetService {
     console.log(process.env.frontUrl);
     console.log(query.code);
 
-    let user = await this.authService.verify(request.cookies.jwt);
+    const user = await this.authService.verify(request.cookies.jwt);
     user.apiToken = query.code;
 
     await this.usersRepository.save(user);

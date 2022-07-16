@@ -12,28 +12,30 @@ export class Character {
   @PrimaryGeneratedColumn()
   @OneToOne(() => User)
   id: number;
-  @Column({nullable : true})
+  @Column({ nullable: true })
   name: string;
-  @Column({nullable : true})
+  @Column({ nullable: true })
   level: number;
-  @Column({nullable : true})
+  @Column({ nullable: true })
   class: string;
-  @Column({nullable : true})
+  @Column({ nullable: true })
   realm: string;
-  @Column({nullable : true})
+  @Column({ nullable: true })
   faction: string;
-  @Column({nullable : true})
+  @Column({ nullable: true })
   wowCharacterId: string;
-  @Column({nullable : true})
+  @Column({ nullable: true })
   race: string;
-  @Column({nullable : true})
+  @Column({ nullable: true })
   gender: string;
   @ManyToOne(() => User, (user) => user.characters)
   user: User;
 
-  @Column({nullable : true})
-  avatarUrl : string;
+  @Column({ nullable: true })
+  avatarUrl: string;
 
-  @Column({nullable : true})
-  mainPictureUrl : string;
+  @Column({ nullable: true })
+  mainPictureUrl: string;
+  @Column({ nullable: true })
+  guildName: string;
 }

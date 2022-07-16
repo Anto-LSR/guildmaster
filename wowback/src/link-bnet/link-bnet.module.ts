@@ -11,8 +11,13 @@ import { LinkBnetService } from './link-bnet.service';
 
 @Module({
   controllers: [LinkBnetController],
-  providers: [LinkBnetService, AuthService, UsersService, JwtService, CharacterService  ],
+  providers: [
+    LinkBnetService,
+    AuthService,
+    UsersService,
+    JwtService,
+    CharacterService,
+  ],
   imports: [TypeOrmModule.forFeature([User, Character])],
-
 })
 export class LinkBnetModule {}

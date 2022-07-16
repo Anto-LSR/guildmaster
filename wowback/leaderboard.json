@@ -1,0 +1,79 @@
+{
+  "_links": {
+    "self": {
+      "href": "https://eu.api.blizzard.com/data/wow/connected-realm/1390/mythic-leaderboard/?namespace=dynamic-eu"
+    }
+  },
+  "current_leaderboards": [
+    {
+      "key": {
+        "href": "https://eu.api.blizzard.com/data/wow/connected-realm/1390/mythic-leaderboard/375/period/863?namespace=dynamic-eu"
+      },
+      "name": "Brumes de Tirna Scithe",
+      "id": 375
+    },
+    {
+      "key": {
+        "href": "https://eu.api.blizzard.com/data/wow/connected-realm/1390/mythic-leaderboard/376/period/863?namespace=dynamic-eu"
+      },
+      "name": "Sillage nécrotique",
+      "id": 376
+    },
+    {
+      "key": {
+        "href": "https://eu.api.blizzard.com/data/wow/connected-realm/1390/mythic-leaderboard/377/period/863?namespace=dynamic-eu"
+      },
+      "name": "L’Autre côté",
+      "id": 377
+    },
+    {
+      "key": {
+        "href": "https://eu.api.blizzard.com/data/wow/connected-realm/1390/mythic-leaderboard/378/period/863?namespace=dynamic-eu"
+      },
+      "name": "Salles de l’Expiation",
+      "id": 378
+    },
+    {
+      "key": {
+        "href": "https://eu.api.blizzard.com/data/wow/connected-realm/1390/mythic-leaderboard/379/period/863?namespace=dynamic-eu"
+      },
+      "name": "Malepeste",
+      "id": 379
+    },
+    {
+      "key": {
+        "href": "https://eu.api.blizzard.com/data/wow/connected-realm/1390/mythic-leaderboard/380/period/863?namespace=dynamic-eu"
+      },
+      "name": "Profondeurs Sanguines",
+      "id": 380
+    },
+    {
+      "key": {
+        "href": "https://eu.api.blizzard.com/data/wow/connected-realm/1390/mythic-leaderboard/381/period/863?namespace=dynamic-eu"
+      },
+      "name": "Flèches de l’Ascension",
+      "id": 381
+    },
+    {
+      "key": {
+        "href": "https://eu.api.blizzard.com/data/wow/connected-realm/1390/mythic-leaderboard/382/period/863?namespace=dynamic-eu"
+      },
+      "name": "Théâtre de la Souffrance",
+      "id": 382
+    },
+    {
+      "key": {
+        "href": "https://eu.api.blizzard.com/data/wow/connected-realm/1390/mythic-leaderboard/392/period/863?namespace=dynamic-eu"
+      },
+      "name": "Tazavesh : le stratagème de So’leah",
+      "id": 392
+    },
+    {
+      "key": {
+        "href": "https://eu.api.blizzard.com/data/wow/connected-realm/1390/mythic-leaderboard/391/period/863?namespace=dynamic-eu"
+      },
+      "name": "Tazavesh : les rues des merveilles",
+      "id": 391
+    }
+  ]
+}

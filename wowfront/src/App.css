@@ -36,3 +36,64 @@
     transform: rotate(360deg);
   }
 }
+
+
+.text-warriorcolor {
+  color: #C69B6D;
+}
+
+.text-warlockcolor {
+  color: #8788EE;
+}
+
+.text-roguecolor {
+  color: #FFF468;
+}
+
+.text-shamancolor {
+  color: #0070DD;
+}
+
+.text-priestcolor {
+  color: #FFFFFF;
+}
+
+.text-paladincolor {
+  color: #F48CBA;
+}
+
+.text-monkcolor {
+  color: #00FF96;
+}
+
+.text-magecolor {
+  color: #69CCF0;
+}
+
+.text-huntercolor{
+  color: #ABD473;
+}
+
+.text-evoker{
+  color: #33937F;
+}
+
+.text-druidcolor{
+  color: #FF7D0A;
+}
+
+.text-demonhuntercolor{
+  color: #A330C9;
+}
+
+.text-deathknightcolor{
+  color: #C41F3B;
+}
+
+.bg-alliance {
+  background-color: #c41f3b18;
+}
+
+.bg-horde {
+  background-color: #006fdd17;
+}
