@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 .App-logo {
@@ -98,3 +99,4 @@
 .bg-horde {
   background-color: #c41f3b18;
 }
+

@@ -9,12 +9,22 @@ import { MdClose } from "react-icons/md";
 
 import { Link, Outlet } from "react-router-dom";
 import { UserInfoContext } from "../contexts/UserInfoContext";
+import ApiManager from "../services/ApiManager";
 
 function Navbar() {
   const { userInfo, setUserInfo, characterData, setCharacterData } =
     useContext(UserInfoContext);
 
   const [navBarToggled, setNavBarToggled] = useState(false);
+  console.log(characterData);
+
+  const handleLogOut = async () => {
+    console.log("HANDLING LOGOUT");
+    const am = ApiManager.getInstance();
+    await am.get("/auth/logout");
+    window.location = ('/')
+  };
+
   return (
     <div className="App">
       <div className="flex flex-row">
@@ -38,34 +48,60 @@ function Navbar() {
           </div>
           {characterData && (
             <div>
-              <div className="user-info flex m-5">
+              <div className="user-info flex m-5 mb-10 mt-10">
+                {/* CHARACTER AVATAR */}
                 <img
-                  src={characterData?.avatar}
+                  src={
+                    characterData?.avatar === undefined
+                      ? characterData?.avatarUrl
+                      : characterData?.avatar
+                  }
                   alt=""
                   className="rounded border-2 border-white"
                 />
                 <div className="text-left pl-2 text-white">
-                  <p
-                    className={
-                      "text-" +
-                      characterData?.character_class.name
-                        .toLowerCase()
-                        .replaceAll(" ", "") +
-                      "color"
-                    }
-                  >
-                    {characterData?.name}
+                  {/* CHARACTER NAME */}
+                  {characterData?.character_class?.name && (
+                    <p
+                      className={
+                        "text-" +
+                        characterData?.character_class?.name
+                          .toLowerCase()
+                          .replaceAll(" ", "") +
+                        "color font-bold text-xl"
+                      }
+                    >
+                      {characterData?.name}
+                    </p>
+                  )}
+                  {/* CHARACTER NAME DB */}
+                  {characterData?.class && (
+                    <p
+                      className={
+                        "text-" +
+                        characterData?.class.toLowerCase().replaceAll(" ", "") +
+                        "color font-bold text-xl"
+                      }
+                    >
+                      {characterData?.name}
+                    </p>
+                  )}
+                  {/* CHARACTER REALM */}
+                  <p>
+                    {characterData?.realm.name === undefined
+                      ? characterData?.realm.charAt(0).toUpperCase() +
+                        characterData?.realm.slice(1)
+                      : characterData?.realm.name}
                   </p>
-
-                  <p>{characterData?.realm.name}</p>
+                  {/* CHARACTER GUILD */}
                   <p className="text-[#E7B57A]">{characterData?.guild?.name}</p>
-                  <p>{characterData?.level}</p>
+                  <p>Level {characterData?.level}</p>
                 </div>
               </div>
 
               <Link
                 to="my-characters"
-                className="bg-primary hover:bg-[#2A7484] text-white font-bold py-2 px-4 border-b-4 border-[#2A7484] hover:border-[##2A7484] rounded transition ease-in-out"
+                className="bg-primary hover:bg-[#2A7484] text-white font-bold py-2 px-4 border-b-4 border-[#2A7484] hover:border-[##2A7484] rounded transition ease-in-out "
                 onClick={() => {
                   setNavBarToggled(false);
                 }}
@@ -74,9 +110,28 @@ function Navbar() {
               </Link>
             </div>
           )}
-          <ul className="mt-10 ml-10 text-white">
+          {(userInfo && !characterData && userInfo?.bnetLinked === 0) ||
+            (userInfo?.bnetLinked === null && (
+              <div className="mt-10 ">
+                <Link
+                  to="/bnet"
+                  className="bg-primary hover:bg-[#2A7484] text-white font-bold py-2 px-4 border-b-4 border-[#2A7484] hover:border-[##2A7484] rounded transition ease-in-out mb-2"
+                  onClick={() => {
+                    setNavBarToggled(false);
+                  }}
+                >
+                  Link Battle.net account
+                </Link>
+                <p className="mt-3 pb-5 text-white divide border-dashed border-b border-0">
+                  To Apply to a guild and see your characters details, please
+                  link your <span className="text-primary">battle.net</span>{" "}
+                  account to your guildmaster.io account.
+                </p>
+              </div>
+            ))}
+          <ul className="mt-20 ml-10 text-white">
             <li className=" flex">
-              {characterData && (
+              {userInfo && characterData && (
                 <div className="flex">
                   <div className="flex items-center text-xl cursor-pointer  hover:text-primary  transition ease-in-out">
                     <BiShieldQuarter className="mr-5" />
@@ -87,12 +142,18 @@ function Navbar() {
                 </div>
               )}
 
-              {!characterData && (
+              {!userInfo && (
                 <div>
                   <div className="flex items-center text-xl cursor-pointer  hover:text-primary  transition ease-in-out">
                     <Link to="/auth/login" className="flex items-center">
                       <FiLogIn className="mr-5" />
                       Login &nbsp;
+                    </Link>
+                  </div>
+                  <div className="flex items-center text-xl cursor-pointer  hover:text-primary  transition ease-in-out">
+                    <Link to="/register" className="flex items-center">
+                      <FiLogIn className="mr-5" />
+                      Register &nbsp;
                     </Link>
                   </div>
                 </div>
@@ -104,9 +165,14 @@ function Navbar() {
             </li>
           </ul>
           {userInfo && (
-            <a className="absolute bottom-5 left-10 text-white flex items-center hover:text-primary cursor-pointer">
+            <button
+              onClick={() => {
+                handleLogOut();
+              }}
+              className="absolute bottom-5 left-10 text-white flex items-center hover:text-primary cursor-pointer"
+            >
               <FiLogOut /> &nbsp; Log out
-            </a>
+            </button>
           )}
         </div>
 

@@ -38,9 +38,9 @@ export class User {
   @Column({ nullable: true })
   selectedCharacter: string;
 
-  @Column()
+  @Column({ nullable: true })
   bnetLinked: boolean;
 
-  @Column()
+  @Column({ nullable: true })
   tokenCreatedAt: string;
 }

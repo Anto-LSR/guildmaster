@@ -39,11 +39,11 @@ function RegisterForm() {
 
   return (
     <div
-      className="h-screen w-full  flex items-center justify-center"
-      style={{
-        backgroundImage: `url("${loginBackground}")`,
-        backgroundSize: "cover",
-      }}
+      className="h-screen w-full  flex items-center justify-center bg-secondary"
+      // style={{
+      //   backgroundImage: `url("${loginBackground}")`,
+      //   backgroundSize: "cover",
+      // }}
     >
       <div className="bg-white h-auto rounded-md  drop-shadow-md w-96">
         <div className="flex  flex-col items-center mb-3 w-full bg-primary rounded-t-md text-white">
@@ -161,7 +161,7 @@ function RegisterForm() {
 
             <div className="flex items-center justify-center">
               <Link
-                to="/login"
+                to="/auth/login"
                 className="py-2 px-4 flex justify-center items-center  bg-primary hover:bg-[#2A7484] focus:ring-secondary focus:ring-offset-secondary text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 m-2"
               >
                 Login{" "}

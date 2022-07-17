@@ -13,16 +13,15 @@ export class AuthController {
   @Post('login')
   async login(@Req() req: Request, @Res() res: Response): Promise<void> {
     const jwtToken = await this.authService.login(req.user as User);
+    res.status(202).cookie('jwt', jwtToken.access_token, {
+      sameSite: 'strict',
+      path: '/',
+      expires: new Date(new Date().getTime() + 60 * 1000 * 60 * 24 * 7),
+      httpOnly: true,
+    });
     res
-      .status(202)
-      .cookie('jwt', jwtToken.access_token, {
-        sameSite: 'strict',
-        path: '/',
+      .cookie('isAuthenticated', 'true', {
         expires: new Date(new Date().getTime() + 60 * 1000 * 60 * 24 * 7),
-        httpOnly: true,
-      })
-      res.cookie('isAuthenticated', 'true', {
-        expires: new Date(new Date().getTime() + 60 * 1000 * 60 * 24 * 7)
       })
       .send('cookie being initialized');
   }
@@ -30,8 +29,16 @@ export class AuthController {
   @UseGuards(JwtAuthGuard)
   @Post('get-user')
   async getUser(@Req() req: Request): Promise<User> {
-    let user = await this.authService.verify(req.cookies.jwt);
+    const user = await this.authService.verify(req.cookies.jwt);
     user.password = undefined;
     return user;
+  }
+
+  @UseGuards(JwtAuthGuard)
+  @Get('logout')
+  async logout(@Req() req: Request, @Res() res: Response): Promise<void> {
+    res.clearCookie('jwt');
+    res.clearCookie('isAuthenticated');
+    res.send();
   }
 }

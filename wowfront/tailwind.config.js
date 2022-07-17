@@ -6,6 +6,8 @@ module.exports = {
       colors:{
         'primary': '#41B0C9',
         'secondary' : '#467186',
+        'oldprimary' : '#41B0C9',
+        'complementary' : '#d27619',
         'mygray' : '#252525',
         'warriorcolor' : '#C69B6D',
         'warlockcolor' : '#8788EE',

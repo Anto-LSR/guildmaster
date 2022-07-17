@@ -36,11 +36,11 @@ function LoginForm() {
 
   return (
     <div
-      className="h-screen w-full  flex items-center justify-center"
-      style={{
-        backgroundImage: `url("${loginBackground}")`,
-        backgroundSize: "cover",
-      }}
+      className="h-screen w-full  flex items-center justify-center bg-secondary"
+      // style={{
+      //   backgroundImage: `url("${loginBackground}")`,
+      //   backgroundSize: "cover",
+      // }}
     >
       <div className="bg-white h-auto rounded-md drop-shadow-md w-96">
         <div className="flex  flex-col items-center mb-3 w-full bg-primary rounded-t-md text-white">

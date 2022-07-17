@@ -2,6 +2,8 @@ import React, { useEffect, useState, useContext } from "react";
 import { UserInfoContext } from "../contexts/UserInfoContext";
 import ApiManager from "../services/ApiManager";
 import CharacterCard from "./CharacterCard";
+import { AiOutlineCheck } from "react-icons/ai";
+import { BiErrorCircle, BiRefresh } from "react-icons/bi";
 
 function CharacterSelection() {
   const { userInfo, setUserInfo, characterData, setCharacterData } =
@@ -9,6 +11,7 @@ function CharacterSelection() {
   const [characters, setCharacters] = useState([]);
   const [selected, setSelected] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [swapResult, setSwapResult] = useState("");
   useEffect(() => {
     const am = ApiManager.getInstance();
 
@@ -29,9 +32,10 @@ function CharacterSelection() {
     };
     try {
       let character = await am.post("/character/set/selected-character", body);
-      console.log(character.data);
       setCharacterData(character.data);
+      setSwapResult("success");
     } catch (e) {
+      setSwapResult("error");
       console.log(e);
     }
     setIsLoading(false);
@@ -39,11 +43,12 @@ function CharacterSelection() {
 
   return (
     <div>
-      {!isLoading && (
-        <div className="flex justify-center items-center lg:h-screen">
-          <div className=" border-white mt-10 lg:border lg:bg-mygray rounded-lg mb-32">
+      {!isLoading && characterData && (
+        <div className="flex justify-center items-center lg:h-screen flex-col">
+          <div className=" border-[#ffffff5c] mt-10 lg:border lg:bg-mygray rounded-lg mb-36 drop-shadow-md">
             <div className="grid grid-cols-2 md:grid-cols-3  gap-5 lg:p-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
               {characters &&
+                userInfo &&
                 characters.map((character) => {
                   if (character.wowCharacterId === userInfo.selectedCharacter) {
                     return;
@@ -57,23 +62,67 @@ function CharacterSelection() {
                   );
                 })}
             </div>
-
-            <button
-              onClick={() => {
-                //TODO: CHANGE SELECTED CHARACTER ON USER TABLE ETC..
-                if (selected !== "") {
-                  handleSelectedChange();
-                }
-              }}
-              className="fixed bottom-0 right-1/2 translate-x-1/2 bg-primary hover:bg-[#2A7484] text-white font-bold py-2 px-4 border-b-4 border-[#2A7484] hover:border-[##2A7484] rounded transition ease-in-out mb-10
-            md:absolute md:translate-x-1/2 md:right-1/2 
-            lg:static lg:mr-10 lg:translate-x-0
-            xl:static lg-translate-x-0
-            "
-            >
-              Swap to this character
-            </button>
           </div>
+          {/* SWAP BUTTON */}
+          <button
+            onClick={() => {
+              if (selected !== "") {
+                handleSelectedChange();
+              }
+            }}
+            className="
+                fixed bottom-5 right-1/2 translate-x-1/2 text-white font-bold py-2 px-4 border-b-4 border-[#2A7484] rounded transition ease-in-out mb-10 shadow-md
+                bg-primary 
+                hover:bg-[#2A7484]  hover:border-[##2A7484] 
+                md:absolute md:translate-x-1/2 md:right-1/2 
+                lg:static lg:mr-10 lg:translate-x-0
+                xl:static lg-translate-x-0
+              "
+          >
+            Swap to this character
+          </button>
+          {/* REFRESH BUTTON */}
+          <a
+            href={`https://eu.battle.net/oauth/authorize?client_id=${process.env.REACT_APP_CLIENT_ID}&redirect_uri=${process.env.REACT_APP_BASEURL}/bnet&response_type=code&scope=wow.profile`}
+            className="
+                fixed bottom-7 right-4 translate-x-2/2 text-white font-bold py-2 px-4 border-b-4 border-[#2A7484] rounded transition ease-in-out mb-10 shadow-md
+                bg-primary 
+                font-bold text-2xl
+                hover:bg-[#2A7484]  hover:border-[##2A7484] 
+                md:absolute md:translate-x-1/2 md:right-1/2 
+                lg:static lg:mr-10 lg:translate-x-0
+                xl:static lg-translate-x-0
+              "
+          >
+            <BiRefresh />
+          </a>
+          {swapResult === "success" && (
+            <div
+              className="p-2 bg-green-800 items-center text-green-100 leading-none lg:rounded-full flex lg:inline-flex drop-shadow-md fixed bottom-0 md:static md:mr-9"
+              role="alert"
+            >
+              <span className="flex rounded-full bg-green-500 uppercase px-2 py-1 text-xs font-bold mr-3">
+                <AiOutlineCheck className="font-bold text-xl" />
+              </span>
+              <span className="font-semibold mr-2 text-left flex-auto">
+                Your selected character has been changed.
+              </span>
+            </div>
+          )}
+
+          {swapResult === "error" && (
+            <div
+              className="p-2 bg-red-800 items-center text-red-100 leading-none lg:rounded-full flex lg:inline-flex drop-shadow-md md:mr-9"
+              role="alert"
+            >
+              <span className="flex rounded-full bg-red-500 uppercase px-2 py-1 text-xs font-bold mr-3">
+                <BiErrorCircle className="font-bold text-xl" />
+              </span>
+              <span className="font-semibold mr-2 text-left flex-auto">
+                Something went wrong
+              </span>
+            </div>
+          )}
         </div>
       )}
 

@@ -7,7 +7,7 @@ export class RegisterController {
   constructor(private readonly registerService: RegisterService) {}
   @Post()
   registerUser(@Req() request: Request): any {
-  
+    console.log('in register controller!');
 
     return this.registerService.registerUser(request);
   }

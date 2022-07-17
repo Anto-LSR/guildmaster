@@ -15,7 +15,7 @@ function UserInfoContextProvider(props) {
       const fetchUserInfo = async () => {
         const user = await am.post("/auth/get-user");
         setUserInfo(user.data);
-        if (user.selectedCharacter !== null) {
+        if (user.data.selectedCharacter !== undefined && user.data.selectedCharacter !== null) {
           fetchCharacterInfo();
           setHasSelectedCharacter(true);
         } else {
@@ -24,6 +24,7 @@ function UserInfoContextProvider(props) {
 
       const fetchCharacterInfo = async () => {
         const character = await am.get("/character/character-info");
+        console.log(character.data);
         setCharacterData(character.data);
       };
 

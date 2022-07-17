@@ -17,10 +17,9 @@ function App() {
           <Route path="/" element={<Navbar />}>
             <Route path="/bnet" element={<BattlenetLogin />} />
             <Route path="/my-characters" element={<CharacterSelection />} />
+            <Route path="/auth/login" element={<LoginForm />} />
+            <Route path="/register" element={<RegisterForm />} />
           </Route>
-          <Route path="/auth/login" element={<LoginForm />} />
-          <Route path="/register" element={<RegisterForm />} />
-          <Route path="/bnet/auth" element={<RegisterForm />} />
         </Routes>
       </UserInfoContextProvider>
     </BrowserRouter>

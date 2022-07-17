@@ -10,8 +10,7 @@ export class BnetInfoController {
   @UseGuards(JwtAuthGuard)
   @Get()
   async getUserInfo(@Req() request: Request): Promise<Record<string, any>> {
-    let token = request.cookies['token'];
+    const token = request.cookies['token'];
     return this.userInfoService.getUserInfo(token);
   }
-
 }

@@ -94,6 +94,16 @@ export class LinkBnetService {
           );
           characterEntity.avatarUrl = mediaInfo.data.assets[0].value;
           characterEntity.mainPictureUrl = mediaInfo.data.assets[2].value;
+          try {
+            const characterBnetInfo = await axios.get(
+              `https://eu.api.blizzard.com/profile/wow/character/${
+                characterEntity.realm
+              }/${characterEntity.name.toLowerCase()}?access_token=${token}&namespace=profile-eu&locale=en_GB`,
+            );
+
+            characterEntity.guildName = characterBnetInfo.data.guild.name;
+          } catch (e) {}
+
           let insert = true;
           registeredCharacters.forEach((registeredCharacter) => {
             if (
@@ -101,15 +111,17 @@ export class LinkBnetService {
               characterEntity.wowCharacterId
             ) {
               insert = false;
-              console.log('Character already registered');
             }
           });
           if (insert) {
             wowCharacterId = characterEntity.wowCharacterId;
             this.charactersRepository.save(characterEntity);
-            if (user.selectedCharacter == null) {
+            if (
+              user.selectedCharacter == undefined ||
+              user.selectedCharacter == null
+            ) {
               user.selectedCharacter = wowCharacterId;
-              await this.usersRepository.save(user);
+              this.usersRepository.save(user);
             }
           }
         } catch (e) {}

@@ -14,12 +14,12 @@ function CharacterCard({ character, passChildData }) {
           className={
             "flex bg-" +
             character.faction.toLowerCase() +
-            " bg-opacity text-white border-2 rounded-md border-white-500  lg:w-44 w-32 md:w-44 items-center pl-2 hover:border-primary cursor-pointer focus:border-primary focus:outline focus:outline-primary "
+            " bg-opacity text-white border-double shadow-md  rounded-md   lg:w-60 w-32 md:w-44 items-center   hover:outline-primary  hover:outline-double hover:outline-offset-2 hover:outline-3 cursor-pointer focus:border-primary focus:outline focus:outline-primary "
           }
         >
           <div>
             <img
-              className=" hidden border-white lg:block"
+              className=" hidden  lg:block rounded-l-md"
               src={character.avatarUrl}
               alt=""
             />
@@ -29,7 +29,7 @@ function CharacterCard({ character, passChildData }) {
               className={
                 "text-" +
                 character.class.toLowerCase().replaceAll(" ", "") +
-                "color"
+                "color font-bold"
               }
             >
               {character.name}
@@ -38,7 +38,7 @@ function CharacterCard({ character, passChildData }) {
               {character.realm.charAt(0).toUpperCase() +
                 character.realm.slice(1)}
             </p>
-            <p>{character.level}</p>
+            <p>Level {character.level}</p>
           </div>
         </button>
       )}
