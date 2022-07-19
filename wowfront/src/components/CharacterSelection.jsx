@@ -33,7 +33,7 @@ function CharacterSelection() {
     };
     try {
       let character = await am.post("/character/set/selected-character", body);
-      console.log(character.data,                     'FROM CHARACTER SELECTION');
+      console.log(character.data, "FROM CHARACTER SELECTION");
       setCharacterData(character.data);
       setSwapResult("success");
     } catch (e) {

@@ -48,12 +48,15 @@ export class CharacterController {
     const character = await this.characterService.findByCharacterId(id);
     if (character) {
       user.selectedCharacter = request.body.wowCharacterId;
-      await this.characterService.setSelectedCharacter(user);
-      const char = await this.characterService.findByCharacterId(
-        user.selectedCharacter,
-      );
-
-      return char;
+      const [characterHasBeenSet, characterInfo] = await Promise.all([
+        this.characterService.setSelectedCharacter(user),
+        this.characterService.getSelectedCharacter(user),
+      ]);
+      if (characterHasBeenSet) {
+        return characterInfo;
+      } else {
+        throw new Error('Character has not been set');
+      }
     }
     return null;
   }

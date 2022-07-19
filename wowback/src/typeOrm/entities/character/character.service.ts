@@ -47,8 +47,12 @@ export class CharacterService {
    * @param user
    * @returns
    */
-  async setSelectedCharacter(user: User): Promise<User> {
-    return await this.userRepository.save(user);
+  async setSelectedCharacter(user: User): Promise<boolean> {
+    if (await this.userRepository.save(user)) {
+      return true;
+    } else {
+      return false;
+    }
   }
 
   /**
@@ -66,7 +70,6 @@ export class CharacterService {
         selectedCharacter.realm
       }/${selectedCharacter.name.toLowerCase()}?access_token=${app_token}&namespace=profile-eu&locale=en_GB`,
     );
-    console.log(characterInfo.data);
     //On récupère les données de blizzard et on les applique à notre entité character
     const characterEntity = new Character();
     characterEntity.name = characterInfo.data.name;
@@ -81,5 +84,17 @@ export class CharacterService {
     characterEntity.avatarUrl = selectedCharacter.avatarUrl;
     characterEntity.mainPictureUrl = selectedCharacter.mainPictureUrl;
     return characterEntity;
+  }
+
+  async getCharacterRaids(character: Character): Promise<Partial<Character>> {
+    const app_token = await this.getTokenService.getAccessToken();
+    const characterRaid = await axios.get(
+      `https://eu.api.blizzard.com/profile/wow/character/${
+        character.realm
+      }/${character.name.toLowerCase()}/encounters/raids?access_token=${app_token}&namespace=profile-eu&locale=en_GB`,
+    );
+    console.log(characterRaid.data);
+
+    return null;
   }
 }

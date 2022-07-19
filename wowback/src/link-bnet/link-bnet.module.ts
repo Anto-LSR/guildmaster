@@ -6,9 +6,11 @@ import { Character } from 'src/typeOrm/entities/character/character.entity';
 import { CharacterModule } from 'src/typeOrm/entities/character/character.module';
 import { User } from 'src/typeOrm/entities/user/user.entity';
 import { UsersModule } from 'src/typeOrm/entities/user/user.module';
+import { LinkBnetController } from './link-bnet.controller';
 import { LinkBnetService } from './link-bnet.service';
 
 @Module({
+  controllers: [LinkBnetController],
   providers: [LinkBnetService],
   imports: [
     TypeOrmModule.forFeature([User, Character]),

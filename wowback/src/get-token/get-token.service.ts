@@ -29,7 +29,6 @@ export class GetTokenService {
     this.clientCredential.token = token.data.access_token;
     this.clientCredential.token_expires_in = token.data.expires_in;
     this.clientCredential.creationDate = new Date(Date.now());
-
     return this.clientCredential;
   }
 
@@ -37,6 +36,7 @@ export class GetTokenService {
     if (this.isExpired()) {
       await this.getCredentials();
     }
+    console.log('APP_TOKEN : ', this.clientCredential.token);
     return this.clientCredential.token;
   }
 

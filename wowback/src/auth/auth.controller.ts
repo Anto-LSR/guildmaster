@@ -36,7 +36,7 @@ export class AuthController {
 
   @UseGuards(JwtAuthGuard)
   @Get('logout')
-  async logout(@Req() req: Request, @Res() res: Response): Promise<void> {
+  async logout(@Res() res: Response): Promise<void> {
     res.clearCookie('jwt');
     res.clearCookie('isAuthenticated');
     res.send();
