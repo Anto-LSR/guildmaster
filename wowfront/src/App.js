@@ -8,6 +8,7 @@ import { React } from "react";
 
 import UserInfoContextProvider from "./contexts/UserInfoContext";
 import CharacterSelection from "./components/CharacterSelection";
+import UserProfile from "./components/UserProfile";
 
 function App() {
   return (
@@ -19,8 +20,10 @@ function App() {
             <Route path="/my-characters" element={<CharacterSelection />} />
             <Route path="/auth/login" element={<LoginForm />} />
             <Route path="/register" element={<RegisterForm />} />
+            <Route path="/my-profile" element={<UserProfile />} />
           </Route>
         </Routes>
+
       </UserInfoContextProvider>
     </BrowserRouter>
   );

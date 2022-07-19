@@ -4,6 +4,7 @@ import { VscWorkspaceUnknown } from "react-icons/vsc";
 import { FiLogOut, FiLogIn } from "react-icons/fi";
 import { GiCrenelCrown } from "react-icons/gi";
 import { HiMenu } from "react-icons/hi";
+import { CgProfile } from "react-icons/cg";
 
 import { MdClose } from "react-icons/md";
 
@@ -16,13 +17,11 @@ function Navbar() {
     useContext(UserInfoContext);
 
   const [navBarToggled, setNavBarToggled] = useState(false);
-  console.log(characterData);
 
   const handleLogOut = async () => {
-    console.log("HANDLING LOGOUT");
     const am = ApiManager.getInstance();
     await am.get("/auth/logout");
-    window.location = ('/')
+    window.location = "/";
   };
 
   return (
@@ -51,30 +50,11 @@ function Navbar() {
               <div className="user-info flex m-5 mb-10 mt-10">
                 {/* CHARACTER AVATAR */}
                 <img
-                  src={
-                    characterData?.avatar === undefined
-                      ? characterData?.avatarUrl
-                      : characterData?.avatar
-                  }
+                  src={characterData.avatarUrl}
                   alt=""
                   className="rounded border-2 border-white"
                 />
                 <div className="text-left pl-2 text-white">
-                  {/* CHARACTER NAME */}
-                  {characterData?.character_class?.name && (
-                    <p
-                      className={
-                        "text-" +
-                        characterData?.character_class?.name
-                          .toLowerCase()
-                          .replaceAll(" ", "") +
-                        "color font-bold text-xl"
-                      }
-                    >
-                      {characterData?.name}
-                    </p>
-                  )}
-                  {/* CHARACTER NAME DB */}
                   {characterData?.class && (
                     <p
                       className={
@@ -88,13 +68,11 @@ function Navbar() {
                   )}
                   {/* CHARACTER REALM */}
                   <p>
-                    {characterData?.realm.name === undefined
-                      ? characterData?.realm.charAt(0).toUpperCase() +
-                        characterData?.realm.slice(1)
-                      : characterData?.realm.name}
+                    {characterData?.realm?.charAt(0).toUpperCase() +
+                      characterData?.realm?.slice(1)}
                   </p>
                   {/* CHARACTER GUILD */}
-                  <p className="text-[#E7B57A]">{characterData?.guild?.name}</p>
+                  <p className="text-[#E7B57A]">{characterData?.guildName}</p>
                   <p>Level {characterData?.level}</p>
                 </div>
               </div>
@@ -130,6 +108,14 @@ function Navbar() {
               </div>
             ))}
           <ul className="mt-20 ml-10 text-white">
+            {userInfo && (
+              <li className="nav flex items-center text-xl cursor-pointer hover:text-primary transition ease-in-out mt-3">
+                <Link to="/my-profile" className="flex items-center">
+                  <CgProfile className="mr-5" />
+                  Profile
+                </Link>
+              </li>
+            )}
             <li className=" flex">
               {userInfo && characterData && (
                 <div className="flex">
@@ -159,7 +145,7 @@ function Navbar() {
                 </div>
               )}
             </li>
-            <li className="nav-active-link flex items-center text-xl cursor-pointer hover:text-primary transition ease-in-out mt-3">
+            <li className="nav-active-link flex items-center text-xl cursor-pointer hover:text-primary transition ease-in-out ">
               <VscWorkspaceUnknown className="mr-5" />
               Find a guild
             </li>

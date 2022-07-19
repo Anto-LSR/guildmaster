@@ -1,23 +1,21 @@
 import { Module } from '@nestjs/common';
-import { JwtService } from '@nestjs/jwt';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { AuthService } from 'src/auth/auth.service';
+import { AuthModule } from 'src/auth/auth.module';
+import { GetTokenModule } from 'src/get-token/get-token.module';
 import { Character } from 'src/typeOrm/entities/character/character.entity';
-import { CharacterService } from 'src/typeOrm/entities/character/character.service';
+import { CharacterModule } from 'src/typeOrm/entities/character/character.module';
 import { User } from 'src/typeOrm/entities/user/user.entity';
-import { UsersService } from 'src/typeOrm/entities/user/user.service';
-import { LinkBnetController } from './link-bnet.controller';
+import { UsersModule } from 'src/typeOrm/entities/user/user.module';
 import { LinkBnetService } from './link-bnet.service';
 
 @Module({
-  controllers: [LinkBnetController],
-  providers: [
-    LinkBnetService,
-    AuthService,
-    UsersService,
-    JwtService,
-    CharacterService,
+  providers: [LinkBnetService],
+  imports: [
+    TypeOrmModule.forFeature([User, Character]),
+    GetTokenModule,
+    AuthModule,
+    UsersModule,
+    CharacterModule,
   ],
-  imports: [TypeOrmModule.forFeature([User, Character])],
 })
 export class LinkBnetModule {}

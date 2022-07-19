@@ -4,6 +4,8 @@ import { AuthService } from 'src/auth/auth.service';
 import { Request } from 'express';
 import { JwtAuthGuard } from 'src/auth/guards/jwt-auth.guard';
 import axios from 'axios';
+import { Character } from './character.entity';
+import { GetTokenService } from 'src/get-token/get-token.service';
 
 @UseGuards(JwtAuthGuard)
 @Controller('character')
@@ -11,6 +13,7 @@ export class CharacterController {
   constructor(
     private readonly characterService: CharacterService,
     private readonly authService: AuthService,
+    private readonly getTokenService: GetTokenService,
   ) {}
 
   @Get('selected-character')
@@ -25,34 +28,10 @@ export class CharacterController {
   @Get('character-info')
   async getCharacterInfo(@Req() request: Request) {
     const user = await this.authService.verify(request.cookies.jwt);
-    const token = user.apiToken;
-    const selectedCharacter = await this.characterService.getCharacterInfo(
-      user.selectedCharacter,
+    const selectedCharacter = await this.characterService.getSelectedCharacter(
+      user,
     );
-    try {
-      const characterInfo = await axios.get(
-        `https://eu.api.blizzard.com/profile/wow/character/${
-          selectedCharacter.realm
-        }/${selectedCharacter.name.toLowerCase()}?access_token=${token}&namespace=profile-eu&locale=en_GB`,
-      );
-      characterInfo['character_class'] =
-        characterInfo.data.character_class.name;
-      characterInfo.data['avatar'] = selectedCharacter.avatarUrl;
-      return characterInfo.data;
-    } catch (e) {
-      const character = await this.characterService.findByCharacterId(
-        user.selectedCharacter,
-      );
-      try {
-        character['avatar'] = selectedCharacter.avatarUrl;
-        character['character_class'] = selectedCharacter.class;
-        console.log(character);
-
-        return character;
-      } catch (e) {
-        return;
-      }
-    }
+    return selectedCharacter;
   }
 
   @Get('all-characters')
@@ -70,23 +49,11 @@ export class CharacterController {
     if (character) {
       user.selectedCharacter = request.body.wowCharacterId;
       await this.characterService.setSelectedCharacter(user);
-      try {
-        const token = user.apiToken;
-        const characterInfo = await axios.get(
-          `https://eu.api.blizzard.com/profile/wow/character/${
-            character.realm
-          }/${character.name.toLowerCase()}?access_token=${token}&namespace=profile-eu&locale=en_GB`,
-        );
-        characterInfo.data['avatar'] = character.avatarUrl;
-        return characterInfo.data;
-      } catch (e) {
-        const char = await this.characterService.findByCharacterId(
-          user.selectedCharacter,
-        );
-        console.log(char);
+      const char = await this.characterService.findByCharacterId(
+        user.selectedCharacter,
+      );
 
-        return char;
-      }
+      return char;
     }
     return null;
   }

@@ -1,9 +1,5 @@
 import { HttpModule } from '@nestjs/axios';
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
-import { GetTokenService } from './get-token/get-token.service';
-import { GetTokenController } from './get-token/get-token.controller';
 import { ConfigModule } from '@nestjs/config';
 import { BnetInfoModule } from './bnet-info/bnet-info.module';
 import { LinkBnetModule } from './link-bnet/link-bnet.module';
@@ -15,8 +11,7 @@ import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './typeOrm/entities/user/user.module';
 import { CharacterModule } from './typeOrm/entities/character/character.module';
 import { Character } from './typeOrm/entities/character/character.entity';
-
-
+import { GetTokenModule } from './get-token/get-token.module';
 
 @Module({
   imports: [
@@ -38,9 +33,10 @@ import { Character } from './typeOrm/entities/character/character.entity';
     AuthModule,
     UsersModule,
     CharacterModule,
+    GetTokenModule,
   ],
-  controllers: [AppController, GetTokenController],
-  providers: [AppService, GetTokenService],
+  controllers: [],
+  providers: [],
 })
 export class AppModule {
   constructor(private dataSource: DataSource) {}

@@ -14,15 +14,6 @@ export class LinkBnetController {
     @Res() response: Response,
     @Req() request: Request,
   ): Promise<void> {
-    this.linkBnetService.getAccessToken(code, response, request);
-  }
-
-  @Get('bnet-infos')
-  async getToken(
-    @Query() query,
-    @Req() request: Request,
-    @Res() response: Response,
-  ): Promise<void> {
-    this.linkBnetService.setTokenAndBnetInfos(request, response, query);
+    this.linkBnetService.linkBnetUserInfos(code, response, request);
   }
 }

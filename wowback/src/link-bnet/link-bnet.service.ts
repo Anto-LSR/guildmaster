@@ -5,10 +5,9 @@ import { Request, Response } from 'express';
 import { AuthService } from 'src/auth/auth.service';
 import { Character } from 'src/typeOrm/entities/character/character.entity';
 import { User } from 'src/typeOrm/entities/user/user.entity';
-import qs from 'qs';
 import { Repository } from 'typeorm';
 import { CharacterService } from 'src/typeOrm/entities/character/character.service';
-import { log } from 'console';
+import { GetTokenService } from 'src/get-token/get-token.service';
 
 @Injectable()
 export class LinkBnetService {
@@ -19,14 +18,16 @@ export class LinkBnetService {
     @InjectRepository(Character)
     private charactersRepository: Repository<Character>,
     private readonly characterService: CharacterService,
+    private readonly getTokenService: GetTokenService,
   ) {}
 
   /**
-   * Create a new token containing the access_token from battle.net then redirect the user to the frontend
+   * Récupère les informations BNET de l'utilisateur ainsi que les informations de ses personnages
    * @param code Token généré par bnet
    * @param response
    */
-  async getAccessToken(code: string, response: Response, request: Request) {
+  async linkBnetUserInfos(code: string, response: Response, request: Request) {
+    //On prépare la requête pour récupérer le token de l'utilisateur
     // eslint-disable-next-line @typescript-eslint/no-var-requires
     const qs = require('qs');
     const data = qs.stringify({
@@ -37,7 +38,7 @@ export class LinkBnetService {
     });
     const config = {
       method: 'post',
-      url: 'https://us.battle.net/oauth/token',
+      url: 'https://eu.battle.net/oauth/token',
       headers: {
         Authorization: 'Basic ' + process.env.BLIZZARD_API_KEY,
         'Content-Type': 'application/x-www-form-urlencoded',
@@ -56,26 +57,32 @@ export class LinkBnetService {
     const bnetInfo = await axios.get(
       `http://eu.battle.net/oauth/userinfo?region=eu&access_token=${token}`,
     );
-
+    //On récupère l'utilisateur depuis la base
     const user = await this.authService.verify(request.cookies.jwt);
-    console.log('Old api token : ', user.apiToken);
-    console.log('New api token : ', token);
-
+    //On lui affecte ses données BNET
     user.apiToken = token;
     user.bnetId = bnetInfo.data.id;
     user.battleTag = bnetInfo.data.battletag;
     user.tokenCreatedAt = new Date(Date.now()).valueOf() + '';
     user.bnetLinked = true;
     this.usersRepository.save(user);
+    //On récupère le token CLIENT de l'application
+    //TODO: Appeller ma méthode getCredentials() dans le service GetTokenService plutôt que de faire une requete à la zob
+    const credentials = await this.getTokenService.getAccessToken();
+    const app_token = credentials;
+    console.log(app_token, 'mon token');
     //On récupère les personnages de l'utilisateur
     const wowAccounts = await axios.get(
       `https://eu.api.blizzard.com/profile/user/wow?namespace=profile-eu&locale=en_GB&access_token=${token}`,
     );
+    //On récupère les personnages de l'utilisateur qui ont déjà été mis en base
     const registeredCharacters = await this.charactersRepository.find();
     let wowCharacterId;
+    //On itère sur les comptes WoW de l'utilisateur
     wowAccounts.data.wow_accounts.forEach(async (account) => {
       account.characters.forEach(async (character) => {
         try {
+          //On itère sur les personnages de l'utilisateur et on hydrate les attributs d'une entité Character
           const characterEntity = new Character();
           characterEntity.realm = character.realm.slug;
           characterEntity.class = character.playable_class.name;
@@ -88,22 +95,14 @@ export class LinkBnetService {
           characterEntity.wowCharacterId = character.id;
           characterEntity.name = character.name;
           characterEntity.user = user;
-
+          //On récupère les données médias du personnage
           const mediaInfo = await axios.get(
-            `https://eu.api.blizzard.com/profile/wow/character/${characterEntity.realm.toLowerCase()}/${characterEntity.name.toLowerCase()}/character-media?namespace=profile-eu&access_token=${token}&alt=/shadow/avatar/${raceId}-${genderId}.jpg`,
+            `https://eu.api.blizzard.com/profile/wow/character/${characterEntity.realm.toLowerCase()}/${characterEntity.name.toLowerCase()}/character-media?namespace=profile-eu&access_token=${app_token}&alt=/shadow/avatar/${raceId}-${genderId}.jpg`,
           );
+          //On hydrate l'entité Character avec les données médias
           characterEntity.avatarUrl = mediaInfo.data.assets[0].value;
           characterEntity.mainPictureUrl = mediaInfo.data.assets[2].value;
-          try {
-            const characterBnetInfo = await axios.get(
-              `https://eu.api.blizzard.com/profile/wow/character/${
-                characterEntity.realm
-              }/${characterEntity.name.toLowerCase()}?access_token=${token}&namespace=profile-eu&locale=en_GB`,
-            );
-
-            characterEntity.guildName = characterBnetInfo.data.guild.name;
-          } catch (e) {}
-
+          //On vérifie que le personnage n'est pas déjà en base
           let insert = true;
           registeredCharacters.forEach((registeredCharacter) => {
             if (
@@ -113,6 +112,7 @@ export class LinkBnetService {
               insert = false;
             }
           });
+          //Si le personnage n'est pas déjà en base, on l'ajoute
           if (insert) {
             wowCharacterId = characterEntity.wowCharacterId;
             this.charactersRepository.save(characterEntity);
@@ -124,49 +124,18 @@ export class LinkBnetService {
               this.usersRepository.save(user);
             }
           }
-        } catch (e) {}
+        } catch (e) {
+          if (e.response.status === 404) {
+            //Si la reponse est une 404, cela veut dire que le personnage n'a pas été misà jour depuis longtemps par blizzard, et qu'il n'est donc pas joué.
+            console.log('Character is too old !', e.response.status);
+          }
+          if (e.response.status === 401) {
+            console.log('Unauthorized', e.response.status);
+          }
+        }
       });
     });
-
+    //On redirige l'utilisateur sur le front
     response.redirect(process.env.frontUrl);
-  }
-
-  async getCharacterMedia(slug, name) {
-    console.log('Getting media...');
-
-    return await axios.get(
-      `https://eu.api.blizzard.com/profile/wow/character/${slug}/${name}/character-media`,
-    );
-  }
-
-  /**
-   * Set the user wow_token and the user bnet infos in database
-   * @param request
-   * @param response
-   * @param query
-   */
-  async setTokenAndBnetInfos(request: Request, response: Response, query) {
-    console.log('Gestion token wow!');
-    console.log(process.env.frontUrl);
-    console.log(query.code);
-
-    const user = await this.authService.verify(request.cookies.jwt);
-    user.apiToken = query.code;
-
-    await this.usersRepository.save(user);
-
-    //TODO: Récupérer les personnages de l'utilisateur
-    // const accountData = await this.getAccountData(user.apiToken);
-    // console.log(accountData.data);
-
-    response.redirect(process.env.frontUrl);
-  }
-
-  async getAccountData(token: string) {
-    const accountData = await axios.get(
-      `http://eu.battle.net/oauth/userinfo?region=eu&access_token=${token}`,
-    );
-    console.log('coucou');
-    return accountData;
   }
 }

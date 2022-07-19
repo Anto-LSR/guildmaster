@@ -12,6 +12,7 @@ function CharacterSelection() {
   const [selected, setSelected] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [swapResult, setSwapResult] = useState("");
+
   useEffect(() => {
     const am = ApiManager.getInstance();
 
@@ -32,6 +33,7 @@ function CharacterSelection() {
     };
     try {
       let character = await am.post("/character/set/selected-character", body);
+      console.log(character.data,                     'FROM CHARACTER SELECTION');
       setCharacterData(character.data);
       setSwapResult("success");
     } catch (e) {
@@ -50,9 +52,6 @@ function CharacterSelection() {
               {characters &&
                 userInfo &&
                 characters.map((character) => {
-                  if (character.wowCharacterId === userInfo.selectedCharacter) {
-                    return;
-                  }
                   return (
                     <CharacterCard
                       key={character.id}
