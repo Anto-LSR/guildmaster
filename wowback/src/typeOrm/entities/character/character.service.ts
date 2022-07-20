@@ -83,6 +83,7 @@ export class CharacterService {
     characterEntity.gender = characterInfo.data.gender.type;
     characterEntity.avatarUrl = selectedCharacter.avatarUrl;
     characterEntity.mainPictureUrl = selectedCharacter.mainPictureUrl;
+    this.getCharacterRaids(characterEntity); //<----------------TEST
     return characterEntity;
   }
 
@@ -93,8 +94,61 @@ export class CharacterService {
         character.realm
       }/${character.name.toLowerCase()}/encounters/raids?access_token=${app_token}&namespace=profile-eu&locale=en_GB`,
     );
-    console.log(characterRaid.data);
-
-    return null;
+    // const characterRaid = await axios.get(
+    //   `https://eu.api.blizzard.com/profile/wow/character/archimonde/lapintade/encounters/raids?access_token=${app_token}&namespace=profile-eu&locale=en_GB`,
+    // );
+    const partialCharacter: Partial<Character> = {};
+    characterRaid.data.expansions.forEach((expansion) => {
+      if (expansion.expansion.name === 'Shadowlands') {
+        expansion.instances.forEach((instance) => {
+          if (instance.instance.name === process.env.PREVIOUS_RAID) {
+            instance.modes.forEach((mode) => {
+              if (mode.difficulty.type === 'NORMAL') {
+                partialCharacter.previousNormalProgress =
+                  mode.progress.completed_count +
+                  '/' +
+                  mode.progress.total_count;
+              }
+              if (mode.difficulty.type === 'HEROIC') {
+                partialCharacter.previousHeroicProgress =
+                  mode.progress.completed_count +
+                  '/' +
+                  mode.progress.total_count;
+              }
+              if (mode.difficulty.type === 'MYTHIC') {
+                partialCharacter.previousMythicProgress =
+                  mode.progress.completed_count +
+                  '/' +
+                  mode.progress.total_count;
+              }
+            });
+          }
+          if (instance.instance.name === process.env.CURRENT_RAID) {
+            instance.modes.forEach((mode) => {
+              if (mode.difficulty.type === 'NORMAL') {
+                partialCharacter.currentNormalProgress =
+                  mode.progress.completed_count +
+                  '/' +
+                  mode.progress.total_count;
+              }
+              if (mode.difficulty.type === 'HEROIC') {
+                partialCharacter.currentHeroicProgress =
+                  mode.progress.completed_count +
+                  '/' +
+                  mode.progress.total_count;
+              }
+              if (mode.difficulty.type === 'MYTHIC') {
+                partialCharacter.currentMythicProgress =
+                  mode.progress.completed_count +
+                  '/' +
+                  mode.progress.total_count;
+              }
+            });
+          }
+        });
+      }
+    });
+    console.log(partialCharacter);
+    return partialCharacter;
   }
 }

@@ -30,12 +30,23 @@ export class Character {
   gender: string;
   @ManyToOne(() => User, (user) => user.characters)
   user: User;
-
   @Column({ nullable: true })
   avatarUrl: string;
-
   @Column({ nullable: true })
   mainPictureUrl: string;
   @Column({ nullable: true })
   guildName: string;
+  ///////RAIDS INFO///////////
+  @Column({ nullable: true })
+  previousNormalProgress: string;
+  @Column({ nullable: true })
+  previousHeroicProgress: string;
+  @Column({ nullable: true })
+  previousMythicProgress: string;
+  @Column({ nullable: true })
+  currentNormalProgress: string;
+  @Column({ nullable: true })
+  currentHeroicProgress: string;
+  @Column({ nullable: true })
+  currentMythicProgress: string;
 }

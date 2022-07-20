@@ -3,10 +3,9 @@ import { useContext } from "react";
 import battlenet from "../assets/img/battlenet.png";
 
 function UserProfile() {
-  
   const { userInfo, setUserInfo, characterData, setCharacterData } =
     useContext(UserInfoContext);
-    console.log(characterData);
+  console.log(characterData);
   return (
     //Container
     <div className="h-full flex items-center justify-center flex-col">
@@ -53,6 +52,7 @@ function UserProfile() {
           style={{
             backgroundImage: `url("${characterData?.mainPictureUrl}")`,
             backgroundSize: "cover",
+            backgroundPosition: "center",
           }}
           className="w-full h-full rounded-md"
         ></div>

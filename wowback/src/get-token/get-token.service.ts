@@ -1,6 +1,6 @@
 import { HttpService } from '@nestjs/axios';
 import { Injectable } from '@nestjs/common';
-import { ClientCredentials } from 'src/Client-credentials';
+import { ClientCredentials } from 'src/tools/Client-credentials';
 
 @Injectable()
 export class GetTokenService {
