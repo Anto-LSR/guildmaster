@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useContext } from "react";
+import background from "../assets/img/background.jpg";
 import { BiShieldQuarter } from "react-icons/bi";
 import { VscWorkspaceUnknown } from "react-icons/vsc";
 import { FiLogOut, FiLogIn } from "react-icons/fi";
@@ -23,10 +24,10 @@ function Navbar() {
     await am.get("/auth/logout");
     window.location = "/";
   };
-
   return (
     <div className="App">
       <div className="flex flex-row">
+        
         <div
           className={
             navBarToggled
@@ -41,10 +42,11 @@ function Navbar() {
               setNavBarToggled(false);
             }}
           />
-          <div className="flex flex-col items-center border-0 border-b border-solid bg-primary">
+          <div className="flex flex-col items-center border-0 border-b border-solid border-secondary bg-primary">
             <GiCrenelCrown className="text-white font-bold text-4xl " />
             <h1 className="font-bold text-4xl text-white mb-2">Guild Master</h1>
           </div>
+          {/* ----------------------Character data---------------------- */}
           {characterData && (
             <div>
               <div className="user-info flex m-5 mb-10 mt-10">
@@ -79,7 +81,7 @@ function Navbar() {
 
               <Link
                 to="my-characters"
-                className="bg-primary hover:bg-[#2A7484] text-white font-bold py-2 px-4 border-b-4 border-[#2A7484] hover:border-[##2A7484] rounded transition ease-in-out "
+                className="bg-primary hover:bg-secondary text-white font-bold py-2 px-4 border-b-4 border-secondary hover:border-secondary rounded transition ease-in-out "
                 onClick={() => {
                   setNavBarToggled(false);
                 }}
@@ -88,12 +90,13 @@ function Navbar() {
               </Link>
             </div>
           )}
-          {(userInfo && !characterData && userInfo?.bnetLinked === 0) ||
-            (userInfo?.bnetLinked === null && (
+          {/* ----------------------END---------------------- */}
+          {/* ----------------------Link BNET---------------------- */}
+          {(userInfo && !characterData && userInfo?.bnetLinked === false  && (
               <div className="mt-10 ">
                 <Link
                   to="/bnet"
-                  className="bg-primary hover:bg-[#2A7484] text-white font-bold py-2 px-4 border-b-4 border-[#2A7484] hover:border-[##2A7484] rounded transition ease-in-out mb-2"
+                  className="bg-primary hover:bg-secondary text-white font-bold py-2 px-4 border-b-4 border-secondary hover:border-secondary rounded transition ease-in-out mb-2"
                   onClick={() => {
                     setNavBarToggled(false);
                   }}
@@ -107,6 +110,7 @@ function Navbar() {
                 </p>
               </div>
             ))}
+            {/* ----------------------END---------------------- */}
           <ul className="mt-20 ml-10 text-white">
             {userInfo && (
               <li className="nav flex items-center text-xl cursor-pointer hover:text-primary transition ease-in-out mt-3">
@@ -183,6 +187,10 @@ function Navbar() {
               : "lg:block w-full bg-[#232739] h-full w-full md:h-screen  lg:h-screen"
           }
           id="content"
+          style={{
+            backgroundImage: `url("${background}")`,
+            backgroundSize: "cover",
+          }}
         >
           <Outlet />
         </div>

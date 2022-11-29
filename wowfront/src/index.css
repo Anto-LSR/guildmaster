@@ -18,5 +18,20 @@ code {
 }
 
 .nav-active-link {
-  color: #6caccc;
+  color: #6e7967;
+}
+
+.fade-out{
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 300ms, opacity 300ms ;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.fade-in{
+  animation: fadeIn 300ms;
 }

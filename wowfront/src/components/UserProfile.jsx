@@ -29,7 +29,7 @@ function UserProfile() {
         <div id="mail" className="flex items-center p-3 mr-4">
           <div className="flex flex-col">
             <p className="text-md">{userInfo?.email.toUpperCase()}</p>
-            <button className="bg-primary hover:bg-[#2A7484] text-white font-bold py-1 px-2 border-b-4 border-[#2A7484] hover:border-[##2A7484] rounded transition ease-in-out ">
+            <button className="bg-primary hover:bg-secondary text-white font-bold py-1 px-2 border-b-4 border-secondary hover:border-secondary rounded transition ease-in-out ">
               Change my email
             </button>
           </div>
@@ -37,13 +37,13 @@ function UserProfile() {
       </div>
 
       <div className="mt-8 border-[#ffffff5c] border bg-mygray text-white md:w-3/4  justify-between p-3 rounded-md md:flex hidden">
-        <button className="bg-primary hover:bg-[#2A7484] text-white font-bold py-1 px-2 border-b-4 border-[#2A7484] hover:border-[##2A7484] rounded transition ease-in-out ">
+        <button className="bg-primary hover:bg-secondary text-white font-bold py-1 px-2 border-b-4 border-secondary hover:border-secondary rounded transition ease-in-out ">
           Change my password
         </button>
-        <button className="bg-primary hover:bg-[#2A7484] text-white font-bold py-1 px-2 border-b-4 border-[#2A7484] hover:border-[##2A7484] rounded transition ease-in-out ">
+        <button className="bg-primary hover:bg-secondary text-white font-bold py-1 px-2 border-b-4 border-secondary hover:border-secondary rounded transition ease-in-out ">
           Refresh my characters
         </button>
-        <button className="bg-red-700 hover:bg-red-900 text-white font-bold py-1 px-2 border-b-4 border-red-900 hover:border-[##2A7484] rounded transition ease-in-out ">
+        <button className="bg-red-700 hover:bg-red-900 text-white font-bold py-1 px-2 border-b-4 border-red-900 hover:border-secondary rounded transition ease-in-out ">
           Delete my account
         </button>
       </div>

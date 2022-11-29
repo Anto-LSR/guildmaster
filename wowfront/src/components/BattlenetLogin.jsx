@@ -20,7 +20,7 @@ function BattlenetLogin() {
           <div className="mt-12 inline-flex rounded-md shadow">
             <a
               href={`https://eu.battle.net/oauth/authorize?client_id=${process.env.REACT_APP_CLIENT_ID}&redirect_uri=${process.env.REACT_APP_BASEURL}/bnet&response_type=code&scope=wow.profile`}
-              className="py-4 px-6  bg-[#5e90f1] border-2 border-[#68a0ff] hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg "
+              className="py-4 px-6  bg-primary border-2 border-secondary hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg "
             >
               Link battle net account
             </a>

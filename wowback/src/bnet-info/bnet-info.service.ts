@@ -10,7 +10,6 @@ export class BnetInfoService {
     const accountInfo = await axios.get(
       `http://eu.battle.net/oauth/userinfo?region=eu&access_token=${token}`,
     );
-    console.log(accountInfo.data);
 
     // const profileInfo = await axios.get(
     //   `https://eu.api.blizzard.com/profile/user/wow?namespace=profile-eu&access_token=${token}`,

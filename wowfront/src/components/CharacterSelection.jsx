@@ -4,6 +4,7 @@ import ApiManager from "../services/ApiManager";
 import CharacterCard from "./CharacterCard";
 import { AiOutlineCheck } from "react-icons/ai";
 import { BiErrorCircle, BiRefresh } from "react-icons/bi";
+import Toast from "./Toast";
 
 function CharacterSelection() {
   const { userInfo, setUserInfo, characterData, setCharacterData } =
@@ -70,9 +71,9 @@ function CharacterSelection() {
               }
             }}
             className="
-                fixed bottom-5 right-1/2 translate-x-1/2 text-white font-bold py-2 px-4 border-b-4 border-[#2A7484] rounded transition ease-in-out mb-10 shadow-md
+                fixed bottom-5 right-1/2 translate-x-1/2 text-white font-bold py-2 px-4 border-b-4 border-secondary rounded transition ease-in-out mb-10 shadow-md
                 bg-primary 
-                hover:bg-[#2A7484]  hover:border-[##2A7484] 
+                hover:bg-secondary  hover:border-secondary 
                 md:absolute md:translate-x-1/2 md:right-1/2 
                 lg:static lg:mr-10 lg:translate-x-0
                 xl:static lg-translate-x-0
@@ -84,10 +85,10 @@ function CharacterSelection() {
           <a
             href={`https://eu.battle.net/oauth/authorize?client_id=${process.env.REACT_APP_CLIENT_ID}&redirect_uri=${process.env.REACT_APP_BASEURL}/bnet&response_type=code&scope=wow.profile`}
             className="
-                fixed bottom-7 right-4 translate-x-2/2 text-white font-bold py-2 px-4 border-b-4 border-[#2A7484] rounded transition ease-in-out mb-10 shadow-md
+                fixed bottom-7 right-4 translate-x-2/2 text-white font-bold py-2 px-4 border-b-4 border-secondary rounded transition ease-in-out mb-10 shadow-md
                 bg-primary 
                 font-bold text-2xl
-                hover:bg-[#2A7484]  hover:border-[##2A7484] 
+                hover:bg-secondary  hover:border-secondary 
                 md:absolute md:translate-x-1/2 md:right-1/2 
                 lg:static lg:mr-10 lg:translate-x-0
                 xl:static lg-translate-x-0
@@ -96,31 +97,17 @@ function CharacterSelection() {
             <BiRefresh />
           </a>
           {swapResult === "success" && (
-            <div
-              className="p-2 bg-green-800 items-center text-green-100 leading-none lg:rounded-full flex lg:inline-flex drop-shadow-md fixed bottom-0 md:static md:mr-9"
-              role="alert"
-            >
-              <span className="flex rounded-full bg-green-500 uppercase px-2 py-1 text-xs font-bold mr-3">
-                <AiOutlineCheck className="font-bold text-xl" />
-              </span>
-              <span className="font-semibold mr-2 text-left flex-auto">
-                Your selected character has been changed.
-              </span>
-            </div>
+            <Toast
+              status='success'
+              message='Your selected character has been changed.'
+            />
           )}
 
           {swapResult === "error" && (
-            <div
-              className="p-2 bg-red-800 items-center text-red-100 leading-none lg:rounded-full flex lg:inline-flex drop-shadow-md md:mr-9"
-              role="alert"
-            >
-              <span className="flex rounded-full bg-red-500 uppercase px-2 py-1 text-xs font-bold mr-3">
-                <BiErrorCircle className="font-bold text-xl" />
-              </span>
-              <span className="font-semibold mr-2 text-left flex-auto">
-                Something went wrong
-              </span>
-            </div>
+            <Toast
+            status='error'
+            message='Something went wrong.'
+          />
           )}
         </div>
       )}
@@ -128,7 +115,7 @@ function CharacterSelection() {
       {isLoading && (
         <div className="">
           <div
-            role="status "
+            role="status"
             className="h-screen flex justify-center items-center"
           >
             <svg

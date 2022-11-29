@@ -145,7 +145,7 @@ function RegisterForm() {
 
             <button
               type="submit"
-              className="py-2 px-4 flex justify-center items-center  bg-primary hover:bg-[#2A7484] focus:ring-secondary focus:ring-offset-secondary text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-full"
+              className="py-2 px-4 flex justify-center items-center  bg-primary hover:bg-secondary focus:ring-secondary focus:ring-offset-secondary text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-full"
             >
               <TbSwords className="mr-3" />
               Register
@@ -162,7 +162,7 @@ function RegisterForm() {
             <div className="flex items-center justify-center">
               <Link
                 to="/auth/login"
-                className="py-2 px-4 flex justify-center items-center  bg-primary hover:bg-[#2A7484] focus:ring-secondary focus:ring-offset-secondary text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 m-2"
+                className="py-2 px-4 flex justify-center items-center  bg-primary hover:bg-secondary focus:ring-secondary focus:ring-offset-secondary text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 m-2"
               >
                 Login{" "}
               </Link>

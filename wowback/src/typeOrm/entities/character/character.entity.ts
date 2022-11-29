@@ -49,4 +49,6 @@ export class Character {
   currentHeroicProgress: string;
   @Column({ nullable: true })
   currentMythicProgress: string;
+  @Column({ nullable: true })
+  bestSeasonalMythicRuns: string;
 }

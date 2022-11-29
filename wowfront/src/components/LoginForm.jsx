@@ -92,7 +92,7 @@ function LoginForm() {
 
           <button
             type="submit"
-            className="py-2 px-4 flex justify-center items-center  bg-primary hover:bg-[#2A7484] focus:ring-secondary focus:ring-offset-secondary text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-full"
+            className="py-2 px-4 flex justify-center items-center  bg-primary hover:bg-secondary focus:ring-secondary focus:ring-offset-secondary text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-full"
           >
             <BsDoorClosed className="mr-3" />
             Log in

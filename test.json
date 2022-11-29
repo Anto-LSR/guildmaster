@@ -1,0 +1,851 @@
+{
+    "_links": {
+      "self": {
+        "href": "https://eu.api.blizzard.com/profile/wow/character/hyjal/%C3%ABver/mythic-keystone-profile/season/8?namespace=profile-eu"
+      }
+    },
+    "season": {
+      "key": {
+        "href": "https://eu.api.blizzard.com/data/wow/mythic-keystone/season/8?namespace=dynamic-eu"
+      },
+      "id": 8
+    },
+    "best_runs": [
+      {
+        "completed_timestamp": 1662227882000,
+        "duration": 1684644,
+        "keystone_level": 15,
+        "keystone_affixes": [
+          {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/keystone-affix/9?namespace=static-10.0.0_46112-eu"
+            },
+            "name": "Tyrannical",
+            "id": 9
+          },
+          {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/keystone-affix/6?namespace=static-10.0.0_46112-eu"
+            },
+            "name": "Raging",
+            "id": 6
+          },
+          {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/keystone-affix/3?namespace=static-10.0.0_46112-eu"
+            },
+            "name": "Volcanic",
+            "id": 3
+          },
+          {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/keystone-affix/131?namespace=static-10.0.0_46112-eu"
+            },
+            "name": "Shrouded",
+            "id": 131
+          }
+        ],
+        "members": [
+          {
+            "character": {
+              "name": "Olórinn",
+              "id": 205439770,
+              "realm": {
+                "key": {
+                  "href": "https://eu.api.blizzard.com/data/wow/realm/542?namespace=dynamic-eu"
+                },
+                "id": 542,
+                "slug": "hyjal"
+              }
+            },
+            "specialization": {
+              "key": {
+                "href": "https://eu.api.blizzard.com/data/wow/playable-specialization/264?namespace=static-10.0.0_46112-eu"
+              },
+              "name": "Restoration",
+              "id": 264
+            },
+            "race": {
+              "key": {
+                "href": "https://eu.api.blizzard.com/data/wow/playable-race/34?namespace=static-10.0.0_46112-eu"
+              },
+              "name": "Dark Iron Dwarf",
+              "id": 34
+            },
+            "equipped_item_level": 292
+          },
+          {
+            "character": {
+              "name": "Ëver",
+              "id": 197426216,
+              "realm": {
+                "key": {
+                  "href": "https://eu.api.blizzard.com/data/wow/realm/542?namespace=dynamic-eu"
+                },
+                "id": 542,
+                "slug": "hyjal"
+              }
+            },
+            "specialization": {
+              "key": {
+                "href": "https://eu.api.blizzard.com/data/wow/playable-specialization/260?namespace=static-10.0.0_46112-eu"
+              },
+              "name": "Outlaw",
+              "id": 260
+            },
+            "race": {
+              "key": {
+                "href": "https://eu.api.blizzard.com/data/wow/playable-race/2?namespace=static-10.0.0_46112-eu"
+              },
+              "name": "Orc",
+              "id": 2
+            },
+            "equipped_item_level": 297
+          },
+          {
+            "character": {
+              "name": "Telweae",
+              "id": 173897588,
+              "realm": {
+                "key": {
+                  "href": "https://eu.api.blizzard.com/data/wow/realm/536?namespace=dynamic-eu"
+                },
+                "id": 536,
+                "slug": "argent-dawn"
+              }
+            },
+            "specialization": {
+              "key": {
+                "href": "https://eu.api.blizzard.com/data/wow/playable-specialization/268?namespace=static-10.0.0_46112-eu"
+              },
+              "name": "Brewmaster",
+              "id": 268
+            },
+            "race": {
+              "key": {
+                "href": "https://eu.api.blizzard.com/data/wow/playable-race/11?namespace=static-10.0.0_46112-eu"
+              },
+              "name": "Draenei",
+              "id": 11
+            },
+            "equipped_item_level": 295
+          },
+          {
+            "character": {
+              "name": "Mswinters",
+              "id": 170289070,
+              "realm": {
+                "key": {
+                  "href": "https://eu.api.blizzard.com/data/wow/realm/506?namespace=dynamic-eu"
+                },
+                "id": 506,
+                "slug": "draenor"
+              }
+            },
+            "specialization": {
+              "key": {
+                "href": "https://eu.api.blizzard.com/data/wow/playable-specialization/254?namespace=static-10.0.0_46112-eu"
+              },
+              "name": "Marksmanship",
+              "id": 254
+            },
+            "race": {
+              "key": {
+                "href": "https://eu.api.blizzard.com/data/wow/playable-race/35?namespace=static-10.0.0_46112-eu"
+              },
+              "name": "Vulpera",
+              "id": 35
+            },
+            "equipped_item_level": 292
+          },
+          {
+            "character": {
+              "name": "Loraelliya",
+              "id": 168551370,
+              "realm": {
+                "key": {
+                  "href": "https://eu.api.blizzard.com/data/wow/realm/1307?namespace=dynamic-eu"
+                },
+                "id": 1307,
+                "slug": "chamber-of-aspects"
+              }
+            },
+            "specialization": {
+              "key": {
+                "href": "https://eu.api.blizzard.com/data/wow/playable-specialization/254?namespace=static-10.0.0_46112-eu"
+              },
+              "name": "Marksmanship",
+              "id": 254
+            },
+            "race": {
+              "key": {
+                "href": "https://eu.api.blizzard.com/data/wow/playable-race/4?namespace=static-10.0.0_46112-eu"
+              },
+              "name": "Night Elf",
+              "id": 4
+            },
+            "equipped_item_level": 290
+          }
+        ],
+        "dungeon": {
+          "key": {
+            "href": "https://eu.api.blizzard.com/data/wow/mythic-keystone/dungeon/369?namespace=dynamic-eu"
+          },
+          "name": "Operation: Mechagon - Junkyard",
+          "id": 369
+        },
+        "is_completed_within_time": true,
+        "mythic_rating": {
+          "color": {
+            "r": 163,
+            "g": 53,
+            "b": 238,
+            "a": 1
+          },
+          "rating": 128.264
+        },
+        "map_rating": {
+          "color": {
+            "r": 0,
+            "g": 112,
+            "b": 221,
+            "a": 1
+          },
+          "rating": 192.39601
+        }
+      },
+      {
+        "completed_timestamp": 1662151044000,
+        "duration": 1494792,
+        "keystone_level": 15,
+        "keystone_affixes": [
+          {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/keystone-affix/9?namespace=static-10.0.0_46112-eu"
+            },
+            "name": "Tyrannical",
+            "id": 9
+          },
+          {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/keystone-affix/6?namespace=static-10.0.0_46112-eu"
+            },
+            "name": "Raging",
+            "id": 6
+          },
+          {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/keystone-affix/3?namespace=static-10.0.0_46112-eu"
+            },
+            "name": "Volcanic",
+            "id": 3
+          },
+          {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/keystone-affix/131?namespace=static-10.0.0_46112-eu"
+            },
+            "name": "Shrouded",
+            "id": 131
+          }
+        ],
+        "members": [
+          {
+            "character": {
+              "name": "Ëver",
+              "id": 197426216,
+              "realm": {
+                "key": {
+                  "href": "https://eu.api.blizzard.com/data/wow/realm/542?namespace=dynamic-eu"
+                },
+                "id": 542,
+                "slug": "hyjal"
+              }
+            },
+            "specialization": {
+              "key": {
+                "href": "https://eu.api.blizzard.com/data/wow/playable-specialization/260?namespace=static-10.0.0_46112-eu"
+              },
+              "name": "Outlaw",
+              "id": 260
+            },
+            "race": {
+              "key": {
+                "href": "https://eu.api.blizzard.com/data/wow/playable-race/2?namespace=static-10.0.0_46112-eu"
+              },
+              "name": "Orc",
+              "id": 2
+            },
+            "equipped_item_level": 297
+          },
+          {
+            "character": {
+              "name": "Amidja",
+              "id": 191822189,
+              "realm": {
+                "key": {
+                  "href": "https://eu.api.blizzard.com/data/wow/realm/1305?namespace=dynamic-eu"
+                },
+                "id": 1305,
+                "slug": "kazzak"
+              }
+            },
+            "specialization": {
+              "key": {
+                "href": "https://eu.api.blizzard.com/data/wow/playable-specialization/267?namespace=static-10.0.0_46112-eu"
+              },
+              "name": "Destruction",
+              "id": 267
+            },
+            "race": {
+              "key": {
+                "href": "https://eu.api.blizzard.com/data/wow/playable-race/2?namespace=static-10.0.0_46112-eu"
+              },
+              "name": "Orc",
+              "id": 2
+            },
+            "equipped_item_level": 288
+          },
+          {
+            "character": {
+              "name": "Bãradhur",
+              "id": 184411642,
+              "realm": {
+                "key": {
+                  "href": "https://eu.api.blizzard.com/data/wow/realm/625?namespace=dynamic-eu"
+                },
+                "id": 625,
+                "slug": "twisting-nether"
+              }
+            },
+            "specialization": {
+              "key": {
+                "href": "https://eu.api.blizzard.com/data/wow/playable-specialization/262?namespace=static-10.0.0_46112-eu"
+              },
+              "name": "Elemental",
+              "id": 262
+            },
+            "race": {
+              "key": {
+                "href": "https://eu.api.blizzard.com/data/wow/playable-race/3?namespace=static-10.0.0_46112-eu"
+              },
+              "name": "Dwarf",
+              "id": 3
+            },
+            "equipped_item_level": 281
+          },
+          {
+            "character": {
+              "name": "Krokkete",
+              "id": 162661454,
+              "realm": {
+                "key": {
+                  "href": "https://eu.api.blizzard.com/data/wow/realm/542?namespace=dynamic-eu"
+                },
+                "id": 542,
+                "slug": "hyjal"
+              }
+            },
+            "specialization": {
+              "key": {
+                "href": "https://eu.api.blizzard.com/data/wow/playable-specialization/257?namespace=static-10.0.0_46112-eu"
+              },
+              "name": "Holy",
+              "id": 257
+            },
+            "race": {
+              "key": {
+                "href": "https://eu.api.blizzard.com/data/wow/playable-race/5?namespace=static-10.0.0_46112-eu"
+              },
+              "name": "Undead",
+              "id": 5
+            },
+            "equipped_item_level": 294
+          },
+          {
+            "character": {
+              "name": "Äzzuel",
+              "id": 171354593,
+              "realm": {
+                "key": {
+                  "href": "https://eu.api.blizzard.com/data/wow/realm/542?namespace=dynamic-eu"
+                },
+                "id": 542,
+                "slug": "hyjal"
+              }
+            },
+            "specialization": {
+              "key": {
+                "href": "https://eu.api.blizzard.com/data/wow/playable-specialization/250?namespace=static-10.0.0_46112-eu"
+              },
+              "name": "Blood",
+              "id": 250
+            },
+            "race": {
+              "key": {
+                "href": "https://eu.api.blizzard.com/data/wow/playable-race/10?namespace=static-10.0.0_46112-eu"
+              },
+              "name": "Blood Elf",
+              "id": 10
+            },
+            "equipped_item_level": 297
+          }
+        ],
+        "dungeon": {
+          "key": {
+            "href": "https://eu.api.blizzard.com/data/wow/mythic-keystone/dungeon/234?namespace=dynamic-eu"
+          },
+          "name": "Return to Karazhan: Upper",
+          "id": 234
+        },
+        "is_completed_within_time": true,
+        "mythic_rating": {
+          "color": {
+            "r": 163,
+            "g": 53,
+            "b": 238,
+            "a": 1
+          },
+          "rating": 128.60243
+        },
+        "map_rating": {
+          "color": {
+            "r": 0,
+            "g": 112,
+            "b": 221,
+            "a": 1
+          },
+          "rating": 192.90366
+        }
+      },
+      {
+        "completed_timestamp": 1662229558000,
+        "duration": 1064791,
+        "keystone_level": 18,
+        "keystone_affixes": [
+          {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/keystone-affix/9?namespace=static-10.0.0_46112-eu"
+            },
+            "name": "Tyrannical",
+            "id": 9
+          },
+          {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/keystone-affix/6?namespace=static-10.0.0_46112-eu"
+            },
+            "name": "Raging",
+            "id": 6
+          },
+          {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/keystone-affix/3?namespace=static-10.0.0_46112-eu"
+            },
+            "name": "Volcanic",
+            "id": 3
+          },
+          {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/keystone-affix/131?namespace=static-10.0.0_46112-eu"
+            },
+            "name": "Shrouded",
+            "id": 131
+          }
+        ],
+        "members": [
+          {
+            "character": {
+              "name": "Ne",
+              "id": 162532746,
+              "realm": {
+                "key": {
+                  "href": "https://eu.api.blizzard.com/data/wow/realm/1303?namespace=dynamic-eu"
+                },
+                "id": 1303,
+                "slug": "grim-batol"
+              }
+            },
+            "specialization": {
+              "key": {
+                "href": "https://eu.api.blizzard.com/data/wow/playable-specialization/255?namespace=static-10.0.0_46112-eu"
+              },
+              "name": "Survival",
+              "id": 255
+            },
+            "race": {
+              "key": {
+                "href": "https://eu.api.blizzard.com/data/wow/playable-race/6?namespace=static-10.0.0_46112-eu"
+              },
+              "name": "Tauren",
+              "id": 6
+            },
+            "equipped_item_level": 293
+          },
+          {
+            "character": {
+              "name": "Thánátós",
+              "id": 154027972,
+              "realm": {
+                "key": {
+                  "href": "https://eu.api.blizzard.com/data/wow/realm/542?namespace=dynamic-eu"
+                },
+                "id": 542,
+                "slug": "hyjal"
+              }
+            },
+            "specialization": {
+              "key": {
+                "href": "https://eu.api.blizzard.com/data/wow/playable-specialization/250?namespace=static-10.0.0_46112-eu"
+              },
+              "name": "Blood",
+              "id": 250
+            },
+            "race": {
+              "key": {
+                "href": "https://eu.api.blizzard.com/data/wow/playable-race/36?namespace=static-10.0.0_46112-eu"
+              },
+              "name": "Mag'har Orc",
+              "id": 36
+            },
+            "equipped_item_level": 298
+          },
+          {
+            "character": {
+              "name": "Ëver",
+              "id": 197426216,
+              "realm": {
+                "key": {
+                  "href": "https://eu.api.blizzard.com/data/wow/realm/542?namespace=dynamic-eu"
+                },
+                "id": 542,
+                "slug": "hyjal"
+              }
+            },
+            "specialization": {
+              "key": {
+                "href": "https://eu.api.blizzard.com/data/wow/playable-specialization/260?namespace=static-10.0.0_46112-eu"
+              },
+              "name": "Outlaw",
+              "id": 260
+            },
+            "race": {
+              "key": {
+                "href": "https://eu.api.blizzard.com/data/wow/playable-race/2?namespace=static-10.0.0_46112-eu"
+              },
+              "name": "Orc",
+              "id": 2
+            },
+            "equipped_item_level": 297
+          },
+          {
+            "character": {
+              "name": "Olórinn",
+              "id": 205439770,
+              "realm": {
+                "key": {
+                  "href": "https://eu.api.blizzard.com/data/wow/realm/542?namespace=dynamic-eu"
+                },
+                "id": 542,
+                "slug": "hyjal"
+              }
+            },
+            "specialization": {
+              "key": {
+                "href": "https://eu.api.blizzard.com/data/wow/playable-specialization/264?namespace=static-10.0.0_46112-eu"
+              },
+              "name": "Restoration",
+              "id": 264
+            },
+            "race": {
+              "key": {
+                "href": "https://eu.api.blizzard.com/data/wow/playable-race/34?namespace=static-10.0.0_46112-eu"
+              },
+              "name": "Dark Iron Dwarf",
+              "id": 34
+            },
+            "equipped_item_level": 292
+          },
+          {
+            "character": {
+              "name": "Harrylock",
+              "id": 178928886,
+              "realm": {
+                "key": {
+                  "href": "https://eu.api.blizzard.com/data/wow/realm/626?namespace=dynamic-eu"
+                },
+                "id": 626,
+                "slug": "ragnaros"
+              }
+            },
+            "specialization": {
+              "key": {
+                "href": "https://eu.api.blizzard.com/data/wow/playable-specialization/267?namespace=static-10.0.0_46112-eu"
+              },
+              "name": "Destruction",
+              "id": 267
+            },
+            "race": {
+              "key": {
+                "href": "https://eu.api.blizzard.com/data/wow/playable-race/35?namespace=static-10.0.0_46112-eu"
+              },
+              "name": "Vulpera",
+              "id": 35
+            },
+            "equipped_item_level": 278
+          }
+        ],
+        "dungeon": {
+          "key": {
+            "href": "https://eu.api.blizzard.com/data/wow/mythic-keystone/dungeon/166?namespace=dynamic-eu"
+          },
+          "name": "Grimrail Depot",
+          "id": 166
+        },
+        "is_completed_within_time": true,
+        "mythic_rating": {
+          "color": {
+            "r": 255,
+            "g": 128,
+            "b": 0,
+            "a": 1
+          },
+          "rating": 145
+        },
+        "map_rating": {
+          "color": {
+            "r": 0,
+            "g": 112,
+            "b": 221,
+            "a": 1
+          },
+          "rating": 217.5
+        }
+      },
+      {
+        "completed_timestamp": 1662149142000,
+        "duration": 1658554,
+        "keystone_level": 15,
+        "keystone_affixes": [
+          {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/keystone-affix/9?namespace=static-10.0.0_46112-eu"
+            },
+            "name": "Tyrannical",
+            "id": 9
+          },
+          {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/keystone-affix/6?namespace=static-10.0.0_46112-eu"
+            },
+            "name": "Raging",
+            "id": 6
+          },
+          {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/keystone-affix/3?namespace=static-10.0.0_46112-eu"
+            },
+            "name": "Volcanic",
+            "id": 3
+          },
+          {
+            "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/keystone-affix/131?namespace=static-10.0.0_46112-eu"
+            },
+            "name": "Shrouded",
+            "id": 131
+          }
+        ],
+        "members": [
+          {
+            "character": {
+              "name": "Äzzuel",
+              "id": 171354593,
+              "realm": {
+                "key": {
+                  "href": "https://eu.api.blizzard.com/data/wow/realm/542?namespace=dynamic-eu"
+                },
+                "id": 542,
+                "slug": "hyjal"
+              }
+            },
+            "specialization": {
+              "key": {
+                "href": "https://eu.api.blizzard.com/data/wow/playable-specialization/250?namespace=static-10.0.0_46112-eu"
+              },
+              "name": "Blood",
+              "id": 250
+            },
+            "race": {
+              "key": {
+                "href": "https://eu.api.blizzard.com/data/wow/playable-race/10?namespace=static-10.0.0_46112-eu"
+              },
+              "name": "Blood Elf",
+              "id": 10
+            },
+            "equipped_item_level": 297
+          },
+          {
+            "character": {
+              "name": "Bubblesupply",
+              "id": 168932206,
+              "realm": {
+                "key": {
+                  "href": "https://eu.api.blizzard.com/data/wow/realm/561?namespace=dynamic-eu"
+                },
+                "id": 561,
+                "slug": "earthen-ring"
+              }
+            },
+            "specialization": {
+              "key": {
+                "href": "https://eu.api.blizzard.com/data/wow/playable-specialization/70?namespace=static-10.0.0_46112-eu"
+              },
+              "name": "Retribution",
+              "id": 70
+            },
+            "race": {
+              "key": {
+                "href": "https://eu.api.blizzard.com/data/wow/playable-race/1?namespace=static-10.0.0_46112-eu"
+              },
+              "name": "Human",
+              "id": 1
+            },
+            "equipped_item_level": 297
+          },
+          {
+            "character": {
+              "name": "Krokkete",
+              "id": 162661454,
+              "realm": {
+                "key": {
+                  "href": "https://eu.api.blizzard.com/data/wow/realm/542?namespace=dynamic-eu"
+                },
+                "id": 542,
+                "slug": "hyjal"
+              }
+            },
+            "specialization": {
+              "key": {
+                "href": "https://eu.api.blizzard.com/data/wow/playable-specialization/257?namespace=static-10.0.0_46112-eu"
+              },
+              "name": "Holy",
+              "id": 257
+            },
+            "race": {
+              "key": {
+                "href": "https://eu.api.blizzard.com/data/wow/playable-race/5?namespace=static-10.0.0_46112-eu"
+              },
+              "name": "Undead",
+              "id": 5
+            },
+            "equipped_item_level": 294
+          },
+          {
+            "character": {
+              "name": "Ëver",
+              "id": 197426216,
+              "realm": {
+                "key": {
+                  "href": "https://eu.api.blizzard.com/data/wow/realm/542?namespace=dynamic-eu"
+                },
+                "id": 542,
+                "slug": "hyjal"
+              }
+            },
+            "specialization": {
+              "key": {
+                "href": "https://eu.api.blizzard.com/data/wow/playable-specialization/260?namespace=static-10.0.0_46112-eu"
+              },
+              "name": "Outlaw",
+              "id": 260
+            },
+            "race": {
+              "key": {
+                "href": "https://eu.api.blizzard.com/data/wow/playable-race/2?namespace=static-10.0.0_46112-eu"
+              },
+              "name": "Orc",
+              "id": 2
+            },
+            "equipped_item_level": 295
+          },
+          {
+            "character": {
+              "name": "Shadowhoof",
+              "id": 173861865,
+              "realm": {
+                "key": {
+                  "href": "https://eu.api.blizzard.com/data/wow/realm/1092?namespace=dynamic-eu"
+                },
+                "id": 1092,
+                "slug": "drakthul"
+              }
+            },
+            "specialization": {
+              "key": {
+                "href": "https://eu.api.blizzard.com/data/wow/playable-specialization/263?namespace=static-10.0.0_46112-eu"
+              },
+              "name": "Enhancement",
+              "id": 263
+            },
+            "race": {
+              "key": {
+                "href": "https://eu.api.blizzard.com/data/wow/playable-race/28?namespace=static-10.0.0_46112-eu"
+              },
+              "name": "Highmountain Tauren",
+              "id": 28
+            },
+            "equipped_item_level": 283
+          }
+        ],
+        "dungeon": {
+          "key": {
+            "href": "https://eu.api.blizzard.com/data/wow/mythic-keystone/dungeon/391?namespace=dynamic-eu"
+          },
+          "name": "Tazavesh: Streets of Wonder",
+          "id": 391
+        },
+        "is_completed_within_time": true,
+        "mythic_rating": {
+          "color": {
+            "r": 163,
+            "g": 53,
+            "b": 238,
+            "a": 1
+          },
+          "rating": 128.6402
+        },
+        "map_rating": {
+          "color": {
+            "r": 0,
+            "g": 112,
+            "b": 221,
+            "a": 1
+          },
+          "rating": 192.9603
+        }
+      }
+    ],
+    "character": {
+      "key": {
+        "href": "https://eu.api.blizzard.com/profile/wow/character/hyjal/%C3%ABver?namespace=profile-eu"
+      },
+      "name": "Ëver",
+      "id": 197426216,
+      "realm": {
+        "key": {
+          "href": "https://eu.api.blizzard.com/data/wow/realm/542?namespace=dynamic-eu"
+        },
+        "name": "Hyjal",
+        "id": 542,
+        "slug": "hyjal"
+      }
+    },
+    "mythic_rating": {
+      "color": {
+        "r": 255,
+        "g": 255,
+        "b": 255,
+        "a": 0
+      },
+      "rating": 795.76
+    }
+  }

@@ -65,28 +65,37 @@ export class CharacterService {
     const selectedCharacter = await this.getCharacterInfo(
       user.selectedCharacter,
     );
-    const characterInfo = await axios.get(
-      `https://eu.api.blizzard.com/profile/wow/character/${
-        selectedCharacter.realm
-      }/${selectedCharacter.name.toLowerCase()}?access_token=${app_token}&namespace=profile-eu&locale=en_GB`,
-    );
-    //On récupère les données de blizzard et on les applique à notre entité character
-    const characterEntity = new Character();
-    characterEntity.name = characterInfo.data.name;
-    characterEntity.faction = characterInfo.data.faction.name;
-    characterEntity.race = characterInfo.data.race.name;
-    characterEntity.class = characterInfo.data.character_class.name;
-    characterEntity.realm = characterInfo.data.realm.slug;
-    characterEntity.guildName = characterInfo.data.guild?.name;
-    characterEntity.level = characterInfo.data.level;
-    characterEntity.wowCharacterId = characterInfo.data.id;
-    characterEntity.gender = characterInfo.data.gender.type;
-    characterEntity.avatarUrl = selectedCharacter.avatarUrl;
-    characterEntity.mainPictureUrl = selectedCharacter.mainPictureUrl;
-    this.getCharacterRaids(characterEntity); //<----------------TEST
-    return characterEntity;
+    try {
+      const characterInfo = await axios.get(
+        `https://eu.api.blizzard.com/profile/wow/character/${
+          selectedCharacter.realm
+        }/${selectedCharacter.name.toLowerCase()}?access_token=${app_token}&namespace=profile-eu&locale=en_GB`,
+      );
+      //On récupère les données de blizzard et on les applique à notre entité character
+      const characterEntity = new Character();
+      characterEntity.name = characterInfo.data.name;
+      characterEntity.faction = characterInfo.data.faction.name;
+      characterEntity.race = characterInfo.data.race.name;
+      characterEntity.class = characterInfo.data.character_class.name;
+      characterEntity.realm = characterInfo.data.realm.slug;
+      characterEntity.guildName = characterInfo.data.guild?.name;
+      characterEntity.level = characterInfo.data.level;
+      characterEntity.wowCharacterId = characterInfo.data.id;
+      characterEntity.gender = characterInfo.data.gender.type;
+      characterEntity.avatarUrl = selectedCharacter.avatarUrl;
+      characterEntity.mainPictureUrl = selectedCharacter.mainPictureUrl;
+      const kuku = await this.getCharacterMythicDungeons(characterEntity);
+      return characterEntity;
+    } catch (e) {
+      console.log(e);
+    }
   }
 
+  /**
+   *
+   * @param character Retourne les informations sur le progress du précédent et de l'actuel raid du personnage
+   * @returns
+   */
   async getCharacterRaids(character: Character): Promise<Partial<Character>> {
     const app_token = await this.getTokenService.getAccessToken();
     const characterRaid = await axios.get(
@@ -148,7 +157,53 @@ export class CharacterService {
         });
       }
     });
-    console.log(partialCharacter);
     return partialCharacter;
+  }
+
+  async getCharacterMythicDungeons(character: Character): Promise<string> {
+    const app_token = await this.getTokenService.getAccessToken();
+    try {
+      const characterMythicDungeons = await axios.get(
+        `https://eu.api.blizzard.com/profile/wow/character/${
+          character.realm
+        }/${character.name.toLowerCase()}/mythic-keystone-profile/season/${
+          process.env.MYTHIC_SEASON
+        }?access_token=${app_token}&namespace=profile-eu&locale=en_GB`,
+      );
+      //console.log(characterMythicDungeons.data.best_runs[0].duration);
+      characterMythicDungeons.data.best_runs.forEach((run) => {
+        console.log('--------------------------------------------------');
+        console.log('----DURATION----');
+        const date = new Date(run.duration);
+        const seconds =
+          date.getSeconds() < 10 ? '0' + date.getSeconds() : date.getSeconds();
+        console.log(date.getMinutes() + ':' + seconds);
+        console.log('----KEY LEVEL----');
+        console.log(run.keystone_level);
+        console.log('----AFFIXES----');
+        run.keystone_affixes.forEach((affix) => {
+          console.log(affix.name);
+        });
+        console.log('----MEMBERS----');
+        run.members.forEach((member) => {
+          console.log(member.character.name);
+          console.log(
+            'spec : ' +
+              member.specialization.name +
+              '-' +
+              member.specialization.id,
+          );
+          console.log(run.dungeon.name);
+          console.log(run.is_completed_within_time);
+          console.log(JSON.stringify(run.mythic_rating.color));
+          console.log(run.map_rating.rating);
+        });
+      });
+      return 'michel';
+    } catch (e) {
+      console.log(e.code, 'Aucune donnée pour cette saison');
+    }
+
+    return null;
   }
 }

@@ -36,13 +36,11 @@ export class GetTokenService {
     if (this.isExpired()) {
       await this.getCredentials();
     }
-    console.log('APP_TOKEN : ', this.clientCredential.token);
     return this.clientCredential.token;
   }
 
   private isExpired(): boolean {
     if (this.clientCredential === null || this.clientCredential === undefined) {
-      console.log('EXPIRED');
       return true;
     }
 

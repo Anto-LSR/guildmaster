@@ -23,7 +23,6 @@ function App() {
             <Route path="/my-profile" element={<UserProfile />} />
           </Route>
         </Routes>
-
       </UserInfoContextProvider>
     </BrowserRouter>
   );

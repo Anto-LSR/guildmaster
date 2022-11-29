@@ -70,7 +70,6 @@ export class LinkBnetService {
     //TODO: Appeller ma méthode getCredentials() dans le service GetTokenService plutôt que de faire une requete à la zob
     const credentials = await this.getTokenService.getAccessToken();
     const app_token = credentials;
-    console.log(app_token, 'mon token');
     //On récupère les personnages de l'utilisateur
     const wowAccounts = await axios.get(
       `https://eu.api.blizzard.com/profile/user/wow?namespace=profile-eu&locale=en_GB&access_token=${token}`,
@@ -127,7 +126,6 @@ export class LinkBnetService {
         } catch (e) {
           if (e.response.status === 404) {
             //Si la reponse est une 404, cela veut dire que le personnage n'a pas été misà jour depuis longtemps par blizzard, et qu'il n'est donc pas joué.
-            console.log('Character is too old !', e.response.status);
           }
           if (e.response.status === 401) {
             console.log('Unauthorized', e.response.status);
