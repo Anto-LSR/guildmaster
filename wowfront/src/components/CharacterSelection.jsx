@@ -45,9 +45,9 @@ function CharacterSelection() {
   };
 
   return (
-    <div>
+    <>
       {!isLoading && characterData && (
-        <div className="flex justify-center items-center lg:h-screen flex-col overflow-y-scroll">
+        <div className="flex  items-center lg:h-screen flex-col overflow-y-scroll">
           <div className=" border-[#ffffff5c] mt-10 lg:border lg:bg-mygray rounded-lg mb-12 drop-shadow-md">
             <div className="grid grid-cols-2 md:grid-cols-3  gap-5 lg:p-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
               {characters &&
@@ -137,7 +137,7 @@ function CharacterSelection() {
           </div>
         </div>
       )}
-    </div>
+    </>
   );
 }
 
