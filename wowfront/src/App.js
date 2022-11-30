@@ -17,8 +17,7 @@ function App() {
     <BrowserRouter>
       <UserInfoContextProvider>
         <Routes>
-          <Route path="/" element={<MainContainer />}>
-            <Route path="/" element={<Navbar />}/>
+          <Route path="" element={<MainContainer />}>
             <Route path="/" element={<ContentBlock />}>
               <Route path="/bnet" element={<BattlenetLogin />} />
               <Route path="/my-characters" element={<CharacterSelection />} />
