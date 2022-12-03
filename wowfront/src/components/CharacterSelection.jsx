@@ -46,7 +46,7 @@ function CharacterSelection() {
   return (
     <>
       {!isLoading && characterData && (
-        <div className="flex  items-center lg:h-screen flex-col overflow-y-scroll">
+        <div className="flex  items-center lg:h-screen flex-col mb-24 md:mb-0">
           <div className=" border-[#ffffff5c] mt-10 lg:border lg:bg-mygray rounded-lg mb-12 drop-shadow-md">
             <div className="grid grid-cols-2 md:grid-cols-3  gap-5 lg:p-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
               {characters &&
@@ -88,7 +88,7 @@ function CharacterSelection() {
                 bg-primary 
                 font-bold text-2xl
                 hover:bg-secondary  hover:border-secondary 
-                md:absolute md:translate-x-1/2 md:right-1/2 
+                md:absolute  
                 lg:static lg:mr-10 lg:translate-x-0
                 xl:static lg-translate-x-0
               "

@@ -30,7 +30,7 @@ function Navbar() {
         <div
           className={
             navBarToggled
-              ? "w-screen bg-[#252525] h-screen  lg:w-64"
+              ? "w-screen bg-[#252525] h-screen  absolute z-50"
               : "hidden bg-[#252525] h-screen  left-0 lg:block lg:w-80"
           }
           toggled={navBarToggled.toString()}

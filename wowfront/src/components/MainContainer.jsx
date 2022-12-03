@@ -5,7 +5,7 @@ import Navbar from "./Navbar";
 function MainContainer() {
   return (
     <div className="App">
-      <div className="flex flex-row">
+      <div className="flex flex-row h-screen">
         <Toaster
           position="top-right"
           reverseOrder={false}
