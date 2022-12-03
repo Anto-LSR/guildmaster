@@ -11,7 +11,9 @@ import CharacterSelection from "./components/CharacterSelection";
 import UserProfile from "./components/UserProfile";
 import MainContainer from "./components/MainContainer";
 import ContentBlock from "./components/ContentBlock";
+import toast, { Toaster } from 'react-hot-toast';
 
+const notify = () => toast('Here is your toast.');
 function App() {
   return (
     <BrowserRouter>

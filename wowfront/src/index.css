@@ -35,3 +35,9 @@ code {
 .fade-in{
   animation: fadeIn 300ms;
 }
+.toast{
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 44px;
+}

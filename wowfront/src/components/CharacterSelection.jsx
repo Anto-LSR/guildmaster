@@ -4,7 +4,7 @@ import ApiManager from "../services/ApiManager";
 import CharacterCard from "./CharacterCard";
 import { AiOutlineCheck } from "react-icons/ai";
 import { BiErrorCircle, BiRefresh } from "react-icons/bi";
-import Toast from "./Toast";
+import toast from "react-hot-toast";
 
 function CharacterSelection() {
   const { userInfo, setUserInfo, characterData, setCharacterData } =
@@ -12,7 +12,6 @@ function CharacterSelection() {
   const [characters, setCharacters] = useState([]);
   const [selected, setSelected] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [swapResult, setSwapResult] = useState("");
 
   useEffect(() => {
     const am = ApiManager.getInstance();
@@ -36,9 +35,9 @@ function CharacterSelection() {
       let character = await am.post("/character/set/selected-character", body);
       console.log(character.data, "FROM CHARACTER SELECTION");
       setCharacterData(character.data);
-      setSwapResult("success");
+      toast.success("Main character has been changed");
     } catch (e) {
-      setSwapResult("error");
+      toast.error("Something went wrong");
       console.log(e);
     }
     setIsLoading(false);
@@ -96,19 +95,6 @@ function CharacterSelection() {
           >
             <BiRefresh />
           </a>
-          {swapResult === "success" && (
-            <Toast
-              status='success'
-              message='Your selected character has been changed.'
-            />
-          )}
-
-          {swapResult === "error" && (
-            <Toast
-            status='error'
-            message='Something went wrong.'
-          />
-          )}
         </div>
       )}
 
