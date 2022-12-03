@@ -24,6 +24,7 @@ function Navbar() {
     await am.get("/auth/logout");
     window.location = "/";
   };
+
   return (
       <>
         <div
@@ -90,7 +91,7 @@ function Navbar() {
           )}
           {/* ----------------------END---------------------- */}
           {/* ----------------------Link BNET---------------------- */}
-          {(userInfo && !characterData && userInfo?.bnetLinked === false  && (
+          {(userInfo && !characterData && userInfo?.bnetLinked == null  && (
               <div className="mt-10 ">
                 <Link
                   to="/bnet"
