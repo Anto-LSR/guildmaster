@@ -75,7 +75,9 @@ export class LinkBnetService {
       `https://eu.api.blizzard.com/profile/user/wow?namespace=profile-eu&locale=en_GB&access_token=${token}`,
     );
     //On récupère les personnages de l'utilisateur qui ont déjà été mis en base
-    const registeredCharacters = await this.charactersRepository.find();
+    const registeredCharacters = await this.characterService.getAllCharacters(
+      user,
+    );
     let wowCharacterId;
     //On itère sur les comptes WoW de l'utilisateur
     wowAccounts.data.wow_accounts.forEach(async (account) => {
@@ -103,15 +105,24 @@ export class LinkBnetService {
           characterEntity.mainPictureUrl = mediaInfo.data.assets[2].value;
           //On vérifie que le personnage n'est pas déjà en base
           let insert = true;
-          registeredCharacters.forEach((registeredCharacter) => {
+          let existingCharacter = new Character();
+          registeredCharacters.forEach(async (registeredCharacter) => {
             if (
               registeredCharacter.wowCharacterId ==
               characterEntity.wowCharacterId
             ) {
               insert = false;
+              //Si le personnage est déjà en base, on le met à jour
+              existingCharacter = registeredCharacter;
+              try {
+                await this.charactersRepository.save(existingCharacter);
+              } catch (e) {
+                //<Rejected> Unhandle promise rejection
+              }
             }
           });
           //Si le personnage n'est pas déjà en base, on l'ajoute
+
           if (insert) {
             wowCharacterId = characterEntity.wowCharacterId;
             this.charactersRepository.save(characterEntity);

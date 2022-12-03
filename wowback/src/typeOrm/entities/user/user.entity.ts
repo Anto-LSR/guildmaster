@@ -31,7 +31,6 @@ export class User {
 
   @Column({ nullable: true })
   bnetId: string;
-
   @OneToMany(() => Character, (character) => character.user)
   characters: Character[];
 

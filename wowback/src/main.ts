@@ -12,5 +12,8 @@ async function bootstrap() {
 
   app.use(cookieParser());
   await app.listen(3000);
+  process.on('unhandledRejection', (reason, p) => {
+    console.trace(reason, p);
+  });
 }
 bootstrap();
