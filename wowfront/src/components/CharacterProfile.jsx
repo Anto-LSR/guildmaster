@@ -13,7 +13,7 @@ import wowprogressIcon from "../assets/img/wowprogressIcon.png";
 import Spinner from "./Spinner";
 import CharacterStats from "./CharacterStats";
 import Tippy from "@tippyjs/react";
-
+import CharacterMythicProgress from "./CharacterMythicProgress";
 
 function CharacterProfile() {
   const { characterData, setCharacterData } = useContext(UserInfoContext);
@@ -28,15 +28,12 @@ function CharacterProfile() {
     };
     const getCharacterGear = async () => {
       const res = await am.get("/character/character-gear");
-      console.log(res.data);
       setGear(res.data);
     };
     const getStats = async () => {
       const res = await am.get("/character/character-stats");
-      //console.log(res.data);
       setStats(res.data);
     };
-    console.log(characterData);
     getStats();
     getCharacterGear();
     getCharacterDetails();
@@ -205,13 +202,14 @@ function CharacterProfile() {
                   characterData?.name
                 }
               >
-                <img className="h-6" src={wowprogressIcon} alt="" /> <span className="pl-1 text-lg font-wl">Warcraft Logs</span>
+                <img className="h-6" src={wowprogressIcon} alt="" />{" "}
+                <span className="pl-1 text-lg font-wl">Warcraft Logs</span>
               </a>
             </Tippy>
           </div>
           <hr className="my-8 h-px bg-gray-200 border-0 dark:bg-gray-700" />
           <div>
-            <h1>Block progress mm+</h1>
+            <CharacterMythicProgress />
           </div>
           <hr className="my-8 h-px bg-gray-200 border-0 dark:bg-gray-700" />
           <div>

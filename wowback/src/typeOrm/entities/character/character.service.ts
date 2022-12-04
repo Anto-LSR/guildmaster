@@ -87,8 +87,6 @@ export class CharacterService {
       characterEntity.activeSpec = characterInfo.data.active_spec.name;
       characterEntity.specId = characterInfo.data.active_spec.id;
       characterEntity.ilvl = characterInfo.data.average_item_level;
-      //console.log(characterInfo);
-      const kuku = await this.getCharacterMythicDungeons(characterEntity);
       return characterEntity;
     } catch (e) {
       console.log(e);
@@ -174,38 +172,32 @@ export class CharacterService {
           process.env.MYTHIC_SEASON
         }?access_token=${app_token}&namespace=profile-eu&locale=en_GB`,
       );
-      //console.log(characterMythicDungeons.data.best_runs[0].duration);
-      characterMythicDungeons.data.best_runs.forEach((run) => {
-        console.log('--------------------------------------------------');
-        console.log('----DURATION----');
+
+      console.log(characterMythicDungeons.data);
+
+      //Récupérer les médias du donjon concerné
+      for (const run of characterMythicDungeons.data.best_runs) {
         const date = new Date(run.duration);
         const seconds =
           date.getSeconds() < 10 ? '0' + date.getSeconds() : date.getSeconds();
-        console.log(date.getMinutes() + ':' + seconds);
-        console.log('----KEY LEVEL----');
-        console.log(run.keystone_level);
-        console.log('----AFFIXES----');
-        run.keystone_affixes.forEach((affix) => {
-          console.log(affix.name);
-        });
-        console.log('----MEMBERS----');
-        run.members.forEach((member) => {
-          console.log(member.character.name);
-          console.log(
-            'spec : ' +
-              member.specialization.name +
-              '-' +
-              member.specialization.id,
+        //console.log(date.getMinutes() + ':' + seconds);
+        run.duration = date.getMinutes() + ':' + seconds;
+        try {
+          const firstRes = await axios.get(
+            `${run.dungeon.key.href}&access_token=${app_token}&namespace=profile-eu&locale=en_GB`,
           );
-          console.log(run.dungeon.name);
-          console.log(run.is_completed_within_time);
-          console.log(JSON.stringify(run.mythic_rating.color));
-          console.log(run.map_rating.rating);
-        });
-      });
-      return 'michel';
+          const dungeonMediaId = firstRes.data.dungeon.id;
+          const secondRes = await axios.get(
+            `https://eu.api.blizzard.com/data/wow/media/journal-instance/${dungeonMediaId}?access_token=${app_token}&namespace=static-eu&locale=en_GB`,
+          );
+          run.dungeon.media = secondRes.data.assets[0].value;
+        } catch (e) {
+          console.log(e);
+        }
+      }
+      return characterMythicDungeons.data;
     } catch (e) {
-      console.log(e.code, 'Aucune donnée pour cette saison');
+      console.log(e, 'Aucune donnée pour cette saison');
     }
 
     return null;

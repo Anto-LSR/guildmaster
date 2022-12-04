@@ -12,4 +12,3 @@ function refreshTooltip() {
   } finally {
   }
 }
- console.log("test");

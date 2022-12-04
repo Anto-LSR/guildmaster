@@ -62,6 +62,19 @@ export class CharacterController {
     return null;
   }
 
+  @Get('character-mythic-dungeons')
+  async getCharacterMythicDungeon(@Req() request: Request) {
+    const user = await this.authService.verify(request.cookies.jwt);
+    const character = await this.characterService.findByCharacterId(
+      user.selectedCharacter,
+    );
+    const mythicDungeons =
+      await this.characterService.getCharacterMythicDungeons(character);
+    console.log(mythicDungeons, '------RETOUR DU CONTROLLER------');
+
+    return mythicDungeons;
+  }
+
   @Get('character-achievements')
   async getCharacterAchievements(@Req() request: Request) {
     const user = await this.authService.verify(request.cookies.jwt);
