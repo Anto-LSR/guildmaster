@@ -12,6 +12,27 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #252525;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #6a6a6a;
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -40,4 +61,40 @@ code {
   top: 0;
   right: 0;
   height: 44px;
+}
+
+.agility-icon{
+  filter: invert(95%) sepia(51%) saturate(4180%) hue-rotate(344deg) brightness(101%) contrast(90%);
+}
+
+.strenght-icon{
+  filter: invert(28%) sepia(22%) saturate(4869%) hue-rotate(337deg) brightness(112%) contrast(92%);
+}
+
+.intellect-icon{
+  filter: invert(73%) sepia(74%) saturate(5899%) hue-rotate(252deg) brightness(91%) contrast(87%);
+}
+
+.critic-icon{
+  filter: invert(19%) sepia(24%) saturate(7485%) hue-rotate(347deg) brightness(114%) contrast(96%);
+}
+
+.mastery-icon{
+  filter: invert(14%) sepia(88%) saturate(6158%) hue-rotate(276deg) brightness(96%) contrast(125%);
+}
+
+.haste-icon{
+  filter: invert(83%) sepia(81%) saturate(354%) hue-rotate(65deg) brightness(89%) contrast(89%);
+}
+
+.versatility-icon{
+  filter: invert(85%) sepia(5%) saturate(10%) hue-rotate(24deg) brightness(90%) contrast(89%);
+}
+
+.stamina-icon{
+  filter: invert(50%) sepia(84%) saturate(1241%) hue-rotate(10deg) brightness(102%) contrast(101%);
+}
+
+.font-wl{
+  font-family: 'ralewayregular', Avenir, sans-serif;
 }

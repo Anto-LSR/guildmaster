@@ -7,7 +7,7 @@ function MainContainer() {
     <div className="App">
       <div className="flex flex-row h-screen">
         <Toaster
-          position="top-right"
+          position="bottom-right"
           reverseOrder={false}
           gutter={8}
           containerClassName=""
@@ -15,7 +15,7 @@ function MainContainer() {
           toastOptions={{
             
 
-            // Default options for specific types
+            // Default options for specific types 
             success: {
               duration: 3000,
               style: {

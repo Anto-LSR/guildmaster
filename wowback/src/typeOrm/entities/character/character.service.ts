@@ -84,6 +84,10 @@ export class CharacterService {
       characterEntity.gender = characterInfo.data.gender.type;
       characterEntity.avatarUrl = selectedCharacter.avatarUrl;
       characterEntity.mainPictureUrl = selectedCharacter.mainPictureUrl;
+      characterEntity.activeSpec = characterInfo.data.active_spec.name;
+      characterEntity.specId = characterInfo.data.active_spec.id;
+      characterEntity.ilvl = characterInfo.data.average_item_level;
+      //console.log(characterInfo);
       const kuku = await this.getCharacterMythicDungeons(characterEntity);
       return characterEntity;
     } catch (e) {
@@ -205,5 +209,41 @@ export class CharacterService {
     }
 
     return null;
+  }
+
+  async getCharacterAchievements(character: Character): Promise<string> {
+    const app_token = await this.getTokenService.getAccessToken();
+    try {
+      const characterAchievements = await axios.get(
+        `https://eu.api.blizzard.com/profile/wow/character/${
+          character.realm
+        }/${character.name.toLowerCase()}/achievements?access_token=${app_token}&namespace=profile-eu&locale=en_GB`,
+      );
+      return characterAchievements.data.total_points;
+    } catch (e) {}
+  }
+
+  async getCharacterGear(character: Character): Promise<string> {
+    const app_token = await this.getTokenService.getAccessToken();
+    try {
+      const characterGear = await axios.get(
+        `https://eu.api.blizzard.com/profile/wow/character/${
+          character.realm
+        }/${character.name.toLowerCase()}/equipment?access_token=${app_token}&namespace=profile-eu&locale=en_GB`,
+      );
+      return characterGear.data.equipped_items;
+    } catch (e) {}
+  }
+
+  async getCharacterStats(character: Character): Promise<string> {
+    const app_token = await this.getTokenService.getAccessToken();
+    try {
+      const characterStats = await axios.get(
+        `https://eu.api.blizzard.com/profile/wow/character/${
+          character.realm
+        }/${character.name.toLowerCase()}/statistics?access_token=${app_token}&namespace=profile-eu&locale=en_GB`,
+      );
+      return characterStats.data;
+    } catch (e) {}
   }
 }

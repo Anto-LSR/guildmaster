@@ -20,6 +20,12 @@ export class Character {
   @Column({ nullable: true })
   class: string;
   @Column({ nullable: true })
+  activeSpec: string;
+  @Column({ nullable: true })
+  specId: string;
+  @Column({ nullable: true })
+  ilvl: number;
+  @Column({ nullable: true })
   realm: string;
   @Column({ nullable: true })
   faction: string;

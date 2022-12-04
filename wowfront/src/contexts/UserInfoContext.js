@@ -24,7 +24,6 @@ function UserInfoContextProvider(props) {
 
       const fetchCharacterInfo = async () => {
         const character = await am.get("/character/character-info");
-        console.log(character.data, "               FROM CONTEXT");
         setCharacterData(character.data);
       };
 

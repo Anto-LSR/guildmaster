@@ -6,6 +6,7 @@ import { JwtAuthGuard } from 'src/auth/guards/jwt-auth.guard';
 import axios from 'axios';
 import { Character } from './character.entity';
 import { GetTokenService } from 'src/get-token/get-token.service';
+import { get } from 'http';
 
 @UseGuards(JwtAuthGuard)
 @Controller('character')
@@ -59,5 +60,37 @@ export class CharacterController {
       }
     }
     return null;
+  }
+
+  @Get('character-achievements')
+  async getCharacterAchievements(@Req() request: Request) {
+    const user = await this.authService.verify(request.cookies.jwt);
+    const character = await this.characterService.findByCharacterId(
+      user.selectedCharacter,
+    );
+    const achievements = await this.characterService.getCharacterAchievements(
+      character,
+    );
+    return achievements;
+  }
+
+  @Get('character-gear')
+  async getCharacterGear(@Req() request: Request) {
+    const user = await this.authService.verify(request.cookies.jwt);
+    const character = await this.characterService.findByCharacterId(
+      user.selectedCharacter,
+    );
+    const gear = await this.characterService.getCharacterGear(character);
+    return gear;
+  }
+
+  @Get('character-stats')
+  async getCharacterStats(@Req() request: Request) {
+    const user = await this.authService.verify(request.cookies.jwt);
+    const character = await this.characterService.findByCharacterId(
+      user.selectedCharacter,
+    );
+    const gear = await this.characterService.getCharacterStats(character);
+    return gear;
   }
 }
