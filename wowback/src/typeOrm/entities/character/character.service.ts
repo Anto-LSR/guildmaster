@@ -1,4 +1,9 @@
-import { Inject, Injectable } from '@nestjs/common';
+import {
+  HttpException,
+  Inject,
+  Injectable,
+  NotFoundException,
+} from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { MetadataAlreadyExistsError, Repository } from 'typeorm';
 import { User } from '../user/user.entity';
@@ -197,7 +202,7 @@ export class CharacterService {
       }
       return characterMythicDungeons.data;
     } catch (e) {
-      console.log(e, 'Aucune donnée pour cette saison');
+      throw new HttpException('Aucune donnée pour cette saison', 204);
     }
 
     return null;

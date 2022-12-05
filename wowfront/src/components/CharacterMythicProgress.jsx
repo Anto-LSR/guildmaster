@@ -3,6 +3,7 @@ import { UserInfoContext } from "../contexts/UserInfoContext";
 import ApiManager from "../services/ApiManager";
 import Spinner from "./Spinner";
 import { BiTimer } from "react-icons/bi";
+import { FaDungeon } from "react-icons/fa";
 import Tippy from "@tippyjs/react";
 
 const CharacterMythicProgress = () => {
@@ -12,7 +13,9 @@ const CharacterMythicProgress = () => {
     const am = ApiManager.getInstance();
     const getDungeons = async () => {
       const res = await am.get("/character/character-mythic-dungeons");
-      console.log(res.data);
+      if (res.status === 204) {
+        setMythicDungeons("");
+      }
       setMythicDungeons(res.data);
     };
     getDungeons();
@@ -80,7 +83,14 @@ const CharacterMythicProgress = () => {
           </div>
         </div>
       )}
-      {!mythicDungeons && <Spinner />}
+      {mythicDungeons !== "" && !mythicDungeons && <Spinner />}
+
+      {mythicDungeons === "" && (
+        <div className="flex items-center justify-center bg-[#25252569] p-2">
+          <FaDungeon className="text-red-500 mr-2" />
+          <span> No Mythic dungeons done this season</span>
+        </div>
+      )}
     </>
   );
 };

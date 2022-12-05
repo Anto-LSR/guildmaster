@@ -9,6 +9,7 @@ import { RiSwordFill } from "react-icons/ri";
 import hordeIcon from "../assets/img/hordeIcon.png";
 import allianceIcon from "../assets/img/allianceIcon.png";
 import raiderIcon from "../assets/img/raiderIcon.svg";
+import checkPvpIcon from "../assets/img/logo-pvp.png";
 import wowprogressIcon from "../assets/img/wowprogressIcon.png";
 import Spinner from "./Spinner";
 import CharacterStats from "./CharacterStats";
@@ -38,6 +39,7 @@ function CharacterProfile() {
     getCharacterGear();
     getCharacterDetails();
   }, [window.refreshTooltip()]);
+  console.log(process.env.REACT_APP_PUBLIC_URL);
   return (
     <>
       {!achievements && !gear && !stats && <Spinner />}
@@ -82,9 +84,9 @@ function CharacterProfile() {
           <div className="bg-[#25252569] py-4">
             <div className="flex items-center justify-center">
               <img
-                src={require("../assets/img/icons/specs/" +
-                  characterData?.specId +
-                  ".jpg")}
+                src={`
+                  ${process.env.PUBLIC_URL} 
+                  /icons/specs/${characterData?.specId}.jpg`}
                 alt=""
                 className="h-8 bg-[#252525] rounded mr-2"
               />
@@ -204,6 +206,21 @@ function CharacterProfile() {
               >
                 <img className="h-6" src={wowprogressIcon} alt="" />{" "}
                 <span className="pl-1 text-lg font-wl">Warcraft Logs</span>
+              </a>
+            </Tippy>
+            <Tippy content="See Check-Pvp profile">
+              <a
+                className="flex items-center"
+                target="blank"
+                href={
+                  "https://check-pvp.fr/eu/" +
+                  characterData?.realm +
+                  "/" +
+                  characterData?.name
+                }
+              >
+                <img className="h-6" src={checkPvpIcon} alt="" />{" "}
+                <span className="pl-1 text-lg font-wl">Check-Pvp</span>
               </a>
             </Tippy>
           </div>
