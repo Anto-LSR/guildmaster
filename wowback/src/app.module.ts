@@ -12,6 +12,7 @@ import { UsersModule } from './typeOrm/entities/user/user.module';
 import { CharacterModule } from './typeOrm/entities/character/character.module';
 import { Character } from './typeOrm/entities/character/character.entity';
 import { GetTokenModule } from './get-token/get-token.module';
+import { Dungeon_run } from './typeOrm/entities/dungeon_run/dungeon_run.entity';
 
 @Module({
   imports: [
@@ -27,7 +28,7 @@ import { GetTokenModule } from './get-token/get-token.module';
       username: process.env.dbUsername,
       password: process.env.dbPassword,
       database: process.env.dbDatabase,
-      entities: [User, Character],
+      entities: [User, Character, Dungeon_run],
       synchronize: true,
     }),
     AuthModule,

@@ -19,8 +19,8 @@ const CharacterMythicProgress = () => {
       setMythicDungeons(res.data);
     };
     getDungeons();
-    //console.log(mythicDungeons);
-  }, []);
+    
+  }, [console.log(mythicDungeons)]);
   return (
     <>
       {mythicDungeons && (
