@@ -2,8 +2,8 @@ import { Injectable } from '@nestjs/common';
 import { PassportStrategy } from '@nestjs/passport';
 import { Request } from 'express';
 import { ExtractJwt, Strategy } from 'passport-jwt';
-import { User } from 'src/typeOrm/entities/user/user.entity';
-import { UsersService } from 'src/typeOrm/entities/user/user.service';
+import { User } from 'src/entities/user/user.entity';
+import { UsersService } from 'src/entities/user/user.service';
 import { AuthService } from '../auth.service';
 require('dotenv').config();
 

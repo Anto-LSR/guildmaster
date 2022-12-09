@@ -7,7 +7,7 @@ import { User } from '../user/user.entity';
 import { AuthService } from 'src/auth/auth.service';
 import { UsersService } from '../user/user.service';
 import { JwtModule, JwtService } from '@nestjs/jwt';
-import { GetTokenModule } from 'src/get-token/get-token.module';
+import { GetTokenModule } from 'src/tools/get-token/get-token.module';
 import { AuthModule } from 'src/auth/auth.module';
 import { UsersModule } from '../user/user.module';
 

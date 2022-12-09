@@ -5,7 +5,7 @@ import { Request } from 'express';
 import { JwtAuthGuard } from 'src/auth/guards/jwt-auth.guard';
 import axios from 'axios';
 import { Character } from './character.entity';
-import { GetTokenService } from 'src/get-token/get-token.service';
+import { GetTokenService } from 'src/tools/get-token/get-token.service';
 import { get } from 'http';
 
 @UseGuards(JwtAuthGuard)
@@ -70,7 +70,7 @@ export class CharacterController {
     );
     const mythicDungeons =
       await this.characterService.getCharacterMythicDungeons(character);
-    console.log(mythicDungeons, '------RETOUR DU CONTROLLER------');
+    //console.log(mythicDungeons, '------RETOUR DU CONTROLLER------');
 
     return mythicDungeons;
   }

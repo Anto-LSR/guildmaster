@@ -1,12 +1,4 @@
-import {
-  Entity,
-  Column,
-  PrimaryGeneratedColumn,
-  Unique,
-  OneToMany,
-  OneToOne,
-  JoinColumn,
-} from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, OneToMany } from 'typeorm';
 import { Character } from '../character/character.entity';
 
 @Entity()
@@ -42,4 +34,6 @@ export class User {
 
   @Column({ nullable: true })
   tokenCreatedAt: string;
+
+  
 }

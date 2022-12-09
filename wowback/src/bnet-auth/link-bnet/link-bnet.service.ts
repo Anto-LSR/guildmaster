@@ -3,11 +3,11 @@ import { InjectRepository } from '@nestjs/typeorm';
 import axios from 'axios';
 import { Request, Response } from 'express';
 import { AuthService } from 'src/auth/auth.service';
-import { Character } from 'src/typeOrm/entities/character/character.entity';
-import { User } from 'src/typeOrm/entities/user/user.entity';
+import { Character } from 'src/entities/character/character.entity';
+import { User } from 'src/entities/user/user.entity';
 import { Repository } from 'typeorm';
-import { CharacterService } from 'src/typeOrm/entities/character/character.service';
-import { GetTokenService } from 'src/get-token/get-token.service';
+import { CharacterService } from 'src/entities/character/character.service';
+import { GetTokenService } from 'src/tools/get-token/get-token.service';
 
 @Injectable()
 export class LinkBnetService {
@@ -65,7 +65,7 @@ export class LinkBnetService {
     user.battleTag = bnetInfo.data.battletag;
     user.tokenCreatedAt = new Date(Date.now()).valueOf() + '';
     user.bnetLinked = true;
-    this.usersRepository.save(user);
+    await this.usersRepository.save(user);
     //On récupère le token CLIENT de l'application
     //TODO: Appeller ma méthode getCredentials() dans le service GetTokenService plutôt que de faire une requete à la zob
     const credentials = await this.getTokenService.getAccessToken();
@@ -125,21 +125,23 @@ export class LinkBnetService {
 
           if (insert) {
             wowCharacterId = characterEntity.wowCharacterId;
-            this.charactersRepository.save(characterEntity);
+            await this.charactersRepository.save(characterEntity);
             if (
               user.selectedCharacter == undefined ||
               user.selectedCharacter == null
             ) {
               user.selectedCharacter = wowCharacterId;
-              this.usersRepository.save(user);
+              await this.usersRepository.save(user);
             }
           }
         } catch (e) {
+          // console.log(e);
+
           if (e.response.status === 404) {
             //Si la reponse est une 404, cela veut dire que le personnage n'a pas été misà jour depuis longtemps par blizzard, et qu'il n'est donc pas joué.
           }
           if (e.response.status === 401) {
-            console.log('Unauthorized', e.response.status);
+            //console.log('Unauthorized', e.response.status);
           }
         }
       });
