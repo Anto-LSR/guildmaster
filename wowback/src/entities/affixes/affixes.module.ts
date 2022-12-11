@@ -8,5 +8,6 @@ import { Affixe } from './affixe.entity';
   controllers: [AffixesController],
   providers: [AffixesService],
   imports: [TypeOrmModule.forFeature([Affixe])],
+  exports: [AffixesService],
 })
 export class AffixesModule {}

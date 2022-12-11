@@ -1,27 +1,26 @@
 import React, { useContext, useEffect, useState } from "react";
-import { UserInfoContext } from "../contexts/UserInfoContext";
 import ApiManager from "../services/ApiManager";
 import Spinner from "./Spinner";
 import { BiTimer } from "react-icons/bi";
 import { FaDungeon } from "react-icons/fa";
 import Tippy from "@tippyjs/react";
+import { UserInfoContext } from "../contexts/UserInfoContext";
 
 const CharacterMythicProgress = () => {
-  const { characterData, setCharacterData } = useContext(UserInfoContext);
   const [mythicDungeons, setMythicDungeons] = useState("");
   useEffect(() => {
     const am = ApiManager.getInstance();
     const getDungeons = async () => {
-      const res = await am.get("/character/character-mythic-dungeons");
+      const res = await am.get("/dungeon-runs/character-runs");
       if (res.status === 204) {
         setMythicDungeons("");
       }
       setMythicDungeons(res.data);
     };
     getDungeons();
-    
-  }, [console.log(mythicDungeons)]);
-  return (
+  }, []);
+  const { characterData } = useContext(UserInfoContext);
+  return ( 
     <>
       {mythicDungeons && (
         <div className="bg-[#25252569] p-2">
@@ -30,22 +29,18 @@ const CharacterMythicProgress = () => {
             <span
               style={{
                 color: `rgb(${
-                  mythicDungeons.mythic_rating.color.r +
-                  "," +
-                  mythicDungeons.mythic_rating.color.g +
-                  "," +
-                  mythicDungeons.mythic_rating.color.b
+                  characterData.mythic_rating_color
                 })`,
               }}
             >
-              {mythicDungeons.mythic_rating.rating}
+              {characterData.mythic_rating.rating}
             </span>
           </div>
           <div className="grid grid-cols-8 gap-2 ">
-            {mythicDungeons.best_runs.map(function (run, i) {
+            {mythicDungeons.map(function (run, i) {
               return (
                 <div key={i}>
-                  <Tippy content={run.dungeon.name + " - " + run.duration}>
+                  <Tippy content={run.dungeon_name + " - " + run.duration}>
                     <div
                       className=" transition ease-in-out h-32 border border-white rounded relative flex items-center justify-center hover:scale-110 hover:z-50 "
                       style={{
@@ -65,15 +60,11 @@ const CharacterMythicProgress = () => {
                         className="p-1 bg-[#00000090] absolute bottom-0 w-full text-xl rounded "
                         style={{
                           color: `rgb(${
-                            run.map_rating.color.r +
-                            "," +
-                            run.map_rating.color.g +
-                            "," +
-                            run.map_rating.color.b
+                            run.color_rating
                           })`,
                         }}
                       >
-                        {Math.round(run.map_rating.rating)}
+                        {Math.round(run.rating)}
                       </span>
                     </div>
                   </Tippy>

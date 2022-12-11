@@ -96,69 +96,16 @@ export class CharacterService {
    * @param character
    * @returns
    */
-  // async getCharacterRaids(character: Character): Promise<Partial<Character>> {
-  //   const app_token = await this.getTokenService.getAccessToken();
-  //   const characterRaid = await axios.get(
-  //     `https://eu.api.blizzard.com/profile/wow/character/${
-  //       character.realm
-  //     }/${character.name.toLowerCase()}/encounters/raids?access_token=${app_token}&namespace=profile-eu&locale=en_GB`,
-  //   );
-  //   // const characterRaid = await axios.get(
-  //   //   `https://eu.api.blizzard.com/profile/wow/character/archimonde/lapintade/encounters/raids?access_token=${app_token}&namespace=profile-eu&locale=en_GB`,
-  //   // );
-  //   const partialCharacter: Partial<Character> = {};
-  //   characterRaid.data.expansions.forEach((expansion) => {
-  //     if (expansion.expansion.name === 'Shadowlands') {
-  //       expansion.instances.forEach((instance) => {
-  //         if (instance.instance.name === process.env.PREVIOUS_RAID) {
-  //           instance.modes.forEach((mode) => {
-  //             if (mode.difficulty.type === 'NORMAL') {
-  //               partialCharacter.previousNormalProgress =
-  //                 mode.progress.completed_count +
-  //                 '/' +
-  //                 mode.progress.total_count;
-  //             }
-  //             if (mode.difficulty.type === 'HEROIC') {
-  //               partialCharacter.previousHeroicProgress =
-  //                 mode.progress.completed_count +
-  //                 '/' +
-  //                 mode.progress.total_count;
-  //             }
-  //             if (mode.difficulty.type === 'MYTHIC') {
-  //               partialCharacter.previousMythicProgress =
-  //                 mode.progress.completed_count +
-  //                 '/' +
-  //                 mode.progress.total_count;
-  //             }
-  //           });
-  //         }
-  //         if (instance.instance.name === process.env.CURRENT_RAID) {
-  //           instance.modes.forEach((mode) => {
-  //             if (mode.difficulty.type === 'NORMAL') {
-  //               partialCharacter.currentNormalProgress =
-  //                 mode.progress.completed_count +
-  //                 '/' +
-  //                 mode.progress.total_count;
-  //             }
-  //             if (mode.difficulty.type === 'HEROIC') {
-  //               partialCharacter.currentHeroicProgress =
-  //                 mode.progress.completed_count +
-  //                 '/' +
-  //                 mode.progress.total_count;
-  //             }
-  //             if (mode.difficulty.type === 'MYTHIC') {
-  //               partialCharacter.currentMythicProgress =
-  //                 mode.progress.completed_count +
-  //                 '/' +
-  //                 mode.progress.total_count;
-  //             }
-  //           });
-  //         }
-  //       });
-  //     }
-  //   });
-  //   return partialCharacter;
-  // }
+  async getCharacterRaids(character: Character) {
+    const app_token = await this.getTokenService.getAccessToken();
+    const characterRaid = await axios.get(
+      `https://eu.api.blizzard.com/profile/wow/character/${character.realm
+      }/${character.name.toLowerCase()}/encounters/raids?access_token=${app_token}&namespace=profile-eu&locale=en_GB`,
+    );
+    return characterRaid.data;
+
+  }
+
   /**
    * Retourne les informations sur les meilleures runs mythique du personnage
    * @param character

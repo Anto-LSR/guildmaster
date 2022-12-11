@@ -1,16 +1,13 @@
-import loginBackground from "../assets/img/loginBackground.jpg";
 import { BsDoorClosed, BsFillExclamationCircleFill } from "react-icons/bs";
 import { GiCrenelCrown } from "react-icons/gi";
 
-import { useState, useContext } from "react";
-import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import ApiManager from "../services/ApiManager";
 import { UserInfoContext } from "../contexts/UserInfoContext";
 
 function LoginForm() {
-  const { userInfo, setUserInfo} =
-    useContext(UserInfoContext);
+  const { setUserInfo } = useContext(UserInfoContext);
 
   const {
     register,
@@ -24,24 +21,16 @@ function LoginForm() {
       const am = ApiManager.getInstance();
       let response = await am.post("/auth/login", data);
       if (response.status === 202) {
-        console.log(response.status);
-
         let data = await am.post("/auth/get-user");
         const user = data.data;
         setUserInfo(user);
-        window.location='/'
+        window.location = "/";
       }
     }
   };
 
   return (
-    <div
-      className="h-screen w-full  flex items-center justify-center bg-secondary"
-      // style={{
-      //   backgroundImage: `url("${loginBackground}")`,
-      //   backgroundSize: "cover",
-      // }}
-    >
+    <div className="h-screen w-full  flex items-center justify-center bg-secondary">
       <div className="bg-white h-auto rounded-md drop-shadow-md w-96">
         <div className="flex  flex-col items-center mb-3 w-full bg-primary rounded-t-md text-white">
           <GiCrenelCrown className="font-bold text-4xl tracking-wider mt-1" />

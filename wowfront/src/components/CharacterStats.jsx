@@ -6,11 +6,11 @@ const CharacterStats = (props) => {
   const agility = props.props.agility;
   const strenght = props.props.strength;
   const intellect = props.props.intellect;
-  const crit = props.props.melee_crit;
-  const haste = props.props.melee_haste;
+  const crit = props.props.crit;
+  const haste = props.props.haste;
   const mastery = props.props.mastery;
   const versatility_stat = props.props.versatility;
-  const versatility_percent = props.props.versatility_damage_done_bonus;
+  const versatility_percent = props.props.versatility_percent;
   const stamina = props.props.stamina.effective;
   return (
     <div className="flex items-end justify-center">
@@ -19,7 +19,7 @@ const CharacterStats = (props) => {
         <Tippy content="Agility">
           {agility.effective !== agility.base && (
             <div className="flex items-center">
-              <span className="Icon Media-icon Icon--agility Icon--svg bg-[#252525]">
+              <span className="Icon Media-icon Icon--agility Icon--svg bg-[#252525] mr-1">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 64 64"
@@ -41,7 +41,7 @@ const CharacterStats = (props) => {
         {/* STAMINA */}
         <Tippy content="Stamina">
           <div className="flex items-center">
-            <span className="Icon Media-icon Icon--stamina Icon--svg bg-[#252525]">
+            <span className="Icon Media-icon Icon--stamina Icon--svg bg-[#252525] mr-1">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 64 64"
@@ -64,7 +64,7 @@ const CharacterStats = (props) => {
         <Tippy content="Strenght">
           {strenght.effective !== strenght.base && (
             <div className="flex items-center">
-              <span className="Icon Media-icon Icon--strength Icon--svg bg-[#252525]">
+              <span className="Icon Media-icon Icon--strength Icon--svg bg-[#252525] mr-1">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 64 64"
@@ -87,7 +87,7 @@ const CharacterStats = (props) => {
         <Tippy content="Intelligence">
           {intellect.effective !== intellect.base && (
             <div className="flex items-center">
-              <span className="Icon Media-icon Icon--intellect Icon--svg bg-[#252525]">
+              <span className="Icon Media-icon Icon--intellect Icon--svg bg-[#252525] mr-1">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 64 64"
@@ -109,7 +109,7 @@ const CharacterStats = (props) => {
         {/* CRIT */}
         <Tippy content="Crit">
           <div className="flex items-center">
-            <span className="Icon Media-icon Icon--critical-strike Icon--svg bg-[#252525]">
+            <span className="Icon Media-icon Icon--critical-strike Icon--svg bg-[#252525] mr-1">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 64 64"
@@ -134,7 +134,7 @@ const CharacterStats = (props) => {
         {/* HASTE */}
         <Tippy content="Haste">
           <div className="flex items-center">
-            <span className="Icon Media-icon Icon--haste Icon--svg bg-[#252525]">
+            <span className="Icon Media-icon Icon--haste Icon--svg bg-[#252525] mr-1">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 64 64"
@@ -158,7 +158,7 @@ const CharacterStats = (props) => {
         {/* MASTERY */}
         <Tippy content="Mastery">
           <div className="flex items-center">
-            <span className="Icon Media-icon Icon--mastery Icon--svg bg-[#252525]">
+            <span className="Icon Media-icon Icon--mastery Icon--svg bg-[#252525] mr-1">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 64 64"
@@ -182,7 +182,7 @@ const CharacterStats = (props) => {
         {/* VERSATILITY */}
         <Tippy content="Versatility">
           <div className="flex items-center">
-            <span className="Icon Media-icon Icon--versatility Icon--svg bg-[#252525]">
+            <span className="Icon Media-icon Icon--versatility Icon--svg bg-[#252525] mr-1">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 64 64"

@@ -2,8 +2,7 @@ import React, { useEffect, useState, useContext } from "react";
 import { UserInfoContext } from "../contexts/UserInfoContext";
 import ApiManager from "../services/ApiManager";
 import CharacterCard from "./CharacterCard";
-import { AiOutlineCheck } from "react-icons/ai";
-import { BiErrorCircle, BiRefresh } from "react-icons/bi";
+import { BiRefresh } from "react-icons/bi";
 import toast from "react-hot-toast";
 import Spinner from "./Spinner";
 
@@ -28,18 +27,17 @@ function CharacterSelection() {
   const handleSelectedChange = async () => {
     setIsLoading(true);
     const am = ApiManager.getInstance();
-    console.log("Changement de personnage : ", selected);
     const body = {
       wowCharacterId: selected,
     };
     try {
       let character = await am.post("/character/set/selected-character", body);
-      console.log(character.data, "FROM CHARACTER SELECTION");
       setCharacterData(character.data);
+      userInfo.selectedCharacter = character.data.wowCharacterId;
+      setUserInfo(userInfo);
       toast.success("Main character has been changed");
     } catch (e) {
       toast.error("Something went wrong");
-      console.log(e);
     }
     setIsLoading(false);
   };
@@ -99,9 +97,7 @@ function CharacterSelection() {
         </div>
       )}
 
-      {isLoading && (
-        <Spinner />
-      )}
+      {isLoading && <Spinner />}
     </>
   );
 }

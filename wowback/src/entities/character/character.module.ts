@@ -16,7 +16,7 @@ import { UsersModule } from '../user/user.module';
   controllers: [CharacterController],
   exports: [CharacterService],
   imports: [
-    TypeOrmModule.forFeature([Character, User]),
+    TypeOrmModule.forFeature([Character, User, ]),
     GetTokenModule,
     AuthModule,
     UsersModule,

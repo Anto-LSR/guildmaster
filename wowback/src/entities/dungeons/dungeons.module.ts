@@ -8,5 +8,6 @@ import { Dungeon } from './dungeon.entity';
   controllers: [DungeonsController],
   providers: [DungeonsService],
   imports: [TypeOrmModule.forFeature([Dungeon])],
+  exports: [DungeonsService],
 })
-export class DungeonsModule {}
+export class DungeonsModule { }

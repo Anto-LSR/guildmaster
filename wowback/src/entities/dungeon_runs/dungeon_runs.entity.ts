@@ -5,34 +5,49 @@ import {
   PrimaryGeneratedColumn,
   ManyToMany,
   JoinTable,
+  OneToMany,
+  ManyToOne,
 } from 'typeorm';
 import { Affixe } from '../affixes/affixe.entity';
 import { Character } from '../character/character.entity';
+import { Dungeon } from '../dungeons/dungeon.entity';
 
 @Entity()
 export class Dungeon_run {
   @PrimaryGeneratedColumn()
   id: number;
+
   @Column({ nullable: true })
   completed_timestamp: string;
+
   @Column({ nullable: true })
   duration: string;
+
   @Column({ nullable: true })
   is_completed_within_time: boolean;
+
   @Column({ nullable: true })
   keystone_level: number;
+
   @Column({ nullable: true })
   color_rating: string;
+
   @Column({ nullable: true })
-  rating: string;
-  @ManyToMany(() => Character)
-  members: Character[];
+  rating: number;
+
   @ManyToMany(() => Affixe, (affixe) => affixe.dungeon_runs)
   affixes: Affixe[];
-  @Column({ nullable: true })
-  best_run_player_count: number;
+
+  @ManyToOne(() => Dungeon, (dungeon) => dungeon.dungeon_runs)
+  dungeon: Dungeon
+
   @Column({ nullable: true })
   dungeon_name: string;
+
   @Column({ nullable: true })
-  dungeon_id: string;
+  dungeon_id: number;
+
+  @ManyToMany(() => Character)
+  @JoinTable()
+  characters: Character[];
 }

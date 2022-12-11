@@ -1,4 +1,5 @@
-import { Entity, Column, PrimaryGeneratedColumn, ManyToOne } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, ManyToOne, ManyToMany, JoinTable } from 'typeorm';
+import { Dungeon_run } from '../dungeon_runs/dungeon_runs.entity';
 import { User } from '../user/user.entity';
 
 @Entity()
@@ -59,4 +60,12 @@ export class Character {
 
   @Column({ nullable: true })
   achievement_points: number;
+
+  @Column({ nullable: true })
+  mythic_rating: number;
+
+  @Column({ nullable: true })
+  mythic_rating_color: string;
+
+
 }

@@ -5,7 +5,7 @@ import { ConfigModule } from '@nestjs/config';
 import { BnetInfoModule } from './bnet-auth/bnet-info/bnet-info.module';
 import { LinkBnetModule } from './bnet-auth/link-bnet/link-bnet.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { ArrayOverlap, DataSource } from 'typeorm';
+import { DataSource } from 'typeorm';
 import { User } from './entities/user/user.entity';
 import { RegisterModule } from './register/register.module';
 import { AuthModule } from './auth/auth.module';
@@ -34,17 +34,17 @@ import { Affixe } from './entities/affixes/affixe.entity';
       username: process.env.dbUsername,
       password: process.env.dbPassword,
       database: process.env.dbDatabase,
-      entities: [User, Character /*, Dungeon, Dungeon_run, Affixe*/],
+      entities: [User, Character , Dungeon, Dungeon_run, Affixe],
       synchronize: true,
-      //logging: ['query']
+      // logging: ['query']
     }),
     AuthModule,
     UsersModule,
     CharacterModule,
     GetTokenModule,
     DungeonsModule,
-    DungeonRunsModule,
     AffixesModule,
+    DungeonRunsModule,
   ],
   controllers: [],
   providers: [],

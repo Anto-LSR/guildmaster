@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable array-callback-return */
 /* eslint-disable jsx-a11y/anchor-has-content */
-import React, { Component, useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { UserInfoContext } from "../contexts/UserInfoContext";
 import ApiManager from "../services/ApiManager";
 import { BsFillShieldFill } from "react-icons/bs";
@@ -17,10 +17,11 @@ import Tippy from "@tippyjs/react";
 import CharacterMythicProgress from "./CharacterMythicProgress";
 
 function CharacterProfile() {
-  const { characterData, setCharacterData } = useContext(UserInfoContext);
+  const { userInfo, characterData } = useContext(UserInfoContext);
   const [achievements, setAchievements] = useState("");
   const [gear, setGear] = useState("");
   const [stats, setStats] = useState("");
+  
   useEffect(() => {
     const am = ApiManager.getInstance();
     const getCharacterDetails = async () => {
@@ -39,7 +40,6 @@ function CharacterProfile() {
     getCharacterGear();
     getCharacterDetails();
   }, [window.refreshTooltip()]);
-  console.log(process.env.REACT_APP_PUBLIC_URL);
   return (
     <>
       {!achievements && !gear && !stats && <Spinner />}
@@ -102,23 +102,23 @@ function CharacterProfile() {
               <div className="flex flex-col items-end whitespace-nowrap">
                 {gear.map((item, i) => {
                   if (
-                    item.slot.type === "HEAD" ||
-                    item.slot.type === "NECK" ||
-                    item.slot.type === "SHOULDER" ||
-                    item.slot.type === "BACK" ||
-                    item.slot.type === "CHEST" ||
-                    item.slot.type === "SHIRT" ||
-                    item.slot.type === "TABARD" ||
-                    item.slot.type === "WRIST"
+                    item.slot === "HEAD" ||
+                    item.slot === "NECK" ||
+                    item.slot === "SHOULDER" ||
+                    item.slot === "BACK" ||
+                    item.slot === "CHEST" ||
+                    item.slot === "SHIRT" ||
+                    item.slot === "TABARD" ||
+                    item.slot === "WRIST"
                   )
                     return (
                       <a
                         key={i}
                         href={
                           "https://www.wowhead.com/item=" +
-                          item.media.id +
+                          item.id +
                           "&ilvl=" +
-                          item.level.value
+                          item.ilvl
                         }
                       />
                     );
@@ -130,23 +130,23 @@ function CharacterProfile() {
                 <div className="flex flex-col items-start whitespace-nowrap">
                   {gear.map((item, i) => {
                     if (
-                      item.slot.type === "HANDS" ||
-                      item.slot.type === "WAIST" ||
-                      item.slot.type === "LEGS" ||
-                      item.slot.type === "FEET" ||
-                      item.slot.type === "FINGER_1" ||
-                      item.slot.type === "FINGER_2" ||
-                      item.slot.type === "TRINKET_1" ||
-                      item.slot.type === "TRINKET_2"
+                      item.slot === "HANDS" ||
+                      item.slot === "WAIST" ||
+                      item.slot === "LEGS" ||
+                      item.slot === "FEET" ||
+                      item.slot === "FINGER_1" ||
+                      item.slot === "FINGER_2" ||
+                      item.slot === "TRINKET_1" ||
+                      item.slot === "TRINKET_2"
                     )
                       return (
                         <a
                           key={i}
                           href={
                             "https://www.wowhead.com/item=" +
-                            item.media.id +
+                            item.id +
                             "&ilvl=" +
-                            item.level.value
+                            item.ilvl
                           }
                         />
                       );
@@ -157,18 +157,15 @@ function CharacterProfile() {
               <div className="mt-8">
                 <div className="flex justify-center whitespace-nowrap">
                   {gear.map((item, i) => {
-                    if (
-                      item.slot.type === "MAIN_HAND" ||
-                      item.slot.type === "OFF_HAND"
-                    )
+                    if (item.slot === "MAIN_HAND" || item.slot === "OFF_HAND")
                       return (
                         <a
                           key={i}
                           href={
                             "https://www.wowhead.com/item=" +
-                            item.media.id +
+                            item.id +
                             "&ilvl=" +
-                            item.level.value
+                            item.ilvl
                           }
                         />
                       );

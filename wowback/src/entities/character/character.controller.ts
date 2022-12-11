@@ -15,7 +15,7 @@ export class CharacterController {
     private readonly characterService: CharacterService,
     private readonly authService: AuthService,
     private readonly getTokenService: GetTokenService,
-  ) {}
+  ) { }
 
   @Get('selected-character')
   async getSelectedCharacter(@Req() request: Request) {
@@ -70,9 +70,17 @@ export class CharacterController {
     );
     const mythicDungeons =
       await this.characterService.getCharacterMythicDungeons(character);
-    //console.log(mythicDungeons, '------RETOUR DU CONTROLLER------');
-
     return mythicDungeons;
+  }
+
+  @Get('character-raid-progress')
+  async getRaidProgress(@Req() request: Request) {
+    const user = await this.authService.verify(request.cookies.jwt);
+    const character = await this.characterService.findByCharacterId(
+      user.selectedCharacter,
+    );
+    const raidProgress = await this.characterService.getCharacterRaids(character)
+    return raidProgress;
   }
 
   @Get('character-achievements')
