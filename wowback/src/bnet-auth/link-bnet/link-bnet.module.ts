@@ -8,6 +8,7 @@ import { User } from 'src/entities/user/user.entity';
 import { UsersModule } from 'src/entities/user/user.module';
 import { LinkBnetController } from './link-bnet.controller';
 import { LinkBnetService } from './link-bnet.service';
+import { DungeonRunsModule } from 'src/entities/dungeon_runs/dungeon_runs.module';
 
 @Module({
   controllers: [LinkBnetController],
@@ -18,6 +19,7 @@ import { LinkBnetService } from './link-bnet.service';
     AuthModule,
     UsersModule,
     CharacterModule,
+    DungeonRunsModule,
   ],
 })
 export class LinkBnetModule {}

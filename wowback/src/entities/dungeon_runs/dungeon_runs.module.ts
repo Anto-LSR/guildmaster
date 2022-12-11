@@ -23,5 +23,6 @@ import { Character } from '../character/character.entity';
     CharacterModule,
     AuthModule,
   ],
+  exports: [DungeonRunsService]
 })
 export class DungeonRunsModule { }

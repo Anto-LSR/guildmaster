@@ -37,19 +37,21 @@ export class DungeonRunsService {
         if (character_dungeon_runs != null) {
             return character_dungeon_runs;
         } else {
+            //On récupère les runs du personnage
             try {
                 const characterMythicDungeons = await axios.get(
                     `https://eu.api.blizzard.com/profile/wow/character/${character.realm
                     }/${character.name.toLowerCase()}/mythic-keystone-profile/season/${process.env.MYTHIC_SEASON
                     }?access_token=${app_token}&namespace=profile-eu&locale=en_GB`,
                 );
-                //console.log(characterMythicDungeons);
                 const dungeonProfile: DungeonsProfile = characterMythicDungeons.data;
                 const colorString = JSON.stringify(dungeonProfile.mythic_rating.color).replace(/[^0-9,]/g, "");
+                //On en profite pour attribuer son score mythique au personnage
                 character.mythic_rating_color = colorString;
                 character.mythic_rating = dungeonProfile.mythic_rating.rating;
                 this.characterRepository.save(character);
 
+                //On itère sur les runs retournée par l'api 
                 for (const run of dungeonProfile.best_runs) {
                     //On vérifie si le donjon et les affixes sont déjà en base
                     const dungeon_id = run.dungeon.id;
@@ -83,16 +85,32 @@ export class DungeonRunsService {
                     //////////////////////////////////////////////////////////////
 
                     //On vérifie si la run est déjà en base
-                    const dbRun = await this.findMythicDungeonRun(run.completed_timestamp, run.dungeon.id, run.keystone_level, Math.round(run.mythic_rating.rating))
+                    const dbRun = await this.findMythicDungeonRun(run.completed_timestamp)
                     //Si elle n'existe pas
                     if (!dbRun) {
+                        //On vérifie si une run sur ce donjon existe pour ce personnage
+                        const previousRun = await this.findRunByCharacterAndDungeonId(character, run.dungeon.id)
+                        if (previousRun) {
+                            //Si une run précédente existe et qu'elle est moins bien que la run actuelle on n'ajoute pas la run
+                            const previousRunCharArray = [];
+                            if (previousRun.rating < run.mythic_rating.rating) {
+                                for (const member of previousRun.characters) {
+                                    if (member.id != character.id) {
+                                        previousRunCharArray.push(member);
+                                    }
+                                }
+                                previousRun.characters = previousRunCharArray;
+                                await this.dungeonRunRepository.save(previousRun);
+                            }
+                        }
+
+
                         //On insert la run
                         const newRun = new Dungeon_run();
                         newRun.completed_timestamp = run.completed_timestamp;
                         const date = new Date(run.duration);
                         const seconds =
                             date.getSeconds() < 10 ? '0' + date.getSeconds() : date.getSeconds();
-                        //console.log(date.getMinutes() + ':' + seconds);
                         run.duration = date.getMinutes() + ':' + seconds;
                         newRun.duration = run.duration;
                         newRun.is_completed_within_time = run.is_completed_within_time;
@@ -108,29 +126,69 @@ export class DungeonRunsService {
                             aff.blizzard_id = affix.id;
                             return aff
                         })
-                        //on attribue les membres à la run (si ils existent en base)
+
+                        //on attribue les membres à la run (si ils existent en base et si ils n'ont pas une meilleure run sur ce donjon)
                         const charArray = [];
                         for (const member of run.members) {
+                            //On récupère un membre
                             const char = await this.characterService.findByCharacterId(member.character.id.toString());
-                            if (char) {
-                                charArray.push(char);
+                            if (char && char.id != character.id) {
+                                //On récupère les run d'un des autres membre de la run
+                                const charRuns = await this.getCharacterDungeonRuns(char);
+                                //On itère sur ses runs existantes
+                                if (charRuns) {
+                                    for (const charRun of charRuns) {
+                                        if (charRun.dungeon_id == newRun.dungeon_id) {
+                                            //Si la nouvelle run est meilleure pour l'un des membres
+                                            if (charRun.rating < newRun.rating) {
+                                                //On l'ajoute à la run 
+                                                charArray.push(char)
+                                                //et on le retire de la précédente
+                                                const oldRunCharacters = [];
+                                                for (const member of charRun.characters) {
+                                                    if (member.id != char.id) {
+                                                        oldRunCharacters.push(member)
+                                                    }
+                                                }
+                                                charRun.characters = oldRunCharacters;
+                                                await this.dungeonRunRepository.save(charRun);
+                                            } else {
+                                                //Sinon on le retire de la run
+                                            }
+                                        }
+                                    }
+                                }
 
                             }
                         }
-                        newRun.characters = charArray;
+                        //On ajoute le personnage à la run
+                        charArray.push(character);
+                        if (charArray.length) {
+                            newRun.characters = charArray;
+                        }
                         //On attribue le donjon à la run
                         newRun.dungeon = await this.dungeonService.findDungeonByBlizzardId(newRun.dungeon_id);
                         await this.dungeonRunRepository.save(newRun);
-
+                        await this.characterRepository.save(character);
                     }
                     //Si elle existe
                     else {
                         //On ajoute la run au personnage 
                         const charArray = [];
-                        for (const char of dbRun.characters) {
-                            charArray.push(char);
+                        for (const member of dbRun.characters) {
+                            //On récupère le membre de la run
+                            const char = await this.characterService.findByCharacterId(member.wowCharacterId.toString());
+                            if (char) {
+                                //On vérifie que le membre n'ait pas déjà une meilleure run
+                                const charRuns = await this.getCharacterDungeonRuns(char)
+                                //On itère sur les runs du membre
+                                for (const charRun of charRuns) {
+                                    if ((charRun.dungeon_id == dbRun.dungeon_id) && (charRun.rating < dbRun.rating)) {
+                                        charArray.push(char);
+                                    }
+                                }
+                            }
                         }
-                        charArray.push(character)
                         await this.dungeonRunRepository.save(dbRun);
 
                         //On vérifie si c'est la première run du personnage sur ce donjon
@@ -159,7 +217,17 @@ export class DungeonRunsService {
                             for (const member of run.members) {
                                 const char = await this.characterService.findByCharacterId(member.character.id.toString());
                                 if (char) {
-                                    charArray.push(char);
+                                    //On vérifie que le membre n'ait pas déjà une meilleure run
+                                    const charRuns = await this.getCharacterDungeonRuns(char)
+                                    if (charRuns) {
+                                        for (const charRun of charRuns) {
+                                            if ((charRun.dungeon_id == newRun.dungeon_id) && (charRun.rating < newRun.rating)) {
+                                                charArray.push(char);
+                                            }
+                                        }
+                                    }
+
+
 
                                 }
                             }
@@ -185,29 +253,21 @@ export class DungeonRunsService {
                     }
                 }
             } catch (error) {
+                console.log(error);
+
                 throw new HttpException('Aucune donnée pour cette saison', 204);
-
             }
-
             const character_dungeon_runs = await this.getCharacterDungeonRuns(character);
             return character_dungeon_runs;
         }
     }
 
-    async findMythicDungeonRun(completed_timestamp: string,
-        dungeon_id: number,
-        keystone_level: number,
-        mythic_rating: any) {
+    async findMythicDungeonRun(completed_timestamp: string) {
         const run = await this.dungeonRunRepository.findOne({
-            relations: ['characters'],
             where: {
-                completed_timestamp: completed_timestamp,
-                keystone_level: keystone_level,
-                rating: mythic_rating,
-                dungeon_id: dungeon_id,
+                completed_timestamp: completed_timestamp
             }
         })
-
         if (run) {
             return run;
         }
@@ -217,7 +277,7 @@ export class DungeonRunsService {
     async findRunByCharacterAndDungeonId(character: Character, dungeon_id: number) {
         const run: Dungeon_run = await this.dungeonRunRepository.findOne({
             relations: ['characters'],
-            where: { characters: In([character.id]), dungeon_id: dungeon_id }
+            where: { characters: { id: character.id }, dungeon_id: dungeon_id }
         })
         return run;
     }
@@ -226,12 +286,11 @@ export class DungeonRunsService {
         const run: Dungeon_run = await this.dungeonRunRepository.findOne({
             relations: ['characters'],
             where: {
-                characters: character,
+                characters: { id: character.id },
                 dungeon_id: dungeon_id,
                 rating: MoreThan(mythic_rating)
             }
         })
-
         return run;
     }
 
@@ -239,16 +298,12 @@ export class DungeonRunsService {
         const runs = await this.dungeonRunRepository.find({
             relations: ['characters', 'dungeon'],
             where: {
-                characters: character
+                characters: { id: character.id }//character
             }
         })
-
         if (runs.length > 0)
             return runs
-
         return null;
-
-
     }
 
 

@@ -13,14 +13,17 @@ const CharacterMythicProgress = () => {
     const getDungeons = async () => {
       const res = await am.get("/dungeon-runs/character-runs");
       if (res.status === 204) {
-        setMythicDungeons("");
+        //setMythicDungeons("");
       }
+      console.log(res);
       setMythicDungeons(res.data);
     };
     getDungeons();
   }, []);
   const { characterData } = useContext(UserInfoContext);
-  return ( 
+  console.log(characterData);
+
+  return (
     <>
       {mythicDungeons && (
         <div className="bg-[#25252569] p-2">
@@ -28,12 +31,10 @@ const CharacterMythicProgress = () => {
             <span>Mythic score : </span>
             <span
               style={{
-                color: `rgb(${
-                  characterData.mythic_rating_color
-                })`,
+                color: `rgb(${characterData.mythic_rating_color})`,
               }}
             >
-              {characterData.mythic_rating.rating}
+              {characterData.mythic_rating}
             </span>
           </div>
           <div className="grid grid-cols-8 gap-2 ">
@@ -59,9 +60,7 @@ const CharacterMythicProgress = () => {
                       <span
                         className="p-1 bg-[#00000090] absolute bottom-0 w-full text-xl rounded "
                         style={{
-                          color: `rgb(${
-                            run.color_rating
-                          })`,
+                          color: `rgb(${run.color_rating})`,
                         }}
                       >
                         {Math.round(run.rating)}
@@ -74,7 +73,7 @@ const CharacterMythicProgress = () => {
           </div>
         </div>
       )}
-      {mythicDungeons !== "" && !mythicDungeons && <Spinner />}
+      {!mythicDungeons && mythicDungeons != "" && <Spinner />}
 
       {mythicDungeons === "" && (
         <div className="flex items-center justify-center bg-[#25252569] p-2">

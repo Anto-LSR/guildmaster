@@ -8,6 +8,7 @@ import { User } from 'src/entities/user/user.entity';
 import { Repository } from 'typeorm';
 import { CharacterService } from 'src/entities/character/character.service';
 import { GetTokenService } from 'src/tools/get-token/get-token.service';
+import { DungeonRunsService } from 'src/entities/dungeon_runs/dungeon_runs.service';
 
 @Injectable()
 export class LinkBnetService {
@@ -19,7 +20,8 @@ export class LinkBnetService {
     private charactersRepository: Repository<Character>,
     private readonly characterService: CharacterService,
     private readonly getTokenService: GetTokenService,
-  ) {}
+    private readonly dungeonRunsService: DungeonRunsService,
+  ) { }
 
   /**
    * Récupère les informations BNET de l'utilisateur ainsi que les informations de ses personnages
@@ -68,8 +70,8 @@ export class LinkBnetService {
     await this.usersRepository.save(user);
     //On récupère le token CLIENT de l'application
     //TODO: Appeller ma méthode getCredentials() dans le service GetTokenService plutôt que de faire une requete à la zob
-    const credentials = await this.getTokenService.getAccessToken();
-    const app_token = credentials;
+    //const credentials = await this.getTokenService.getAccessToken();
+    const app_token = await this.getTokenService.getAccessToken();
     //On récupère les personnages de l'utilisateur
     const wowAccounts = await axios.get(
       `https://eu.api.blizzard.com/profile/user/wow?namespace=profile-eu&locale=en_GB&access_token=${token}`,
@@ -78,75 +80,118 @@ export class LinkBnetService {
     const registeredCharacters = await this.characterService.getAllCharacters(
       user,
     );
-    let wowCharacterId;
     //On itère sur les comptes WoW de l'utilisateur
-    wowAccounts.data.wow_accounts.forEach(async (account) => {
-      account.characters.forEach(async (character) => {
-        try {
-          //On itère sur les personnages de l'utilisateur et on hydrate les attributs d'une entité Character
-          const characterEntity = new Character();
-          characterEntity.realm = character.realm.slug;
-          characterEntity.class = character.playable_class.name;
-          characterEntity.race = character.playable_race.name;
-          const raceId = character.playable_race.id;
-          characterEntity.gender = character.gender.type;
-          const genderId = character.gender.type === 'MALE' ? 0 : 1;
-          characterEntity.faction = character.faction.name;
-          characterEntity.level = character.level;
-          characterEntity.wowCharacterId = character.id;
-          characterEntity.name = character.name;
-          characterEntity.user = user;
-          //On récupère les données médias du personnage
-          const mediaInfo = await axios.get(
-            `https://eu.api.blizzard.com/profile/wow/character/${characterEntity.realm.toLowerCase()}/${characterEntity.name.toLowerCase()}/character-media?namespace=profile-eu&access_token=${app_token}&alt=/shadow/avatar/${raceId}-${genderId}.jpg`,
-          );
-          //On hydrate l'entité Character avec les données médias
-          characterEntity.avatarUrl = mediaInfo.data.assets[0].value;
-          characterEntity.mainPictureUrl = mediaInfo.data.assets[2].value;
-          //On vérifie que le personnage n'est pas déjà en base
-          let insert = true;
-          let existingCharacter = new Character();
-          registeredCharacters.forEach(async (registeredCharacter) => {
-            if (
-              registeredCharacter.wowCharacterId ==
-              characterEntity.wowCharacterId
-            ) {
-              insert = false;
-              //Si le personnage est déjà en base, on le met à jour
-              existingCharacter = registeredCharacter;
-              try {
-                await this.charactersRepository.save(existingCharacter);
-              } catch (e) {
-                //<Rejected> Unhandle promise rejection
-              }
-            }
-          });
-          //Si le personnage n'est pas déjà en base, on l'ajoute
+    for (const account of wowAccounts.data.wow_accounts) {
+      for (const character of account.characters) {
+        await this.setCharacterData(user, character, registeredCharacters)
+      }
+    }
 
-          if (insert) {
-            wowCharacterId = characterEntity.wowCharacterId;
-            await this.charactersRepository.save(characterEntity);
-            if (
-              user.selectedCharacter == undefined ||
-              user.selectedCharacter == null
-            ) {
-              user.selectedCharacter = wowCharacterId;
-              await this.usersRepository.save(user);
-            }
-          }
-        } catch (e) {
-          // console.log(e);
+    //On redirige l'utilisateur sur le front
+    response.redirect(process.env.frontUrl + '/my-profile');
+  }
 
-          if (e.response.status === 404) {
-            //Si la reponse est une 404, cela veut dire que le personnage n'a pas été misà jour depuis longtemps par blizzard, et qu'il n'est donc pas joué.
-          }
-          if (e.response.status === 401) {
-            //console.log('Unauthorized', e.response.status);
+  async setCharacterData(user: User, character, registeredCharacters) {
+    const app_token = await this.getTokenService.getAccessToken();
+    try {
+      let wowCharacterId;
+      //On itère sur les personnages de l'utilisateur et on hydrate les attributs d'une entité Character
+      const characterEntity = new Character();
+      characterEntity.realm = character.realm.slug;
+      characterEntity.class = character.playable_class.name;
+      characterEntity.race = character.playable_race.name;
+      const raceId = character.playable_race.id;
+      characterEntity.gender = character.gender.type;
+      const genderId = character.gender.type === 'MALE' ? 0 : 1;
+      characterEntity.faction = character.faction.name;
+      characterEntity.level = character.level;
+      characterEntity.wowCharacterId = character.id;
+      characterEntity.name = character.name;
+      characterEntity.user = user;
+      //On tente de récupérer les données supplémentaires du personnage
+      try {
+        const res = await axios.get(
+          `https://eu.api.blizzard.com/profile/wow/character/${characterEntity.realm.toLowerCase()}/${characterEntity.name.toLowerCase()}?namespace=profile-eu&locale=en_GB&access_token=${app_token}`
+        )
+        const characterInfo = res.data;
+        characterEntity.ilvl = characterInfo.average_item_level;
+        characterEntity.guildName = characterInfo?.guild?.name
+        if (this.isTimestampOlderThanOneYear(characterInfo.last_login_timestamp)) {
+          console.log('personnage trop vieux!');
+          return;
+        }
+
+      } catch (e) {
+        //console.log('Echec de la récupération des info supp pour le personnage : ' + characterEntity.name);
+        return;
+      }
+      //On récupère les données médias du personnage
+      try {
+        const mediaInfo = await axios.get(
+          `https://eu.api.blizzard.com/profile/wow/character/${characterEntity.realm.toLowerCase()}/${characterEntity.name.toLowerCase()}/character-media?namespace=profile-eu&access_token=${app_token}&alt=/shadow/avatar/${raceId}-${genderId}.jpg`,
+        );
+        //On hydrate l'entité Character avec les données médias
+        characterEntity.avatarUrl = mediaInfo.data.assets[0].value;
+        characterEntity.mainPictureUrl = mediaInfo.data.assets[2].value;
+      } catch (e) {
+        //console.log('Echec de la récupération des médias : ' + characterEntity.name);
+        return;
+      }
+
+
+      await this.dungeonRunsService.getCharacterDungeonRuns(characterEntity)
+
+
+      //On vérifie que le personnage n'est pas déjà en base
+      let insert = true;
+      let existingCharacter = new Character();
+      for (const registeredCharacter of registeredCharacters) {
+        if (
+          registeredCharacter.wowCharacterId ==
+          characterEntity.wowCharacterId
+        ) {
+          insert = false;
+          //Si le personnage est déjà en base, on le met à jour
+          existingCharacter = registeredCharacter;
+          try {
+            await this.charactersRepository.save(existingCharacter);
+          } catch (e) {
+            //<Rejected> Unhandle promise rejection
           }
         }
-      });
-    });
-    //On redirige l'utilisateur sur le front
-    response.redirect(process.env.frontUrl);
+      }
+      //Si le personnage n'est pas déjà en base, on l'ajoute
+
+      if (insert) {
+        wowCharacterId = characterEntity.wowCharacterId;
+        await this.charactersRepository.save(characterEntity);
+        if (
+          user.selectedCharacter == undefined ||
+          user.selectedCharacter == null
+        ) {
+          user.selectedCharacter = wowCharacterId;
+          await this.usersRepository.save(user);
+        }
+      }
+    } catch (e) {
+      //console.log(e);
+      console.log(e);
+      if (e.response.status === 404) {
+        //Si la reponse est une 404, cela veut dire que le personnage n'a pas été misà jour depuis longtemps par blizzard, et qu'il n'est donc pas joué.
+
+
+      }
+      if (e.response.status === 401) {
+        //console.log('Unauthorized', e.response.status);
+      }
+    }
+
+  }
+
+
+  isTimestampOlderThanOneYear(timestamp: string): boolean {
+    const d = new Date(timestamp);
+    const now = new Date();
+    return (now.getFullYear() - d.getFullYear()) > 1;
   }
 }

@@ -22,7 +22,6 @@ export class DungeonRunsController {
       user.selectedCharacter,
     );
     const runs = await this.dungeonRunsService.getDungeonRuns(character);
-    // console.log(runs)
     return runs;
   }
 

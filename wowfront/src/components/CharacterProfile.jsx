@@ -21,7 +21,7 @@ function CharacterProfile() {
   const [achievements, setAchievements] = useState("");
   const [gear, setGear] = useState("");
   const [stats, setStats] = useState("");
-  
+
   useEffect(() => {
     const am = ApiManager.getInstance();
     const getCharacterDetails = async () => {
@@ -39,7 +39,7 @@ function CharacterProfile() {
     getStats();
     getCharacterGear();
     getCharacterDetails();
-  }, [window.refreshTooltip()]);
+  }, [window.refreshTooltip(), console.log(characterData)]);
   return (
     <>
       {!achievements && !gear && !stats && <Spinner />}

@@ -67,28 +67,33 @@ export class CharacterService {
     const selectedCharacter = await this.getCharacterInfo(
       user.selectedCharacter,
     );
-    if (
-      selectedCharacter.ilvl == null ||
-      selectedCharacter.activeSpec == null ||
-      selectedCharacter.specId == null
-    ) {
-      try {
-        const characterInfo = await axios.get(
-          `https://eu.api.blizzard.com/profile/wow/character/${selectedCharacter.realm
-          }/${selectedCharacter.name.toLowerCase()}?access_token=${app_token}&namespace=profile-eu&locale=en_GB`,
-        );
-        //On récupère les données de blizzard et on les applique à notre entité character
-        selectedCharacter.activeSpec = characterInfo.data.active_spec?.name;
-        selectedCharacter.specId = characterInfo.data.active_spec?.id;
-        selectedCharacter.ilvl = characterInfo.data?.average_item_level;
-        await this.characterRepository.save(selectedCharacter);
-        return selectedCharacter;
-      } catch (e) {
-        console.log('Erreur dans getSelectedCharacter()');
+
+    if (selectedCharacter != null) {
+      if (
+        selectedCharacter.ilvl == null ||
+        selectedCharacter.activeSpec == null ||
+        selectedCharacter.specId == null
+      ) {
+        try {
+          const characterInfo = await axios.get(
+            `https://eu.api.blizzard.com/profile/wow/character/${selectedCharacter.realm
+            }/${selectedCharacter.name.toLowerCase()}?access_token=${app_token}&namespace=profile-eu&locale=en_GB`,
+          );
+          //On récupère les données de blizzard et on les applique à notre entité character
+          selectedCharacter.activeSpec = characterInfo.data.active_spec?.name;
+          selectedCharacter.specId = characterInfo.data.active_spec?.id;
+          await this.characterRepository.save(selectedCharacter);
+          return selectedCharacter;
+        } catch (e) {
+          console.log('Erreur dans getSelectedCharacter()');
+        }
       }
+      return selectedCharacter;
     }
 
-    return selectedCharacter;
+
+
+
   }
 
   /**
@@ -98,11 +103,15 @@ export class CharacterService {
    */
   async getCharacterRaids(character: Character) {
     const app_token = await this.getTokenService.getAccessToken();
+    // const characterRaid = await axios.get(
+    //   `https://eu.api.blizzard.com/profile/wow/character/${character.realm
+    //   }/${character.name.toLowerCase()}/encounters/raids?access_token=${app_token}&namespace=profile-eu&locale=en_GB`,
+    // );
     const characterRaid = await axios.get(
       `https://eu.api.blizzard.com/profile/wow/character/${character.realm
       }/${character.name.toLowerCase()}/encounters/raids?access_token=${app_token}&namespace=profile-eu&locale=en_GB`,
     );
-    return characterRaid.data;
+    return characterRaid.data
 
   }
 
